@@ -17,6 +17,6 @@ namespace Modelo
     // despues mientras vallamos necesitando escribirlos o leerlos les hacemos las props
     //Dejo aca tambien la linea que nos va a permitir que ande en las 2 pc ya que tenemos el mismo nombre de base de datos (sera parte del Negocio)
     // conexion.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-    // Defini la clase Articulo como public 
+    // Defini la clase Articulo como public para que pueda ser usada por la clase winform mas adelante
   }
 }

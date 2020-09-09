@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Winform", "Winform\Winform.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{F6AE0251-0C0D-4550-A129-930ECAB315A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocios", "Negocios\Negocios.csproj", "{2A0C3ECC-CA26-411D-AB52-BE2F57355E30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F6AE0251-0C0D-4550-A129-930ECAB315A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6AE0251-0C0D-4550-A129-930ECAB315A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6AE0251-0C0D-4550-A129-930ECAB315A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0C3ECC-CA26-411D-AB52-BE2F57355E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0C3ECC-CA26-411D-AB52-BE2F57355E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0C3ECC-CA26-411D-AB52-BE2F57355E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0C3ECC-CA26-411D-AB52-BE2F57355E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
