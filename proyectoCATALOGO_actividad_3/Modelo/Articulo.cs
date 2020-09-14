@@ -9,17 +9,18 @@ namespace Modelo
   public class Articulo
   {
     private int id;
-        //private string codigo;
-        public string codigo { get; set; }
-        //private string descripcion;
-        public string descripcion { get; set; }
-        public string nombre { get; set; }
+    //private string codigo;
+    public string codigo { get; set; }
+    //private string descripcion;
 
-        public string imagenUrl { get; set; }
+    public string nombre { get; set; }
+    public string descripcion { get; set; }
+        
+    public string imagenUrl { get; set; }
 
-        public Decimal precio { get; set; }
+    public Decimal precio { get; set; }
 
-        private string marca;
+    private string marca;
     private string categoria;
     // por ahora creo los atributos privados porque no tengo claro cuales van a necesitar tener getter y/o setters todavia.
     // despues mientras vallamos necesitando escribirlos o leerlos les hacemos las props
