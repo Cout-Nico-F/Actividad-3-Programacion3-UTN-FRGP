@@ -16,5 +16,28 @@ namespace Winform
     {
       InitializeComponent();
     }
-  }
+
+        private void btAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btAceptar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btAceptar.Cursor = Cursors.Hand;
+        }
+
+        private void btCancelar_MouseMove(object sender, MouseEventArgs e)
+        {
+            btCancelar.Cursor = Cursors.Hand;
+        }
+
+        private void form_Alta_Load(object sender, EventArgs e)
+        {
+            if(txt_Codigo.Text == "")
+            {
+                
+            }
+        }
+    }
 }

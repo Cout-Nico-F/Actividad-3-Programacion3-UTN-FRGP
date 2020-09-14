@@ -54,7 +54,7 @@ namespace Winform
 
     private void btnAgregar_Click(object sender, EventArgs e)
     {
-            frmAltaArticulos alta = new frmAltaArticulos();
+            form_Alta alta = new form_Alta();
             alta.ShowDialog();
     }
 
