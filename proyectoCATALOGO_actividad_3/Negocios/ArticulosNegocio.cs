@@ -38,7 +38,7 @@ namespace Negocios
                 // (tengo problemas con mostrar el precio) rta-> Segun lo que investigué el tipo de data Money de SQL es equivalente al tipo Decimal en .net
                  
 
-                // no se porque sale descripcion antes que nombre
+                // (no se porque sale descripcion antes que nombre) rta-> DGV toma por defecto el orden de la clase Articulo en este caso.  Entonces cambié el orden de declaracion de las prop y listo.
 
                 table.Add(aux);
             }
