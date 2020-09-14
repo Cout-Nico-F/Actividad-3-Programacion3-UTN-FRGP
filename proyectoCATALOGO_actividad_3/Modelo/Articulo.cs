@@ -17,7 +17,7 @@ namespace Modelo
 
         public string imagenUrl { get; set; }
 
-        public float precio { get; set; }
+        public Decimal precio { get; set; }
 
         private string marca;
     private string categoria;

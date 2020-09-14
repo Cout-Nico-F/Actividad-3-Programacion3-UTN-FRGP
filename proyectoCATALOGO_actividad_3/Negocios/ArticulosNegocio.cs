@@ -33,9 +33,10 @@ namespace Negocios
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
                 aux.imagenUrl = Reader.GetString(3);
-                // aux.precio = Reader.GetString(4);
+                aux.precio = Reader.GetDecimal(4);
 
-                // tengo problemas con mostrar el precio
+                // (tengo problemas con mostrar el precio) rta-> Segun lo que investigué el tipo de data Money de SQL es equivalente al tipo Decimal en .net
+                 
 
                 // no se porque sale descripcion antes que nombre
 
