@@ -16,13 +16,12 @@ namespace Negocios
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
             SqlDataReader Reader;
-            List<Articulo> lista = new List<Articulo>();
+            List<Articulo> listaArticulos = new List<Articulo>(); //Refactorizé el nombre de Table a listaArticulos
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "Select Codigo,Nombre,Descripcion,ImagenUrl,Precio from ARTICULOS";
+            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
             command.Connection = connection;
-
             connection.Open();
             Reader = command.ExecuteReader();
 
@@ -34,17 +33,37 @@ namespace Negocios
                 aux.descripcion = Reader.GetString(2);
                 aux.imagenUrl = Reader.GetString(3);
                 aux.precio = Reader.GetDecimal(4);
+                try
+                {
+                  aux.Marca = new Marca();
+                  aux.Marca.Descripcion = (string)Reader.GetString(5);
+                }
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
+                  aux.Marca.Descripcion = " ";
+                }
+
+                try
+                {
+                  aux.Categoria = new Categoria();
+                  aux.Categoria.Descripcion = (string)Reader.GetString(6);
+                }
+
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
+                  aux.Categoria.Descripcion = " ";
+                }
+                
 
                 // (tengo problemas con mostrar el precio) rta-> Segun lo que investigué el tipo de data Money de SQL es equivalente al tipo Decimal en .net
-                 
-
+                
                 // (no se porque sale descripcion antes que nombre) rta-> DGV toma por defecto el orden de la clase Articulo en este caso.  Entonces cambié el orden de declaracion de las prop y listo.
 
-                lista.Add(aux);
+                listaArticulos.Add(aux);
             }
 
             connection.Close();
-            return lista;
+            return listaArticulos;
 
         }
     }
