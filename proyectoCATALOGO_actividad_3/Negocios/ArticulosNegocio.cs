@@ -33,6 +33,7 @@ namespace Negocios
                 aux.descripcion = Reader.GetString(2);
                 aux.imagenUrl = Reader.GetString(3);
                 aux.precio = Reader.GetDecimal(4);
+
                 try
                 {
                   aux.Marca = new Marca();

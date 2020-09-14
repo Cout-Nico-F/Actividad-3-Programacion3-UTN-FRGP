@@ -44,7 +44,8 @@ namespace Winform
             }
             catch (Exception)
             {
-
+                MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                 
             }
             
@@ -53,7 +54,13 @@ namespace Winform
 
     private void btnAgregar_Click(object sender, EventArgs e)
     {
-
+            frmAltaArticulos alta = new frmAltaArticulos();
+            alta.ShowDialog();
     }
-  }
+
+        private void pbImagen_Click(object sender, EventArgs e)
+        {
+            
+        }
+    }
 }
