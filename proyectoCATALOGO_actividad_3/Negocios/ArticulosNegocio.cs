@@ -16,7 +16,7 @@ namespace Negocios
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
             SqlDataReader Reader;
-            List<Articulo> table = new List<Articulo>();
+            List<Articulo> lista = new List<Articulo>();
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
@@ -40,11 +40,11 @@ namespace Negocios
 
                 // (no se porque sale descripcion antes que nombre) rta-> DGV toma por defecto el orden de la clase Articulo en este caso.  Entonces cambié el orden de declaracion de las prop y listo.
 
-                table.Add(aux);
+                lista.Add(aux);
             }
 
             connection.Close();
-            return table;
+            return lista;
 
         }
     }
