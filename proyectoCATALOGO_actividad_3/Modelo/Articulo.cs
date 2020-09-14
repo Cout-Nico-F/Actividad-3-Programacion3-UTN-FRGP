@@ -8,10 +8,10 @@ namespace Modelo
 {
   public class Articulo
   {
-    private int id;
-    //private string codigo;
+    //private int id;
+  
     public string codigo { get; set; }
-    //private string descripcion;
+   
     public string nombre { get; set; }
 
     public string descripcion { get; set; }
@@ -24,10 +24,5 @@ namespace Modelo
 
     public Categoria Categoria { get; set; }
 
-    // por ahora creo los atributos privados porque no tengo claro cuales van a necesitar tener getter y/o setters todavia.
-    // despues mientras vallamos necesitando escribirlos o leerlos les hacemos las props
-    //Dejo aca tambien la linea que nos va a permitir que ande en las 2 pc ya que tenemos el mismo nombre de base de datos (sera parte del Negocio)
-    // conexion.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-    // Defini la clase Articulo como public para que pueda ser usada por la clase winform mas adelante
   }
 }
