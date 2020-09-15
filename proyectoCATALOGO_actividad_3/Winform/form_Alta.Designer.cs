@@ -43,8 +43,8 @@
             this.combob_Categoria = new System.Windows.Forms.ComboBox();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.errorAlta = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorAlta)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Nombre
@@ -80,6 +80,7 @@
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(136, 20);
             this.txt_Nombre.TabIndex = 3;
+            this.txt_Nombre.TextChanged += new System.EventHandler(this.txt_Nombre_TextChanged);
             // 
             // txt_Descripcion
             // 
@@ -87,6 +88,7 @@
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(319, 20);
             this.txt_Descripcion.TabIndex = 4;
+            this.txt_Descripcion.TextChanged += new System.EventHandler(this.txt_Descripcion_TextChanged);
             // 
             // combob_Marca
             // 
@@ -111,6 +113,7 @@
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 20);
             this.txt_Codigo.TabIndex = 7;
+            this.txt_Codigo.TextChanged += new System.EventHandler(this.txt_Codigo_TextChanged);
             // 
             // txt_Precio
             // 
@@ -118,6 +121,7 @@
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(100, 20);
             this.txt_Precio.TabIndex = 8;
+            this.txt_Precio.TextChanged += new System.EventHandler(this.txt_Precio_TextChanged);
             // 
             // label_Precio
             // 
@@ -164,11 +168,12 @@
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             this.btCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btCancelar_MouseMove);
             // 
-            // errorProvider1
+            // errorAlta
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.errorAlta.ContainerControl = this;
             // 
             // form_Alta
             // 
@@ -192,7 +197,7 @@
             this.Name = "form_Alta";
             this.Text = "Alta de Arcticulos";
             this.Load += new System.EventHandler(this.form_Alta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAlta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,6 +219,6 @@
     private System.Windows.Forms.ComboBox combob_Categoria;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorAlta;
     }
 }
