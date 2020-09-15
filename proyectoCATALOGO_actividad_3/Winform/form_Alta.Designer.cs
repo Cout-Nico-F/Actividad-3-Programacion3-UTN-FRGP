@@ -50,66 +50,71 @@
             // label_Nombre
             // 
             this.label_Nombre.AutoSize = true;
-            this.label_Nombre.Location = new System.Drawing.Point(30, 44);
+            this.label_Nombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Nombre.Location = new System.Drawing.Point(30, 47);
             this.label_Nombre.Name = "label_Nombre";
-            this.label_Nombre.Size = new System.Drawing.Size(44, 13);
+            this.label_Nombre.Size = new System.Drawing.Size(59, 14);
             this.label_Nombre.TabIndex = 0;
             this.label_Nombre.Text = "Nombre";
             // 
             // label_Descripcion
             // 
             this.label_Descripcion.AutoSize = true;
-            this.label_Descripcion.Location = new System.Drawing.Point(30, 76);
+            this.label_Descripcion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Descripcion.Location = new System.Drawing.Point(30, 82);
             this.label_Descripcion.Name = "label_Descripcion";
-            this.label_Descripcion.Size = new System.Drawing.Size(63, 13);
+            this.label_Descripcion.Size = new System.Drawing.Size(84, 14);
             this.label_Descripcion.TabIndex = 1;
             this.label_Descripcion.Text = "Descripcion";
             // 
             // lb_Marca
             // 
             this.lb_Marca.AutoSize = true;
-            this.lb_Marca.Location = new System.Drawing.Point(30, 143);
+            this.lb_Marca.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Marca.Location = new System.Drawing.Point(32, 164);
             this.lb_Marca.Name = "lb_Marca";
-            this.lb_Marca.Size = new System.Drawing.Size(37, 13);
+            this.lb_Marca.Size = new System.Drawing.Size(47, 14);
             this.lb_Marca.TabIndex = 2;
             this.lb_Marca.Text = "Marca";
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(99, 41);
+            this.txt_Nombre.Location = new System.Drawing.Point(135, 45);
             this.txt_Nombre.Name = "txt_Nombre";
-            this.txt_Nombre.Size = new System.Drawing.Size(136, 20);
+            this.txt_Nombre.Size = new System.Drawing.Size(187, 20);
             this.txt_Nombre.TabIndex = 3;
             this.txt_Nombre.TextChanged += new System.EventHandler(this.txt_Nombre_TextChanged);
             // 
             // txt_Descripcion
             // 
-            this.txt_Descripcion.Location = new System.Drawing.Point(99, 76);
+            this.txt_Descripcion.Location = new System.Drawing.Point(135, 76);
+            this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
-            this.txt_Descripcion.Size = new System.Drawing.Size(319, 20);
+            this.txt_Descripcion.Size = new System.Drawing.Size(340, 20);
             this.txt_Descripcion.TabIndex = 4;
             this.txt_Descripcion.TextChanged += new System.EventHandler(this.txt_Descripcion_TextChanged);
             // 
             // combob_Marca
             // 
             this.combob_Marca.FormattingEnabled = true;
-            this.combob_Marca.Location = new System.Drawing.Point(99, 140);
+            this.combob_Marca.Location = new System.Drawing.Point(135, 162);
             this.combob_Marca.Name = "combob_Marca";
-            this.combob_Marca.Size = new System.Drawing.Size(136, 21);
+            this.combob_Marca.Size = new System.Drawing.Size(161, 21);
             this.combob_Marca.TabIndex = 5;
             // 
             // label_Codigo
             // 
             this.label_Codigo.AutoSize = true;
-            this.label_Codigo.Location = new System.Drawing.Point(30, 13);
+            this.label_Codigo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Codigo.Location = new System.Drawing.Point(32, 17);
             this.label_Codigo.Name = "label_Codigo";
-            this.label_Codigo.Size = new System.Drawing.Size(40, 13);
+            this.label_Codigo.Size = new System.Drawing.Size(52, 14);
             this.label_Codigo.TabIndex = 6;
             this.label_Codigo.Text = "Codigo";
             // 
             // txt_Codigo
             // 
-            this.txt_Codigo.Location = new System.Drawing.Point(99, 8);
+            this.txt_Codigo.Location = new System.Drawing.Point(135, 15);
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 20);
             this.txt_Codigo.TabIndex = 7;
@@ -117,7 +122,7 @@
             // 
             // txt_Precio
             // 
-            this.txt_Precio.Location = new System.Drawing.Point(99, 107);
+            this.txt_Precio.Location = new System.Drawing.Point(135, 124);
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(100, 20);
             this.txt_Precio.TabIndex = 8;
@@ -126,34 +131,36 @@
             // label_Precio
             // 
             this.label_Precio.AutoSize = true;
-            this.label_Precio.Location = new System.Drawing.Point(30, 112);
+            this.label_Precio.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Precio.Location = new System.Drawing.Point(32, 126);
             this.label_Precio.Name = "label_Precio";
-            this.label_Precio.Size = new System.Drawing.Size(37, 13);
+            this.label_Precio.Size = new System.Drawing.Size(49, 14);
             this.label_Precio.TabIndex = 9;
             this.label_Precio.Text = "Precio";
             // 
             // label_Categoria
             // 
             this.label_Categoria.AutoSize = true;
-            this.label_Categoria.Location = new System.Drawing.Point(30, 180);
+            this.label_Categoria.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Categoria.Location = new System.Drawing.Point(30, 198);
             this.label_Categoria.Name = "label_Categoria";
-            this.label_Categoria.Size = new System.Drawing.Size(52, 13);
+            this.label_Categoria.Size = new System.Drawing.Size(71, 14);
             this.label_Categoria.TabIndex = 10;
             this.label_Categoria.Text = "Categoria";
             // 
             // combob_Categoria
             // 
             this.combob_Categoria.FormattingEnabled = true;
-            this.combob_Categoria.Location = new System.Drawing.Point(99, 174);
+            this.combob_Categoria.Location = new System.Drawing.Point(135, 191);
             this.combob_Categoria.Name = "combob_Categoria";
-            this.combob_Categoria.Size = new System.Drawing.Size(136, 21);
+            this.combob_Categoria.Size = new System.Drawing.Size(161, 21);
             this.combob_Categoria.TabIndex = 11;
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(72, 228);
+            this.btAceptar.Location = new System.Drawing.Point(135, 268);
             this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(89, 27);
+            this.btAceptar.Size = new System.Drawing.Size(72, 57);
             this.btAceptar.TabIndex = 12;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
@@ -162,9 +169,9 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(238, 228);
+            this.btCancelar.Location = new System.Drawing.Point(290, 268);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(89, 27);
+            this.btCancelar.Size = new System.Drawing.Size(72, 57);
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
@@ -179,7 +186,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 290);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(518, 348);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.combob_Categoria);
