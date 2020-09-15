@@ -81,30 +81,8 @@ namespace Negocios
             connection.Open();
             command.ExecuteNonQuery();
         }
-        public void agregarMarca(Articulo nuevo)
-        {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-
-            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into MARCAS(Descripcion) values('"+ nuevo.Marca.Descripcion +"')";
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-        }
-        public void agregarCategoria(Articulo nuevo)
-        {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-
-            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into CATEGORIAS(Descripcion) values('"+nuevo.Categoria.Descripcion+"')";
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-        }
+        
+        
     }
     // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo
 }

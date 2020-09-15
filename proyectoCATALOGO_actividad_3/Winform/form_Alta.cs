@@ -85,7 +85,9 @@ namespace Winform
             errorAlta.SetError(combob_Categoria, "");
 
             Articulo nuevo = new Articulo();
-            ArticulosNegocio negocio = new ArticulosNegocio();
+            Marca marca = new Marca();
+            Categoria categoria = new Categoria();
+            ArticulosNegocio articuloNegocio = new ArticulosNegocio();
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
@@ -95,13 +97,13 @@ namespace Winform
             nuevo.precio = Convert.ToDecimal(txt_Precio.Text); // nose si es la forma correcta pero parece funcionar
             // en nuevo.precio me tiraba error porque queria convertir el objeto txt en decimal y no su contenido
             
-            nuevo.Marca.Descripcion = combob_Marca.Text;
-            nuevo.Categoria.Descripcion = combob_Categoria.Text;
+            marca =(Marca)combob_Marca.SelectedItem;
+            categoria = (Categoria)combob_Categoria.SelectedItem;
 
             //funcion de agregar articulo
-            negocio.agregarArticulo(nuevo);
-            negocio.agregarMarca(nuevo);
-            negocio.agregarCategoria(nuevo);
+            articuloNegocio.agregarArticulo(nuevo);
+            marcaNegocio.agregarMarca(marca);
+            categoriaNegocio.agregarCategoria(categoria);
 
             Close();
         }
