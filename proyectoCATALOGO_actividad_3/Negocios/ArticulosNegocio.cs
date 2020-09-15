@@ -70,7 +70,18 @@ namespace Negocios
 
         public void agregarArticulo(Articulo nuevo)
         {
-            
+            // Maxi nos va a ayudar a optimizar esto mas adelante pero por ahora asi funciona
+            SqlConnection connection = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+
+            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio) values ('','','','')";
+            command.Connection = connection;
+            connection.Open();
+            command.ExecuteNonQuery();
+
+
         }
     }
     // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo

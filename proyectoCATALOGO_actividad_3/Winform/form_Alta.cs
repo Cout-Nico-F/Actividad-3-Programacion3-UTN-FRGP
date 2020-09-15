@@ -94,7 +94,10 @@ namespace Winform
             nuevo.Marca.Descripcion = combob_Marca.Text;
             nuevo.Categoria.Descripcion = combob_Categoria.Text;
 
+            //funcion de agregar articulo
             negocio.agregarArticulo(nuevo);
+
+            Close();
         }
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
