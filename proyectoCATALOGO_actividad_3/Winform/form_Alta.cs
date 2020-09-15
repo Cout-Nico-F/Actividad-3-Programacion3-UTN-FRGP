@@ -86,16 +86,22 @@ namespace Winform
 
             Articulo nuevo = new Articulo();
             ArticulosNegocio negocio = new ArticulosNegocio();
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
             nuevo.codigo = txt_Codigo.Text;
             nuevo.nombre = txt_Nombre.Text;
             nuevo.descripcion = txt_Descripcion.Text;
-            nuevo.precio = Convert.ToDecimal(txt_Precio); // nose si es la forma correcta pero parece funcionar
+            nuevo.precio = Convert.ToDecimal(txt_Precio.Text); // nose si es la forma correcta pero parece funcionar
+            // en nuevo.precio me tiraba error porque queria convertir el objeto txt en decimal y no su contenido
+            
             nuevo.Marca.Descripcion = combob_Marca.Text;
             nuevo.Categoria.Descripcion = combob_Categoria.Text;
 
             //funcion de agregar articulo
             negocio.agregarArticulo(nuevo);
+            negocio.agregarMarca(nuevo);
+            negocio.agregarCategoria(nuevo);
 
             Close();
         }
@@ -112,7 +118,10 @@ namespace Winform
 
         private void form_Alta_Load(object sender, EventArgs e)
         {
-            
+            MarcaNegocio marcaNegocio = new MarcaNegocio();
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            combob_Marca.DataSource = marcaNegocio.ListarMarcas();
+            combob_Categoria.DataSource = categoriaNegocio.ListarCategorias();
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -122,7 +131,7 @@ namespace Winform
 
         private void txt_Codigo_TextChanged(object sender, EventArgs e)
         {
-            txt_Codigo.MaxLength = 6;
+            txt_Codigo.MaxLength = 5;
         }
 
         private void txt_Nombre_TextChanged(object sender, EventArgs e)
@@ -132,7 +141,7 @@ namespace Winform
 
         private void txt_Descripcion_TextChanged(object sender, EventArgs e)
         {
-            txt_Descripcion.MaxLength = 15;
+            txt_Descripcion.MaxLength = 30;
         }
 
         private void txt_Precio_TextChanged(object sender, EventArgs e)

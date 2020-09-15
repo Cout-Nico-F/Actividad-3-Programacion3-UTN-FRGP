@@ -17,7 +17,7 @@ namespace Negocios
             SqlDataReader Reader;
             List<Marca> AltaArticulos = new List<Marca>();
 
-            connection.ConnectionString = "data source = .\\sqlexpress; initial catalog ==CATALOGO_DB; integrated security =sspi ";
+            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = "Select Id,Descripcion From MARCAS";
             command.Connection = connection;
@@ -33,6 +33,18 @@ namespace Negocios
             Reader.Close();
             connection.Close();
             return AltaArticulos;
+        }
+        public void agregarMarca(Articulo nuevo)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+
+            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "insert into MARCAS(Descripcion) values('" + nuevo.Marca.Descripcion + "')";
+            command.Connection = connection;
+            connection.Open();
+            command.ExecuteNonQuery();
         }
 
     }
