@@ -158,22 +158,24 @@
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(135, 268);
+            this.btAceptar.BackgroundImage = global::Winform.Properties.Resources.Imagen_Aceptar;
+            this.btAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btAceptar.Location = new System.Drawing.Point(321, 268);
             this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(72, 57);
+            this.btAceptar.Size = new System.Drawing.Size(60, 57);
             this.btAceptar.TabIndex = 12;
-            this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             this.btAceptar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btAceptar_MouseMove);
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(290, 268);
+            this.btCancelar.BackgroundImage = global::Winform.Properties.Resources.Imagen_Cancelar;
+            this.btCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCancelar.Location = new System.Drawing.Point(398, 268);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(72, 57);
+            this.btCancelar.Size = new System.Drawing.Size(60, 57);
             this.btCancelar.TabIndex = 13;
-            this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             this.btCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btCancelar_MouseMove);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelo;
+using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -81,6 +83,18 @@ namespace Winform
                 return;
             }
             errorAlta.SetError(combob_Categoria, "");
+
+            Articulo nuevo = new Articulo();
+            ArticulosNegocio negocio = new ArticulosNegocio();
+
+            nuevo.codigo = txt_Codigo.Text;
+            nuevo.nombre = txt_Nombre.Text;
+            nuevo.descripcion = txt_Descripcion.Text;
+            nuevo.precio = Convert.ToDecimal(txt_Precio); // nose si es la forma correcta pero parece funcionar
+            nuevo.Marca.Descripcion = combob_Marca.Text;
+            nuevo.Categoria.Descripcion = combob_Categoria.Text;
+
+            negocio.agregarArticulo(nuevo);
         }
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)

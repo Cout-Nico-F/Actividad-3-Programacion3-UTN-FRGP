@@ -67,6 +67,11 @@ namespace Negocios
             return listaArticulos;
 
         }
+
+        public void agregarArticulo(Articulo nuevo)
+        {
+            
+        }
     }
     // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo
 }
