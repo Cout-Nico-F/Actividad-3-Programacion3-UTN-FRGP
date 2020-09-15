@@ -93,6 +93,16 @@ namespace Winform.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Imagen_Aceptar {
+            get {
+                object obj = ResourceManager.GetObject("Imagen_Aceptar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagen_Agregar {
             get {
                 object obj = ResourceManager.GetObject("Imagen_Agregar", resourceCulture);
