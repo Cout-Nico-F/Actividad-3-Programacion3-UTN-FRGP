@@ -64,7 +64,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvListar.Size = new System.Drawing.Size(644, 182);
+            this.dgvListar.Size = new System.Drawing.Size(720, 182);
             this.dgvListar.TabIndex = 0;
             this.dgvListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListar_CellContentClick);
             this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
@@ -74,7 +74,7 @@
             this.pbImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbImagen.Location = new System.Drawing.Point(795, 63);
+            this.pbImagen.Location = new System.Drawing.Point(792, 33);
             this.pbImagen.Name = "pbImagen";
             this.pbImagen.Size = new System.Drawing.Size(233, 234);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAgregar.FlatAppearance.BorderSize = 2;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(111, 274);
+            this.btnAgregar.Location = new System.Drawing.Point(212, 274);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(112, 42);
             this.btnAgregar.TabIndex = 2;
@@ -105,7 +105,7 @@
             this.btnBaja.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBaja.FlatAppearance.BorderSize = 2;
             this.btnBaja.ForeColor = System.Drawing.Color.Black;
-            this.btnBaja.Location = new System.Drawing.Point(297, 274);
+            this.btnBaja.Location = new System.Drawing.Point(398, 274);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(109, 42);
             this.btnBaja.TabIndex = 3;
@@ -121,7 +121,7 @@
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatAppearance.BorderSize = 2;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.Location = new System.Drawing.Point(488, 274);
+            this.btnModificar.Location = new System.Drawing.Point(589, 274);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(109, 42);
             this.btnModificar.TabIndex = 4;
@@ -152,7 +152,9 @@
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1000, 360);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
