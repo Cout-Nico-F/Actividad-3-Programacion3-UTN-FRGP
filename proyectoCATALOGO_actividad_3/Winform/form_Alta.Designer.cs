@@ -83,7 +83,7 @@
             this.txt_Nombre.MaxLength = 50;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(187, 20);
-            this.txt_Nombre.TabIndex = 3;
+            this.txt_Nombre.TabIndex = 2;
             // 
             // txt_Descripcion
             // 
@@ -92,7 +92,7 @@
             this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(340, 20);
-            this.txt_Descripcion.TabIndex = 4;
+            this.txt_Descripcion.TabIndex = 3;
             // 
             // combob_Marca
             // 
@@ -118,7 +118,7 @@
             this.txt_Codigo.MaxLength = 50;
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 20);
-            this.txt_Codigo.TabIndex = 7;
+            this.txt_Codigo.TabIndex = 1;
             // 
             // txt_Precio
             // 
@@ -126,7 +126,7 @@
             this.txt_Precio.MaxLength = 15;
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(100, 20);
-            this.txt_Precio.TabIndex = 8;
+            this.txt_Precio.TabIndex = 4;
             // 
             // label_Precio
             // 
@@ -154,7 +154,7 @@
             this.combob_Categoria.Location = new System.Drawing.Point(135, 191);
             this.combob_Categoria.Name = "combob_Categoria";
             this.combob_Categoria.Size = new System.Drawing.Size(161, 21);
-            this.combob_Categoria.TabIndex = 11;
+            this.combob_Categoria.TabIndex = 6;
             // 
             // btAceptar
             // 
