@@ -12,9 +12,21 @@ namespace Winform
 {
     public partial class form_Baja : Form
     {
+        private DataGridViewSelectedRowCollection _articuloSeleccionado;
         public form_Baja()
         {
             InitializeComponent();
+        }
+
+        public form_Baja(DataGridViewSelectedRowCollection articuloSeleccionado)
+        {
+            _articuloSeleccionado = articuloSeleccionado;
+            InitializeComponent();
+        }
+
+        private void form_Baja_Load(object sender, EventArgs e)
+        {
+            dgv_Baja.DataSource = _articuloSeleccionado;
         }
     }
 }

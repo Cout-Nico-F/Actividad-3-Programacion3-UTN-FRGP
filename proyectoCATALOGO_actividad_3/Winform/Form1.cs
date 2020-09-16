@@ -13,12 +13,12 @@ using Modelo;
 // agregue como referencia a Modelo y Negocio para poder hacer un using 
 namespace Winform
 {
-  public partial class Form1 : Form
-  {
-    public Form1()
+    public partial class Form1 : Form
     {
-      InitializeComponent();
-    }
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            
+
 
             try
             {
@@ -52,23 +52,33 @@ namespace Winform
                 // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?]
                 // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                 pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
-                
+
             }
-            
-           
+
+
         }
 
-    private void btnAgregar_Click(object sender, EventArgs e)
-    {
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
             form_Alta alta = new form_Alta();
             alta.ShowDialog();
             Cargar();
-    }
+        }
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
-            form_Baja baja = new form_Baja();
-            baja.ShowDialog();
+            if (dgvListar.SelectedRows.Count == 1)
+            {
+                form_Baja baja = new form_Baja(dgvListar.SelectedRows);
+                baja.ShowDialog();
+                Cargar(); // para que al volver a form1 la lista este actualizada.
+            }
+            else
+            {
+                MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
 
     }

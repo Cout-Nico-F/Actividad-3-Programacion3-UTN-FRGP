@@ -28,26 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_avisoBaja = new System.Windows.Forms.Label();
+            this.dgv_Baja = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label_avisoBaja
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label_avisoBaja.AutoSize = true;
+            this.label_avisoBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label_avisoBaja.Location = new System.Drawing.Point(45, 52);
+            this.label_avisoBaja.Name = "label_avisoBaja";
+            this.label_avisoBaja.Size = new System.Drawing.Size(291, 17);
+            this.label_avisoBaja.TabIndex = 0;
+            this.label_avisoBaja.Text = "Esta a punto de eliminar el siguiente articulo:";
+            // 
+            // dgv_Baja
+            // 
+            this.dgv_Baja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Baja.Location = new System.Drawing.Point(12, 103);
+            this.dgv_Baja.Name = "dgv_Baja";
+            this.dgv_Baja.Size = new System.Drawing.Size(495, 28);
+            this.dgv_Baja.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(534, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(286, 237);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(86, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(300, 214);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // form_Baja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(519, 313);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(832, 313);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.dgv_Baja);
+            this.Controls.Add(this.label_avisoBaja);
             this.Name = "form_Baja";
             this.Text = "form_Baja";
+            this.Load += new System.EventHandler(this.form_Baja_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Baja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -55,6 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_avisoBaja;
+        private System.Windows.Forms.DataGridView dgv_Baja;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
