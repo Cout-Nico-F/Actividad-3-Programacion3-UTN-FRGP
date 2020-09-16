@@ -68,5 +68,11 @@ namespace Winform
         {
             
         }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            form_Baja baja = new form_Baja();
+            baja.ShowDialog();
+        }
     }
 }

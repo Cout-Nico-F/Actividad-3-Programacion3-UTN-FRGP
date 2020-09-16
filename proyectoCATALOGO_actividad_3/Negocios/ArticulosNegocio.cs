@@ -32,6 +32,8 @@ namespace Negocios
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
                 aux.precio = Reader.GetDecimal(4);
+                // hice un try y catch de aux.ImagenUrL porque me tiraba error ya que el alta de un articulo no da la posibilidad de ingresar una url
+                // por ahora queda asi
                 try
                 {
                     aux.imagenUrl = Reader.GetString(3);
@@ -84,6 +86,19 @@ namespace Negocios
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ m.Id +"','"+ c.Id + "')"; ;
+            command.Connection = connection;
+            connection.Open();
+            command.ExecuteNonQuery();
+        }
+
+        public void bajaArticulo(Articulo nuevo)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+
+            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "";
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();

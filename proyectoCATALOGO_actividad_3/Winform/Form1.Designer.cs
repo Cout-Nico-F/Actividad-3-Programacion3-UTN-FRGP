@@ -32,6 +32,7 @@
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnBaja = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
@@ -74,12 +75,28 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnBaja
+            // 
+            this.btnBaja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBaja.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaja.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBaja.FlatAppearance.BorderSize = 2;
+            this.btnBaja.ForeColor = System.Drawing.Color.Black;
+            this.btnBaja.Location = new System.Drawing.Point(158, 313);
+            this.btnBaja.Name = "btnBaja";
+            this.btnBaja.Size = new System.Drawing.Size(71, 73);
+            this.btnBaja.TabIndex = 3;
+            this.btnBaja.Text = "Baja";
+            this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cornsilk;
             this.ClientSize = new System.Drawing.Size(650, 412);
+            this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
@@ -98,6 +115,7 @@
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnBaja;
     }
 }
 
