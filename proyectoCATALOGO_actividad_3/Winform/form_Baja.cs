@@ -48,6 +48,8 @@ namespace Winform
         {
             ArticulosNegocio articuloNegocio = new ArticulosNegocio();
             articuloNegocio.bajaArticulo(_articuloSeleccionado.Id);
+            //mensaje de exito
+            Close();
         }
     }
 }
