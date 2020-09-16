@@ -74,13 +74,13 @@
             this.pbImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbImagen.Location = new System.Drawing.Point(749, 33);
-            this.pbImagen.MinimumSize = new System.Drawing.Size(100, 100);
+            this.pbImagen.Location = new System.Drawing.Point(795, 63);
             this.pbImagen.Name = "pbImagen";
             this.pbImagen.Size = new System.Drawing.Size(233, 234);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagen.TabIndex = 1;
             this.pbImagen.TabStop = false;
+            this.pbImagen.Click += new System.EventHandler(this.pbImagen_Click);
             // 
             // btnAgregar
             // 
@@ -90,7 +90,7 @@
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnAgregar.FlatAppearance.BorderSize = 2;
             this.btnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregar.Location = new System.Drawing.Point(136, 255);
+            this.btnAgregar.Location = new System.Drawing.Point(111, 274);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(112, 42);
             this.btnAgregar.TabIndex = 2;
@@ -106,7 +106,7 @@
             this.btnBaja.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBaja.FlatAppearance.BorderSize = 2;
             this.btnBaja.ForeColor = System.Drawing.Color.Black;
-            this.btnBaja.Location = new System.Drawing.Point(322, 255);
+            this.btnBaja.Location = new System.Drawing.Point(297, 274);
             this.btnBaja.Name = "btnBaja";
             this.btnBaja.Size = new System.Drawing.Size(109, 42);
             this.btnBaja.TabIndex = 3;
@@ -122,7 +122,7 @@
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnModificar.FlatAppearance.BorderSize = 2;
             this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.Location = new System.Drawing.Point(513, 255);
+            this.btnModificar.Location = new System.Drawing.Point(488, 274);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(109, 42);
             this.btnModificar.TabIndex = 4;
@@ -139,6 +139,7 @@
             this.lblListado.Size = new System.Drawing.Size(160, 16);
             this.lblListado.TabIndex = 5;
             this.lblListado.Text = "Listado de Productos";
+            this.lblListado.Click += new System.EventHandler(this.lblListado_Click);
             // 
             // Form1
             // 
@@ -153,9 +154,7 @@
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(900, 380);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
