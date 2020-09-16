@@ -73,26 +73,6 @@ namespace Winform
             this.Close();
         }
 
-        private void txt_Codigo_TextChanged(object sender, EventArgs e)
-        {
-            txt_Codigo.MaxLength = 50;
-        }
-
-        private void txt_Nombre_TextChanged(object sender, EventArgs e)
-        {
-            txt_Nombre.MaxLength = 50;
-        }
-
-        private void txt_Descripcion_TextChanged(object sender, EventArgs e)
-        {
-            txt_Descripcion.MaxLength = 150;
-        }
-
-        private void txt_Precio_TextChanged(object sender, EventArgs e)
-        {
-            txt_Precio.MaxLength = 10;
-        }
-
         private void ComprobarCampos()
         {
             if (txt_Codigo.Text == "")

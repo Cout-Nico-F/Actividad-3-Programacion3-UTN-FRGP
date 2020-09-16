@@ -80,19 +80,19 @@
             // txt_Nombre
             // 
             this.txt_Nombre.Location = new System.Drawing.Point(135, 45);
+            this.txt_Nombre.MaxLength = 50;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(187, 20);
             this.txt_Nombre.TabIndex = 3;
-            this.txt_Nombre.TextChanged += new System.EventHandler(this.txt_Nombre_TextChanged);
             // 
             // txt_Descripcion
             // 
             this.txt_Descripcion.Location = new System.Drawing.Point(135, 76);
+            this.txt_Descripcion.MaxLength = 150;
             this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
             this.txt_Descripcion.Size = new System.Drawing.Size(340, 20);
             this.txt_Descripcion.TabIndex = 4;
-            this.txt_Descripcion.TextChanged += new System.EventHandler(this.txt_Descripcion_TextChanged);
             // 
             // combob_Marca
             // 
@@ -115,18 +115,18 @@
             // txt_Codigo
             // 
             this.txt_Codigo.Location = new System.Drawing.Point(135, 15);
+            this.txt_Codigo.MaxLength = 50;
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 20);
             this.txt_Codigo.TabIndex = 7;
-            this.txt_Codigo.TextChanged += new System.EventHandler(this.txt_Codigo_TextChanged);
             // 
             // txt_Precio
             // 
             this.txt_Precio.Location = new System.Drawing.Point(135, 124);
+            this.txt_Precio.MaxLength = 15;
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(100, 20);
             this.txt_Precio.TabIndex = 8;
-            this.txt_Precio.TextChanged += new System.EventHandler(this.txt_Precio_TextChanged);
             // 
             // label_Precio
             // 
