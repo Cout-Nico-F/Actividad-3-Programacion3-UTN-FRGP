@@ -23,15 +23,16 @@ namespace Winform
 
         private void Personalizar_Disenio()
         {
-            panel_Articulos.Visible = false;
+            
+            panel_Productos.Visible = false;
             panel_Opciones.Visible = false;
         }
 
         private void Ocultar_Submenu()
         {
-            if (panel_Articulos.Visible == true)
+            if (panel_Productos.Visible == true)
             {
-                panel_Articulos.Visible = false;
+                panel_Productos.Visible = false;
             } 
             if(panel_Opciones.Visible == true)
             {
@@ -126,7 +127,7 @@ namespace Winform
 
         private void btn_Articulos_Click(object sender, EventArgs e)
         {
-            Mostrar_Submenu(panel_Articulos);
+            Mostrar_Submenu(panel_Productos);
         }
 
         private void btn_Agregar_Click(object sender, EventArgs e)
@@ -135,6 +136,41 @@ namespace Winform
             // codigo
 
             Ocultar_Submenu();
+        }
+
+        private void btnAgrega_Click(object sender, EventArgs e)
+        {
+            form_Alta alta = new form_Alta();
+            alta.ShowDialog();
+            Cargar();
+            Ocultar_Submenu();
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            Ocultar_Submenu();
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvListar.SelectedRows.Count == 1)
+            {
+                form_Baja baja = new form_Baja((Articulo)dgvListar.CurrentRow.DataBoundItem);
+                baja.ShowDialog();
+                Cargar(); // para que al volver a form1 la lista este actualizada.
+            }
+            else
+            {
+                MessageBox.Show("Haga click sobre un articulo para eliminarlo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
+                //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            Ocultar_Submenu();
+        }
+
+        private void btn_Opciones_Click(object sender, EventArgs e)
+        {
+            Mostrar_Submenu(panel_Opciones);
         }
     }
 }

@@ -41,18 +41,18 @@
             this.lblListado = new System.Windows.Forms.Label();
             this.panel_Articulos = new System.Windows.Forms.Panel();
             this.panel_Opciones = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Eliminar = new System.Windows.Forms.Button();
+            this.btn_Modificar = new System.Windows.Forms.Button();
+            this.btnAgrega = new System.Windows.Forms.Button();
             this.btn_Opciones = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_Productos = new System.Windows.Forms.Panel();
             this.btn_Listar = new System.Windows.Forms.Button();
             this.btn_Articulos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panel_Productos.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvListar
@@ -186,7 +186,7 @@
             this.panel_Articulos.BackColor = System.Drawing.Color.SpringGreen;
             this.panel_Articulos.Controls.Add(this.panel_Opciones);
             this.panel_Articulos.Controls.Add(this.btn_Opciones);
-            this.panel_Articulos.Controls.Add(this.panel2);
+            this.panel_Articulos.Controls.Add(this.panel_Productos);
             this.panel_Articulos.Controls.Add(this.btn_Articulos);
             this.panel_Articulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Articulos.Location = new System.Drawing.Point(0, 0);
@@ -196,44 +196,47 @@
             // 
             // panel_Opciones
             // 
-            this.panel_Opciones.Controls.Add(this.button4);
-            this.panel_Opciones.Controls.Add(this.button3);
-            this.panel_Opciones.Controls.Add(this.button2);
+            this.panel_Opciones.Controls.Add(this.btn_Eliminar);
+            this.panel_Opciones.Controls.Add(this.btn_Modificar);
+            this.panel_Opciones.Controls.Add(this.btnAgrega);
             this.panel_Opciones.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Opciones.Location = new System.Drawing.Point(0, 182);
             this.panel_Opciones.Name = "panel_Opciones";
             this.panel_Opciones.Size = new System.Drawing.Size(172, 130);
             this.panel_Opciones.TabIndex = 13;
             // 
-            // button4
+            // btn_Eliminar
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Location = new System.Drawing.Point(0, 80);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(172, 50);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Eliminar.Location = new System.Drawing.Point(0, 80);
+            this.btn_Eliminar.Name = "btn_Eliminar";
+            this.btn_Eliminar.Size = new System.Drawing.Size(172, 47);
+            this.btn_Eliminar.TabIndex = 2;
+            this.btn_Eliminar.Text = "Eliminar";
+            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // button3
+            // btn_Modificar
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(172, 40);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Modificar.Location = new System.Drawing.Point(0, 40);
+            this.btn_Modificar.Name = "btn_Modificar";
+            this.btn_Modificar.Size = new System.Drawing.Size(172, 40);
+            this.btn_Modificar.TabIndex = 1;
+            this.btn_Modificar.Text = "Modificar";
+            this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
-            // button2
+            // btnAgrega
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 40);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAgrega.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgrega.Location = new System.Drawing.Point(0, 0);
+            this.btnAgrega.Name = "btnAgrega";
+            this.btnAgrega.Size = new System.Drawing.Size(172, 40);
+            this.btnAgrega.TabIndex = 0;
+            this.btnAgrega.Text = "Agregar";
+            this.btnAgrega.UseVisualStyleBackColor = true;
+            this.btnAgrega.Click += new System.EventHandler(this.btnAgrega_Click);
             // 
             // btn_Opciones
             // 
@@ -244,22 +247,23 @@
             this.btn_Opciones.TabIndex = 11;
             this.btn_Opciones.Text = "Opciones";
             this.btn_Opciones.UseVisualStyleBackColor = true;
+            this.btn_Opciones.Click += new System.EventHandler(this.btn_Opciones_Click);
             // 
-            // panel2
+            // panel_Productos
             // 
-            this.panel2.Controls.Add(this.btn_Listar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(172, 61);
-            this.panel2.TabIndex = 12;
+            this.panel_Productos.Controls.Add(this.btn_Listar);
+            this.panel_Productos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Productos.Location = new System.Drawing.Point(0, 57);
+            this.panel_Productos.Name = "panel_Productos";
+            this.panel_Productos.Size = new System.Drawing.Size(172, 61);
+            this.panel_Productos.TabIndex = 12;
             // 
             // btn_Listar
             // 
             this.btn_Listar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Listar.Location = new System.Drawing.Point(0, 0);
             this.btn_Listar.Name = "btn_Listar";
-            this.btn_Listar.Size = new System.Drawing.Size(172, 58);
+            this.btn_Listar.Size = new System.Drawing.Size(172, 55);
             this.btn_Listar.TabIndex = 0;
             this.btn_Listar.Text = "Listar Productos";
             this.btn_Listar.UseVisualStyleBackColor = true;
@@ -299,7 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.panel_Articulos.ResumeLayout(false);
             this.panel_Opciones.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.panel_Productos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,13 +319,13 @@
         private System.Windows.Forms.Label lblListado;
         private System.Windows.Forms.Panel panel_Articulos;
         private System.Windows.Forms.Button btn_Opciones;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_Productos;
         private System.Windows.Forms.Button btn_Listar;
         private System.Windows.Forms.Button btn_Articulos;
         private System.Windows.Forms.Panel panel_Opciones;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Eliminar;
+        private System.Windows.Forms.Button btn_Modificar;
+        private System.Windows.Forms.Button btnAgrega;
     }
 }
 
