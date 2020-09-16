@@ -13,12 +13,12 @@ using Modelo;
 // agregue como referencia a Modelo y Negocio para poder hacer un using 
 namespace Winform
 {
-  public partial class Form1 : Form
-  {
-    public Form1()
+    public partial class Form1 : Form
     {
-      InitializeComponent();
-    }
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            
+
 
             try
             {
@@ -51,33 +51,23 @@ namespace Winform
             {
                 MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
-                
+                pbImagen.Image = null;
+
             }
-            
-           
+
         }
 
-    private void btnAgregar_Click(object sender, EventArgs e)
-    {
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
             form_Alta alta = new form_Alta();
             alta.ShowDialog();
             Cargar();
-    }
-
-        private void pbImagen_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
         {
             form_Baja baja = new form_Baja();
             baja.ShowDialog();
-        }
-
-        private void lblListado_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
