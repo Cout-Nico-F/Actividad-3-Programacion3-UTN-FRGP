@@ -51,7 +51,7 @@
             // 
             this.label_Nombre.AutoSize = true;
             this.label_Nombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Nombre.Location = new System.Drawing.Point(30, 47);
+            this.label_Nombre.Location = new System.Drawing.Point(46, 87);
             this.label_Nombre.Name = "label_Nombre";
             this.label_Nombre.Size = new System.Drawing.Size(59, 14);
             this.label_Nombre.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.label_Descripcion.AutoSize = true;
             this.label_Descripcion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Descripcion.Location = new System.Drawing.Point(30, 82);
+            this.label_Descripcion.Location = new System.Drawing.Point(46, 121);
             this.label_Descripcion.Name = "label_Descripcion";
             this.label_Descripcion.Size = new System.Drawing.Size(84, 14);
             this.label_Descripcion.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lb_Marca.AutoSize = true;
             this.lb_Marca.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Marca.Location = new System.Drawing.Point(32, 164);
+            this.lb_Marca.Location = new System.Drawing.Point(48, 190);
             this.lb_Marca.Name = "lb_Marca";
             this.lb_Marca.Size = new System.Drawing.Size(47, 14);
             this.lb_Marca.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(135, 45);
+            this.txt_Nombre.Location = new System.Drawing.Point(161, 81);
             this.txt_Nombre.MaxLength = 50;
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.Size = new System.Drawing.Size(187, 20);
@@ -87,7 +87,7 @@
             // 
             // txt_Descripcion
             // 
-            this.txt_Descripcion.Location = new System.Drawing.Point(135, 76);
+            this.txt_Descripcion.Location = new System.Drawing.Point(161, 115);
             this.txt_Descripcion.MaxLength = 150;
             this.txt_Descripcion.Multiline = true;
             this.txt_Descripcion.Name = "txt_Descripcion";
@@ -97,7 +97,7 @@
             // combob_Marca
             // 
             this.combob_Marca.FormattingEnabled = true;
-            this.combob_Marca.Location = new System.Drawing.Point(135, 162);
+            this.combob_Marca.Location = new System.Drawing.Point(161, 183);
             this.combob_Marca.Name = "combob_Marca";
             this.combob_Marca.Size = new System.Drawing.Size(161, 21);
             this.combob_Marca.TabIndex = 5;
@@ -106,7 +106,7 @@
             // 
             this.label_Codigo.AutoSize = true;
             this.label_Codigo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Codigo.Location = new System.Drawing.Point(32, 17);
+            this.label_Codigo.Location = new System.Drawing.Point(48, 53);
             this.label_Codigo.Name = "label_Codigo";
             this.label_Codigo.Size = new System.Drawing.Size(52, 14);
             this.label_Codigo.TabIndex = 6;
@@ -114,7 +114,7 @@
             // 
             // txt_Codigo
             // 
-            this.txt_Codigo.Location = new System.Drawing.Point(135, 15);
+            this.txt_Codigo.Location = new System.Drawing.Point(161, 47);
             this.txt_Codigo.MaxLength = 50;
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 20);
@@ -122,7 +122,7 @@
             // 
             // txt_Precio
             // 
-            this.txt_Precio.Location = new System.Drawing.Point(135, 124);
+            this.txt_Precio.Location = new System.Drawing.Point(161, 149);
             this.txt_Precio.MaxLength = 15;
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.Size = new System.Drawing.Size(100, 20);
@@ -132,7 +132,7 @@
             // 
             this.label_Precio.AutoSize = true;
             this.label_Precio.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Precio.Location = new System.Drawing.Point(32, 126);
+            this.label_Precio.Location = new System.Drawing.Point(48, 155);
             this.label_Precio.Name = "label_Precio";
             this.label_Precio.Size = new System.Drawing.Size(49, 14);
             this.label_Precio.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             this.label_Categoria.AutoSize = true;
             this.label_Categoria.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Categoria.Location = new System.Drawing.Point(30, 198);
+            this.label_Categoria.Location = new System.Drawing.Point(46, 225);
             this.label_Categoria.Name = "label_Categoria";
             this.label_Categoria.Size = new System.Drawing.Size(71, 14);
             this.label_Categoria.TabIndex = 10;
@@ -151,7 +151,7 @@
             // combob_Categoria
             // 
             this.combob_Categoria.FormattingEnabled = true;
-            this.combob_Categoria.Location = new System.Drawing.Point(135, 191);
+            this.combob_Categoria.Location = new System.Drawing.Point(161, 218);
             this.combob_Categoria.Name = "combob_Categoria";
             this.combob_Categoria.Size = new System.Drawing.Size(161, 21);
             this.combob_Categoria.TabIndex = 6;
@@ -160,7 +160,7 @@
             // 
             this.btAceptar.BackgroundImage = global::Winform.Properties.Resources.Imagen_Aceptar;
             this.btAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btAceptar.Location = new System.Drawing.Point(321, 268);
+            this.btAceptar.Location = new System.Drawing.Point(339, 265);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(60, 57);
             this.btAceptar.TabIndex = 12;
@@ -172,7 +172,7 @@
             // 
             this.btCancelar.BackgroundImage = global::Winform.Properties.Resources.Imagen_Cancelar;
             this.btCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btCancelar.Location = new System.Drawing.Point(398, 268);
+            this.btCancelar.Location = new System.Drawing.Point(416, 265);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(60, 57);
             this.btCancelar.TabIndex = 13;
