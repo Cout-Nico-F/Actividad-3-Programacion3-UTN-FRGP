@@ -80,7 +80,6 @@
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagen.TabIndex = 1;
             this.pbImagen.TabStop = false;
-            this.pbImagen.Click += new System.EventHandler(this.pbImagen_Click);
             // 
             // btnAgregar
             // 
@@ -139,7 +138,6 @@
             this.lblListado.Size = new System.Drawing.Size(160, 16);
             this.lblListado.TabIndex = 5;
             this.lblListado.Text = "Listado de Productos";
-            this.lblListado.Click += new System.EventHandler(this.lblListado_Click);
             // 
             // Form1
             // 

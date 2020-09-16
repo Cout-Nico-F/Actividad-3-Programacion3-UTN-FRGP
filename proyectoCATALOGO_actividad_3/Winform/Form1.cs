@@ -49,8 +49,9 @@ namespace Winform
             }
             catch (Exception)
             {
-                MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?]
                 // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
+                pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
                 
             }
             
@@ -64,20 +65,11 @@ namespace Winform
             Cargar();
     }
 
-        private void pbImagen_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnBaja_Click(object sender, EventArgs e)
         {
             form_Baja baja = new form_Baja();
             baja.ShowDialog();
         }
 
-        private void lblListado_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
