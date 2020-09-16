@@ -29,7 +29,8 @@ namespace Winform
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgvListar.DataSource = negocio.ListarArticulos();
-            dgvListar.Columns[3].Visible = false;
+            dgvListar.Columns["id"].Visible = false;
+            dgvListar.Columns["imagenurl"].Visible = false;
         }
 
         private void dgvListar_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -39,23 +40,17 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-
-
             try
             {
                 Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
                 pbImagen.Load(reg.imagenUrl);
-
             }
             catch (Exception)
             {
                 // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?]
                 // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                 pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
-
             }
-
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -77,9 +72,6 @@ namespace Winform
             {
                 MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
         }
-
     }
 }

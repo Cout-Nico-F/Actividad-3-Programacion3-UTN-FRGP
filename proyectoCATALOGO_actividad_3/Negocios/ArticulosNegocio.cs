@@ -20,7 +20,7 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
+            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
             command.Connection = connection;
             connection.Open();
             Reader = command.ExecuteReader();
@@ -63,6 +63,8 @@ namespace Negocios
                 {
                   aux.Categoria.Descripcion = " ";
                 }
+
+                aux.Id = Reader.GetInt32(7);
                 
 
                 // (tengo problemas con mostrar el precio) rta-> Segun lo que investigué el tipo de data Money de SQL es equivalente al tipo Decimal en .net
@@ -85,25 +87,24 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ m.Id +"','"+ c.Id + "')"; ;
+            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ m.Id +"','"+ c.Id + "','" + nuevo.imagenUrl + "')"; ;
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
         }
 
-        public void bajaArticulo(Articulo nuevo)
+        public void bajaArticulo(int idArticulo)
         {
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "";
+            command.CommandText = "delete from articulos where articulos.id = "+idArticulo;
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
         }
-        
         
     }
     // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo

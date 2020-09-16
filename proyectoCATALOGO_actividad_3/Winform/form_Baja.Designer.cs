@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label_avisoBaja = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AceptarBaja = new System.Windows.Forms.Button();
+            this.btn_CancelarBaja = new System.Windows.Forms.Button();
             this.dgv_Baja = new System.Windows.Forms.DataGridView();
             this.pb_Baja = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Baja)).BeginInit();
@@ -47,23 +47,24 @@
             this.label_avisoBaja.TabIndex = 0;
             this.label_avisoBaja.Text = "Esta a punto de eliminar el siguiente articulo:";
             // 
-            // button1
+            // btn_AceptarBaja
             // 
-            this.button1.Location = new System.Drawing.Point(260, 190);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_AceptarBaja.Location = new System.Drawing.Point(260, 190);
+            this.btn_AceptarBaja.Name = "btn_AceptarBaja";
+            this.btn_AceptarBaja.Size = new System.Drawing.Size(75, 23);
+            this.btn_AceptarBaja.TabIndex = 3;
+            this.btn_AceptarBaja.Text = "Eliminar";
+            this.btn_AceptarBaja.UseVisualStyleBackColor = true;
+            this.btn_AceptarBaja.Click += new System.EventHandler(this.btn_AceptarBaja_Click);
             // 
-            // button2
+            // btn_CancelarBaja
             // 
-            this.button2.Location = new System.Drawing.Point(412, 190);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_CancelarBaja.Location = new System.Drawing.Point(412, 190);
+            this.btn_CancelarBaja.Name = "btn_CancelarBaja";
+            this.btn_CancelarBaja.Size = new System.Drawing.Size(75, 23);
+            this.btn_CancelarBaja.TabIndex = 4;
+            this.btn_CancelarBaja.Text = "Cancelar";
+            this.btn_CancelarBaja.UseVisualStyleBackColor = true;
             // 
             // dgv_Baja
             // 
@@ -93,8 +94,8 @@
             this.ClientSize = new System.Drawing.Size(992, 275);
             this.Controls.Add(this.pb_Baja);
             this.Controls.Add(this.dgv_Baja);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_CancelarBaja);
+            this.Controls.Add(this.btn_AceptarBaja);
             this.Controls.Add(this.label_avisoBaja);
             this.MinimumSize = new System.Drawing.Size(800, 300);
             this.Name = "form_Baja";
@@ -111,8 +112,8 @@
         #endregion
 
         private System.Windows.Forms.Label label_avisoBaja;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_AceptarBaja;
+        private System.Windows.Forms.Button btn_CancelarBaja;
         private System.Windows.Forms.DataGridView dgv_Baja;
         private System.Windows.Forms.PictureBox pb_Baja;
     }
