@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,21 +13,26 @@ namespace Winform
 {
     public partial class form_Baja : Form
     {
-        private DataGridViewSelectedRowCollection _articuloSeleccionado;
+        private Articulo _articuloSeleccionado;
         public form_Baja()
         {
             InitializeComponent();
         }
 
-        public form_Baja(DataGridViewSelectedRowCollection articuloSeleccionado)
+        public form_Baja(Articulo articuloSeleccionado)
         {
+
             _articuloSeleccionado = articuloSeleccionado;
             InitializeComponent();
         }
 
         private void form_Baja_Load(object sender, EventArgs e)
         {
-            dgv_Baja.DataSource = _articuloSeleccionado;
+            List<Articulo> lista = new List<Articulo>();
+            lista.Add(_articuloSeleccionado);
+            dgv_Baja.DataSource = lista;
+            pb_Baja.Load(_articuloSeleccionado.imagenUrl);
+
         }
     }
 }

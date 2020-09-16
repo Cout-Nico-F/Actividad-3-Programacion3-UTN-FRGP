@@ -69,7 +69,7 @@ namespace Winform
         {
             if (dgvListar.SelectedRows.Count == 1)
             {
-                form_Baja baja = new form_Baja(dgvListar.SelectedRows);
+                form_Baja baja = new form_Baja((Articulo)dgvListar.CurrentRow.DataBoundItem);
                 baja.ShowDialog();
                 Cargar(); // para que al volver a form1 la lista este actualizada.
             }
