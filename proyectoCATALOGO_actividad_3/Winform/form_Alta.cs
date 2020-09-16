@@ -95,15 +95,15 @@ namespace Winform
             nuevo.nombre = txt_Nombre.Text;
             nuevo.descripcion = txt_Descripcion.Text;
             nuevo.precio = Convert.ToDecimal(txt_Precio.Text); // nose si es la forma correcta pero parece funcionar
-            // en nuevo.precio me tiraba error porque queria convertir el objeto txt en decimal y no su contenido
+            // en nuevo.precio me tiraba error porque queria convertir el objeto txt en decimal y no su contenido ( Ya lo arregle)
             
             marca =(Marca)combob_Marca.SelectedItem;
             categoria = (Categoria)combob_Categoria.SelectedItem;
 
             //funcion de agregar articulo
-            articuloNegocio.agregarArticulo(nuevo);
-            marcaNegocio.agregarMarca(marca);
-            categoriaNegocio.agregarCategoria(categoria);
+            articuloNegocio.agregarArticulo(nuevo,marca,categoria);
+            //marcaNegocio.agregarMarca(marca);
+            //categoriaNegocio.agregarCategoria(categoria);
 
             Close();
         }

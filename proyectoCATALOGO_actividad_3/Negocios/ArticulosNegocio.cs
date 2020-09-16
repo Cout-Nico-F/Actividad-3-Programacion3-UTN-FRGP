@@ -31,9 +31,16 @@ namespace Negocios
                 aux.codigo = Reader.GetString(0);
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
-                aux.imagenUrl = Reader.GetString(3);
                 aux.precio = Reader.GetDecimal(4);
+                try
+                {
+                    aux.imagenUrl = Reader.GetString(3);
+                }
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
 
+                    aux.imagenUrl = " No contiene una Direccion URL";
+                }
                 try
                 {
                   aux.Marca = new Marca();
@@ -68,7 +75,7 @@ namespace Negocios
 
         }
 
-        public void agregarArticulo(Articulo nuevo)
+        public void agregarArticulo(Articulo nuevo,Marca m,Categoria c)
         {
             // Maxi nos va a ayudar a optimizar esto mas adelante pero por ahora asi funciona
             SqlConnection connection = new SqlConnection();
@@ -76,7 +83,7 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio) values ('"+nuevo.codigo+"','"+ nuevo.nombre+"','"+ nuevo.descripcion +"','"+ nuevo.precio+ "')"; ;
+            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ m.Id +"','"+ c.Id + "')"; ;
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();

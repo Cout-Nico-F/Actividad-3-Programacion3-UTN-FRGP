@@ -34,7 +34,7 @@ namespace Negocios
             connection.Close();
             return AltaArticulos;
         }
-        public void agregarMarca(Marca nuevo)
+        /*public void agregarMarca(Marca nuevo)
         {
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
@@ -45,7 +45,7 @@ namespace Negocios
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
-        }
+        }*/
 
     }
 }
