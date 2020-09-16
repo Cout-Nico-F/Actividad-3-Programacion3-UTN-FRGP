@@ -39,6 +39,7 @@ namespace Winform
             nuevo.precio = Convert.ToDecimal(txt_Precio.Text); 
             marca =(Marca)combob_Marca.SelectedItem;
             categoria = (Categoria)combob_Categoria.SelectedItem;
+            nuevo.imagenUrl = txt_ImagenURL.Text;
 
             //funcion de agregar articulo
             articuloNegocio.agregarArticulo(nuevo,marca,categoria);

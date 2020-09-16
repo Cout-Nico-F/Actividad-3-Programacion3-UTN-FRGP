@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocios;
 
 namespace Winform
 {
@@ -21,7 +22,6 @@ namespace Winform
 
         public form_Baja(Articulo articuloSeleccionado)
         {
-
             _articuloSeleccionado = articuloSeleccionado;
             InitializeComponent();
         }
@@ -31,8 +31,25 @@ namespace Winform
             List<Articulo> lista = new List<Articulo>();
             lista.Add(_articuloSeleccionado);
             dgv_Baja.DataSource = lista;
-            pb_Baja.Load(_articuloSeleccionado.imagenUrl);
 
+            try
+            {
+                pb_Baja.Load(_articuloSeleccionado.imagenUrl);
+            }
+            catch (Exception)
+            {
+
+            }
+            
+
+        }
+
+        private void btn_AceptarBaja_Click(object sender, EventArgs e)
+        {
+            ArticulosNegocio articuloNegocio = new ArticulosNegocio();
+            articuloNegocio.bajaArticulo(_articuloSeleccionado.Id);
+            //mensaje de exito
+            Close();
         }
     }
 }

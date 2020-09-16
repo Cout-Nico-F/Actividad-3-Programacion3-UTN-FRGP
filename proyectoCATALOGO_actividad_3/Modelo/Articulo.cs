@@ -8,7 +8,7 @@ namespace Modelo
 {
   public class Articulo
   {
-    //private int id;
+    public int Id { get; set; }
   
     public string codigo { get; set; }
    
@@ -23,6 +23,5 @@ namespace Modelo
     public Marca Marca { get; set; }
 
     public Categoria Categoria { get; set; }
-
   }
 }
