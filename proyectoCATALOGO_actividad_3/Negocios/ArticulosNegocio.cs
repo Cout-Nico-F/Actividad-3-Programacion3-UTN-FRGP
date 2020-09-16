@@ -20,7 +20,7 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
+            command.CommandText = "select a.codigo As Codigo, a.nombre As Nombre, a.descripcion As Descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
             command.Connection = connection;
             connection.Open();
             Reader = command.ExecuteReader();

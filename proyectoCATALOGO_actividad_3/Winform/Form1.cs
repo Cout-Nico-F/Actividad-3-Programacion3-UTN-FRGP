@@ -18,7 +18,38 @@ namespace Winform
         public Form1()
         {
             InitializeComponent();
+            Personalizar_Disenio();
         }
+
+        private void Personalizar_Disenio()
+        {
+            panel_Articulos.Visible = false;
+            panel_Opciones.Visible = false;
+        }
+
+        private void Ocultar_Submenu()
+        {
+            if (panel_Articulos.Visible == true)
+            {
+                panel_Articulos.Visible = false;
+            } 
+            if(panel_Opciones.Visible == true)
+            {
+                panel_Opciones.Visible = false;
+            }    
+        }
+
+        private void Mostrar_Submenu(Panel Submenu)
+        {
+            if (Submenu.Visible == false)
+            {
+                Ocultar_Submenu();
+                Submenu.Visible = true;
+            }
+            else
+                Submenu.Visible = false;
+        }
+            
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -49,7 +80,7 @@ namespace Winform
             }
             catch (Exception)
             {
-                // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?]
+                // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
                 // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                 pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
 
@@ -75,11 +106,35 @@ namespace Winform
             }
             else
             {
-                MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Haga click sobre un articulo para eliminarlo","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
+                //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
         }
 
+        private void pbImagen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Articulos_Click(object sender, EventArgs e)
+        {
+            Mostrar_Submenu(panel_Articulos);
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            // me confundi de nombre nose como arreglarlo
+            // codigo
+
+            Ocultar_Submenu();
+        }
     }
 }

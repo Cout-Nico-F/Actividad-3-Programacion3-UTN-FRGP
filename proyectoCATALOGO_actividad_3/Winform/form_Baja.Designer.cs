@@ -71,7 +71,9 @@
             this.dgv_Baja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Baja.Location = new System.Drawing.Point(22, 95);
             this.dgv_Baja.Name = "dgv_Baja";
-            this.dgv_Baja.Size = new System.Drawing.Size(744, 42);
+            this.dgv_Baja.RowHeadersVisible = false;
+            this.dgv_Baja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Baja.Size = new System.Drawing.Size(684, 70);
             this.dgv_Baja.TabIndex = 5;
             // 
             // pb_Baja
