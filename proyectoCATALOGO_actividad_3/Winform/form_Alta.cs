@@ -105,6 +105,8 @@ namespace Winform
             //marcaNegocio.agregarMarca(marca);
             //categoriaNegocio.agregarCategoria(categoria);
 
+            MessageBox.Show("Articulo agregado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             Close();
         }
 

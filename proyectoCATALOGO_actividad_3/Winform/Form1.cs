@@ -22,6 +22,11 @@ namespace Winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Cargar();
+        }
+
+        private void Cargar()
+        {
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgvListar.DataSource = negocio.ListarArticulos();
             dgvListar.Columns[3].Visible = false;
@@ -56,6 +61,7 @@ namespace Winform
     {
             form_Alta alta = new form_Alta();
             alta.ShowDialog();
+            Cargar();
     }
 
         private void pbImagen_Click(object sender, EventArgs e)
