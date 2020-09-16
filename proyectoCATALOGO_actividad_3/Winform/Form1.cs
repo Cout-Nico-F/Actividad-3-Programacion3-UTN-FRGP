@@ -74,5 +74,10 @@ namespace Winform
             form_Baja baja = new form_Baja();
             baja.ShowDialog();
         }
+
+        private void lblListado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
