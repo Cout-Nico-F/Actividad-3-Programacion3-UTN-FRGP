@@ -64,6 +64,8 @@
             // 
             // dgv_Listado
             // 
+            this.dgv_Listado.AllowUserToAddRows = false;
+            this.dgv_Listado.AllowUserToDeleteRows = false;
             this.dgv_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -91,6 +93,7 @@
             this.dgv_Listado.GridColor = System.Drawing.Color.SlateGray;
             this.dgv_Listado.Location = new System.Drawing.Point(30, 77);
             this.dgv_Listado.Name = "dgv_Listado";
+            this.dgv_Listado.ReadOnly = true;
             this.dgv_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));

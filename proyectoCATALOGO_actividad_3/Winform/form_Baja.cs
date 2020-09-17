@@ -49,6 +49,9 @@ namespace Winform
             ArticulosNegocio articuloNegocio = new ArticulosNegocio();
             articuloNegocio.bajaArticulo(_articuloSeleccionado.Id);
             //mensaje de exito
+
+            MessageBox.Show("Articulo eliminado exitosamente", "Atencion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
             Close();
         }
 

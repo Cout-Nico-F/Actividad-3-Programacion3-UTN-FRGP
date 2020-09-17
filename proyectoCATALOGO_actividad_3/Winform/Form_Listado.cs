@@ -28,8 +28,18 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo articulo = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
-            pb_Imagen.Load(articulo.imagenUrl);
+
+            try
+            {
+                Articulo articulo = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
+                pb_Imagen.Load(articulo.imagenUrl);
+            }
+            catch (Exception)
+            {
+
+                pb_Imagen.Image = null;
+            }
+            
         }
     }
 }
