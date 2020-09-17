@@ -257,6 +257,8 @@
             // 
             // dgv_Alta
             // 
+            this.dgv_Alta.AllowUserToAddRows = false;
+            this.dgv_Alta.AllowUserToDeleteRows = false;
             this.dgv_Alta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_Alta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgv_Alta.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -284,6 +286,7 @@
             this.dgv_Alta.GridColor = System.Drawing.Color.SlateGray;
             this.dgv_Alta.Location = new System.Drawing.Point(38, 55);
             this.dgv_Alta.Name = "dgv_Alta";
+            this.dgv_Alta.ReadOnly = true;
             this.dgv_Alta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));

@@ -78,11 +78,14 @@
             // 
             // dgv_Baja
             // 
+            this.dgv_Baja.AllowUserToAddRows = false;
+            this.dgv_Baja.AllowUserToDeleteRows = false;
             this.dgv_Baja.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.dgv_Baja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Baja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Baja.Location = new System.Drawing.Point(22, 76);
             this.dgv_Baja.Name = "dgv_Baja";
+            this.dgv_Baja.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
