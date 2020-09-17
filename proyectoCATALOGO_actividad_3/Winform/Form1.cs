@@ -125,6 +125,11 @@ namespace Winform
 
         private void btn_Agregar_Click(object sender, EventArgs e)
         {
+            Form_Listado listado = new Form_Listado();
+            listado.ShowDialog();
+            Cargar();
+            Ocultar_Submenu();
+            
             // me confundi de nombre nose como arreglarlo
             // codigo
 
@@ -166,5 +171,14 @@ namespace Winform
             Mostrar_Submenu(panel_Opciones);
         }
 
+        private void pbImagen_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvListar_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

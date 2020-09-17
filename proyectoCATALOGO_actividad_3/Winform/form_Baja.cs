@@ -51,5 +51,15 @@ namespace Winform
             //mensaje de exito
             Close();
         }
+
+        private void dgv_Baja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_CancelarBaja_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

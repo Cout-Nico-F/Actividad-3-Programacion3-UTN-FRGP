@@ -65,6 +65,7 @@
             this.btn_CancelarBaja.TabIndex = 4;
             this.btn_CancelarBaja.Text = "Cancelar";
             this.btn_CancelarBaja.UseVisualStyleBackColor = true;
+            this.btn_CancelarBaja.Click += new System.EventHandler(this.btn_CancelarBaja_Click);
             // 
             // dgv_Baja
             // 
@@ -76,6 +77,7 @@
             this.dgv_Baja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Baja.Size = new System.Drawing.Size(684, 70);
             this.dgv_Baja.TabIndex = 5;
+            this.dgv_Baja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Baja_CellContentClick);
             // 
             // pb_Baja
             // 
