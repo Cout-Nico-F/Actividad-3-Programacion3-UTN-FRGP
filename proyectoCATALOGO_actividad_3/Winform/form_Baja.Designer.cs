@@ -40,42 +40,49 @@
             // label_avisoBaja
             // 
             this.label_avisoBaja.AutoSize = true;
-            this.label_avisoBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label_avisoBaja.Location = new System.Drawing.Point(12, 26);
+            this.label_avisoBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_avisoBaja.ForeColor = System.Drawing.Color.White;
+            this.label_avisoBaja.Location = new System.Drawing.Point(18, 37);
             this.label_avisoBaja.Name = "label_avisoBaja";
-            this.label_avisoBaja.Size = new System.Drawing.Size(323, 20);
+            this.label_avisoBaja.Size = new System.Drawing.Size(383, 24);
             this.label_avisoBaja.TabIndex = 0;
             this.label_avisoBaja.Text = "Esta a punto de eliminar el siguiente articulo:";
             // 
             // btn_AceptarBaja
             // 
-            this.btn_AceptarBaja.Location = new System.Drawing.Point(260, 190);
+            this.btn_AceptarBaja.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btn_AceptarBaja.FlatAppearance.BorderSize = 3;
+            this.btn_AceptarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AceptarBaja.Location = new System.Drawing.Point(196, 190);
             this.btn_AceptarBaja.Name = "btn_AceptarBaja";
-            this.btn_AceptarBaja.Size = new System.Drawing.Size(75, 23);
+            this.btn_AceptarBaja.Size = new System.Drawing.Size(101, 52);
             this.btn_AceptarBaja.TabIndex = 3;
             this.btn_AceptarBaja.Text = "Eliminar";
-            this.btn_AceptarBaja.UseVisualStyleBackColor = true;
+            this.btn_AceptarBaja.UseVisualStyleBackColor = false;
             this.btn_AceptarBaja.Click += new System.EventHandler(this.btn_AceptarBaja_Click);
             // 
             // btn_CancelarBaja
             // 
-            this.btn_CancelarBaja.Location = new System.Drawing.Point(412, 190);
+            this.btn_CancelarBaja.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.btn_CancelarBaja.FlatAppearance.BorderSize = 3;
+            this.btn_CancelarBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_CancelarBaja.Location = new System.Drawing.Point(406, 190);
             this.btn_CancelarBaja.Name = "btn_CancelarBaja";
-            this.btn_CancelarBaja.Size = new System.Drawing.Size(75, 23);
+            this.btn_CancelarBaja.Size = new System.Drawing.Size(97, 52);
             this.btn_CancelarBaja.TabIndex = 4;
             this.btn_CancelarBaja.Text = "Cancelar";
-            this.btn_CancelarBaja.UseVisualStyleBackColor = true;
+            this.btn_CancelarBaja.UseVisualStyleBackColor = false;
             this.btn_CancelarBaja.Click += new System.EventHandler(this.btn_CancelarBaja_Click);
             // 
             // dgv_Baja
             // 
             this.dgv_Baja.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Baja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Baja.Location = new System.Drawing.Point(22, 95);
+            this.dgv_Baja.Location = new System.Drawing.Point(22, 76);
             this.dgv_Baja.Name = "dgv_Baja";
             this.dgv_Baja.RowHeadersVisible = false;
             this.dgv_Baja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Baja.Size = new System.Drawing.Size(684, 70);
+            this.dgv_Baja.Size = new System.Drawing.Size(697, 89);
             this.dgv_Baja.TabIndex = 5;
             this.dgv_Baja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Baja_CellContentClick);
             // 
@@ -84,7 +91,7 @@
             this.pb_Baja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Baja.Location = new System.Drawing.Point(772, 26);
+            this.pb_Baja.Location = new System.Drawing.Point(750, 37);
             this.pb_Baja.Name = "pb_Baja";
             this.pb_Baja.Size = new System.Drawing.Size(221, 177);
             this.pb_Baja.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,6 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(992, 275);
             this.Controls.Add(this.pb_Baja);
             this.Controls.Add(this.dgv_Baja);

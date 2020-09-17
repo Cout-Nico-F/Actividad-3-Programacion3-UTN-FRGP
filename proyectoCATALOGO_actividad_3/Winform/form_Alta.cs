@@ -18,6 +18,13 @@ namespace Winform
     {
       InitializeComponent();
     }
+        private void Cargar()
+        {
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            dgv_Alta.DataSource = negocio.ListarArticulos();
+            dgv_Alta.Columns["id"].Visible = false;
+            dgv_Alta.Columns["imagenurl"].Visible = false;
+        }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -46,9 +53,13 @@ namespace Winform
             //marcaNegocio.agregarMarca(marca);
             //categoriaNegocio.agregarCategoria(categoria);
 
-            MessageBox.Show("Articulo agregado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show("Articulo agregado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            //con este nuevo form de Alta no haria falta el mensaje no? ya que el dgv se actualiza automaticamente
 
-            Close();
+            form_Alta alta= new form_Alta();
+            alta.ShowDialog();
+            Cargar();
+            //Close();
         }
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
@@ -63,8 +74,10 @@ namespace Winform
 
         private void form_Alta_Load(object sender, EventArgs e)
         {
-            
-            
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            dgv_Alta.DataSource = negocio.ListarArticulos();
+            dgv_Alta.Columns[4].Visible = false;
+
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
@@ -136,6 +149,11 @@ namespace Winform
                 return;
             }
             errorAlta.SetError(combob_Categoria, "");
+        }
+
+        private void dgv_Alta_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -61,6 +61,7 @@
             // 
             this.label_Nombre.AutoSize = true;
             this.label_Nombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Nombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label_Nombre.Location = new System.Drawing.Point(33, 81);
             this.label_Nombre.Name = "label_Nombre";
             this.label_Nombre.Size = new System.Drawing.Size(59, 14);
@@ -71,6 +72,7 @@
             // 
             this.label_Descripcion.AutoSize = true;
             this.label_Descripcion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Descripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label_Descripcion.Location = new System.Drawing.Point(33, 126);
             this.label_Descripcion.Name = "label_Descripcion";
             this.label_Descripcion.Size = new System.Drawing.Size(84, 14);
@@ -81,6 +83,7 @@
             // 
             this.lb_Marca.AutoSize = true;
             this.lb_Marca.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.lb_Marca.Location = new System.Drawing.Point(33, 215);
             this.lb_Marca.Name = "lb_Marca";
             this.lb_Marca.Size = new System.Drawing.Size(47, 14);
@@ -116,6 +119,7 @@
             // 
             this.label_Codigo.AutoSize = true;
             this.label_Codigo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Codigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label_Codigo.Location = new System.Drawing.Point(33, 43);
             this.label_Codigo.Name = "label_Codigo";
             this.label_Codigo.Size = new System.Drawing.Size(52, 14);
@@ -142,6 +146,7 @@
             // 
             this.label_Precio.AutoSize = true;
             this.label_Precio.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Precio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label_Precio.Location = new System.Drawing.Point(33, 172);
             this.label_Precio.Name = "label_Precio";
             this.label_Precio.Size = new System.Drawing.Size(49, 14);
@@ -152,6 +157,7 @@
             // 
             this.label_Categoria.AutoSize = true;
             this.label_Categoria.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Categoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label_Categoria.Location = new System.Drawing.Point(33, 252);
             this.label_Categoria.Name = "label_Categoria";
             this.label_Categoria.Size = new System.Drawing.Size(71, 14);
@@ -168,25 +174,35 @@
             // 
             // btAceptar
             // 
+            this.btAceptar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btAceptar.FlatAppearance.BorderSize = 3;
+            this.btAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btAceptar.Location = new System.Drawing.Point(96, 329);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(131, 57);
             this.btAceptar.TabIndex = 12;
             this.btAceptar.Text = "ACEPTAR";
-            this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.UseVisualStyleBackColor = false;
             this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             this.btAceptar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btAceptar_MouseMove);
             // 
             // btCancelar
             // 
+            this.btCancelar.BackColor = System.Drawing.Color.AntiqueWhite;
             this.btCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.btCancelar.FlatAppearance.BorderSize = 3;
+            this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.btCancelar.Location = new System.Drawing.Point(326, 329);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(120, 57);
             this.btCancelar.TabIndex = 13;
             this.btCancelar.Text = "CANCELAR";
-            this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             this.btCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btCancelar_MouseMove);
             // 
@@ -198,7 +214,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.label1.Location = new System.Drawing.Point(33, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 14);
@@ -233,6 +249,7 @@
             this.panel1.Controls.Add(this.combob_Marca);
             this.panel1.Controls.Add(this.combob_Categoria);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.panel1.Location = new System.Drawing.Point(824, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 398);
@@ -265,7 +282,7 @@
             this.dgv_Alta.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Alta.EnableHeadersVisualStyles = false;
             this.dgv_Alta.GridColor = System.Drawing.Color.SlateGray;
-            this.dgv_Alta.Location = new System.Drawing.Point(62, 55);
+            this.dgv_Alta.Location = new System.Drawing.Point(38, 55);
             this.dgv_Alta.Name = "dgv_Alta";
             this.dgv_Alta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -284,8 +301,9 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_Alta.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Alta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Alta.Size = new System.Drawing.Size(675, 276);
+            this.dgv_Alta.Size = new System.Drawing.Size(719, 276);
             this.dgv_Alta.TabIndex = 17;
+            this.dgv_Alta.SelectionChanged += new System.EventHandler(this.dgv_Alta_SelectionChanged);
             // 
             // form_Alta
             // 

@@ -180,5 +180,10 @@ namespace Winform
         {
 
         }
+
+        private void dgvListar_SelectionChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

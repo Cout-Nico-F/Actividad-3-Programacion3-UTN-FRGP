@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.lblListado = new System.Windows.Forms.Label();
             this.panel_Articulos = new System.Windows.Forms.Panel();
             this.panel_Opciones = new System.Windows.Forms.Panel();
             this.btn_Eliminar = new System.Windows.Forms.Button();
@@ -51,17 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblListado
-            // 
-            this.lblListado.AutoSize = true;
-            this.lblListado.Font = new System.Drawing.Font("Rockwell", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListado.ForeColor = System.Drawing.Color.White;
-            this.lblListado.Location = new System.Drawing.Point(198, 41);
-            this.lblListado.Name = "lblListado";
-            this.lblListado.Size = new System.Drawing.Size(245, 27);
-            this.lblListado.TabIndex = 5;
-            this.lblListado.Text = "Listado de Productos";
             // 
             // panel_Articulos
             // 
@@ -232,7 +220,7 @@
             this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListar.EnableHeadersVisualStyles = false;
             this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(203, 104);
+            this.dgvListar.Location = new System.Drawing.Point(242, 41);
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -251,22 +239,18 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(656, 230);
+            this.dgvListar.Size = new System.Drawing.Size(818, 311);
             this.dgvListar.TabIndex = 9;
             this.dgvListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListar_CellContentClick_1);
+            this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged_1);
             // 
             // pbImagen
             // 
-            this.pbImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbImagen.Location = new System.Drawing.Point(886, 74);
+            this.pbImagen.Location = new System.Drawing.Point(991, 118);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(255, 288);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbImagen.Size = new System.Drawing.Size(122, 194);
             this.pbImagen.TabIndex = 10;
             this.pbImagen.TabStop = false;
-            this.pbImagen.Click += new System.EventHandler(this.pbImagen_Click_1);
             // 
             // Form1
             // 
@@ -277,7 +261,6 @@
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
             this.Controls.Add(this.panel_Articulos);
-            this.Controls.Add(this.lblListado);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1000, 360);
             this.Name = "Form1";
@@ -290,12 +273,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
     }
 
         #endregion
-        private System.Windows.Forms.Label lblListado;
         private System.Windows.Forms.Panel panel_Articulos;
         private System.Windows.Forms.Button btn_Opciones;
         private System.Windows.Forms.Panel panel_Productos;
