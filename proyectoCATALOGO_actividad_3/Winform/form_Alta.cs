@@ -56,8 +56,8 @@ namespace Winform
             //MessageBox.Show("Articulo agregado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information); 
             //con este nuevo form de Alta no haria falta el mensaje no? ya que el dgv se actualiza automaticamente
 
-            form_Alta alta= new form_Alta();
-            alta.ShowDialog();
+            //form_Alta alta= new form_Alta();
+            //alta.ShowDialog();
             Cargar();
             //Close();
         }
