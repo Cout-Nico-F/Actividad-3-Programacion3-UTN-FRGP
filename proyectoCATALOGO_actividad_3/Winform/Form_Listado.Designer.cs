@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblListado = new System.Windows.Forms.Label();
-            this.pbImagen = new System.Windows.Forms.PictureBox();
-            this.dgvListar = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
+            this.pb_Imagen = new System.Windows.Forms.PictureBox();
+            this.dgv_Listado = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Listado)).BeginInit();
             this.SuspendLayout();
             // 
             // lblListado
@@ -50,25 +50,25 @@
             this.lblListado.TabIndex = 6;
             this.lblListado.Text = "Listado de Productos";
             // 
-            // pbImagen
+            // pb_Imagen
             // 
-            this.pbImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pb_Imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbImagen.Location = new System.Drawing.Point(738, 65);
-            this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(242, 288);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbImagen.TabIndex = 7;
-            this.pbImagen.TabStop = false;
+            this.pb_Imagen.Location = new System.Drawing.Point(738, 65);
+            this.pb_Imagen.Name = "pb_Imagen";
+            this.pb_Imagen.Size = new System.Drawing.Size(242, 288);
+            this.pb_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Imagen.TabIndex = 7;
+            this.pb_Imagen.TabStop = false;
             // 
-            // dgvListar
+            // dgv_Listado
             // 
-            this.dgvListar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvListar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dgvListar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvListar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            this.dgvListar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgv_Listado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dgv_Listado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,9 +76,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvListar.ColumnHeadersHeight = 35;
-            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_Listado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Listado.ColumnHeadersHeight = 35;
+            this.dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,12 +86,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvListar.EnableHeadersVisualStyles = false;
-            this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(30, 67);
-            this.dgvListar.Name = "dgvListar";
-            this.dgvListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_Listado.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Listado.EnableHeadersVisualStyles = false;
+            this.dgv_Listado.GridColor = System.Drawing.Color.SlateGray;
+            this.dgv_Listado.Location = new System.Drawing.Point(30, 77);
+            this.dgv_Listado.Name = "dgv_Listado";
+            this.dgv_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,17 +99,18 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Desktop;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvListar.RowHeadersVisible = false;
+            this.dgv_Listado.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Listado.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(686, 286);
-            this.dgvListar.TabIndex = 8;
+            this.dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_Listado.Size = new System.Drawing.Size(675, 276);
+            this.dgv_Listado.TabIndex = 8;
+            this.dgv_Listado.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
             // Form_Listado
             // 
@@ -117,13 +118,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1013, 381);
-            this.Controls.Add(this.dgvListar);
-            this.Controls.Add(this.pbImagen);
+            this.Controls.Add(this.dgv_Listado);
+            this.Controls.Add(this.pb_Imagen);
             this.Controls.Add(this.lblListado);
             this.Name = "Form_Listado";
             this.Text = "Form_Listado";
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
+            this.Load += new System.EventHandler(this.Form_Listado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Listado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +134,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblListado;
-        private System.Windows.Forms.PictureBox pbImagen;
-        private System.Windows.Forms.DataGridView dgvListar;
+        private System.Windows.Forms.PictureBox pb_Imagen;
+        private System.Windows.Forms.DataGridView dgv_Listado;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Modelo;
+using Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,19 @@ namespace Winform
         public Form_Listado()
         {
             InitializeComponent();
+        }
+
+        private void Form_Listado_Load(object sender, EventArgs e)
+        {
+            ArticulosNegocio negocio = new ArticulosNegocio();
+            dgv_Listado.DataSource = negocio.ListarArticulos();
+            dgv_Listado.Columns[4].Visible = false;
+        }
+
+        private void dgvListar_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo articulo = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
+            pb_Imagen.Load(articulo.imagenUrl);
         }
     }
 }

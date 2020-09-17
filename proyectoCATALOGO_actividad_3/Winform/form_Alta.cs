@@ -63,6 +63,8 @@ namespace Winform
 
         private void form_Alta_Load(object sender, EventArgs e)
         {
+            
+            
             MarcaNegocio marcaNegocio = new MarcaNegocio();
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
