@@ -13,6 +13,7 @@ using Modelo;
 // agregue como referencia a Modelo y Negocio para poder hacer un using 
 namespace Winform
 {
+    //problema de asignacion de id salta del ID = 5 al ID = 11
     public partial class Form1 : Form
     {
         public Form1()
@@ -54,6 +55,7 @@ namespace Winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             Cargar();
         }
 
