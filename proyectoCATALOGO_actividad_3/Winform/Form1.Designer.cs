@@ -28,6 +28,7 @@
     /// </summary>
     private void InitializeComponent()
     {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,6 +45,9 @@
             this.btn_Articulos = new System.Windows.Forms.Button();
             this.dgvListar = new System.Windows.Forms.DataGridView();
             this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.lbl_Hora = new System.Windows.Forms.Label();
+            this.lbl_Fecha = new System.Windows.Forms.Label();
+            this.tm_timer = new System.Windows.Forms.Timer(this.components);
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
             this.panel_Productos.SuspendLayout();
@@ -61,7 +65,7 @@
             this.panel_Articulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Articulos.Location = new System.Drawing.Point(0, 0);
             this.panel_Articulos.Name = "panel_Articulos";
-            this.panel_Articulos.Size = new System.Drawing.Size(172, 399);
+            this.panel_Articulos.Size = new System.Drawing.Size(172, 341);
             this.panel_Articulos.TabIndex = 6;
             // 
             // panel_Opciones
@@ -204,7 +208,7 @@
             this.dgvListar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -242,30 +246,60 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(818, 311);
+            this.dgvListar.Size = new System.Drawing.Size(628, 197);
             this.dgvListar.TabIndex = 9;
             this.dgvListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListar_CellContentClick_1);
             this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged_1);
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(991, 118);
+            this.pbImagen.Location = new System.Drawing.Point(958, 68);
             this.pbImagen.Name = "pbImagen";
             this.pbImagen.Size = new System.Drawing.Size(122, 194);
             this.pbImagen.TabIndex = 10;
             this.pbImagen.TabStop = false;
+            // 
+            // lbl_Hora
+            // 
+            this.lbl_Hora.AutoSize = true;
+            this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Hora.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Hora.Location = new System.Drawing.Point(261, 262);
+            this.lbl_Hora.Name = "lbl_Hora";
+            this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Hora.TabIndex = 11;
+            this.lbl_Hora.Text = "label1";
+            // 
+            // lbl_Fecha
+            // 
+            this.lbl_Fecha.AutoSize = true;
+            this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Fecha.Location = new System.Drawing.Point(556, 262);
+            this.lbl_Fecha.Name = "lbl_Fecha";
+            this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Fecha.TabIndex = 12;
+            this.lbl_Fecha.Text = "label1";
+            // 
+            // tm_timer
+            // 
+            this.tm_timer.Enabled = true;
+            this.tm_timer.Tick += new System.EventHandler(this.tm_timer_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1178, 399);
+            this.ClientSize = new System.Drawing.Size(1098, 341);
+            this.Controls.Add(this.lbl_Fecha);
+            this.Controls.Add(this.lbl_Hora);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
             this.Controls.Add(this.panel_Articulos);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1000, 360);
+            this.MinimumSize = new System.Drawing.Size(256, 187);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Articulos";
@@ -276,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
     }
 
@@ -291,6 +326,9 @@
         private System.Windows.Forms.Button btnAgrega;
         private System.Windows.Forms.DataGridView dgvListar;
         private System.Windows.Forms.PictureBox pbImagen;
+        private System.Windows.Forms.Label lbl_Hora;
+        private System.Windows.Forms.Label lbl_Fecha;
+        private System.Windows.Forms.Timer tm_timer;
     }
 }
 

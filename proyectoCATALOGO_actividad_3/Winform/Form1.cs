@@ -187,5 +187,11 @@ namespace Winform
         {
 
         }
+
+        private void tm_timer_Tick(object sender, EventArgs e)
+        {
+            lbl_Hora.Text = DateTime.Now.ToString("HH:mm:ss"); //mayusculas = formato 24 horas
+            lbl_Fecha.Text = DateTime.Now.ToShortDateString();
+        }
     }
 }
