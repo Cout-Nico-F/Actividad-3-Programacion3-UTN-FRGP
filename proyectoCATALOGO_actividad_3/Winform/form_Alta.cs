@@ -168,5 +168,10 @@ namespace Winform
             }
             errorAlta.SetError(combob_Categoria, "");
         }
+
+        private void btn_Volver_Agregar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
