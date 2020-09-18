@@ -135,7 +135,7 @@ namespace Winform
 
             Ocultar_Submenu();
         }
-
+     
         private void btnAgrega_Click(object sender, EventArgs e)
         {
             form_Alta alta = new form_Alta();

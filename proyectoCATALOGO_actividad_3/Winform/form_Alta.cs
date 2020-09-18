@@ -25,13 +25,29 @@ namespace Winform
             dgv_Alta.Columns["id"].Visible = false;
             dgv_Alta.Columns["imagenurl"].Visible = false;
         }
+        public void Limpiar_txt_cb()
+        {
+            txt_Codigo.Clear();
+            txt_Descripcion.Clear();
+            txt_ImagenURL.Clear();
+            txt_Nombre.Clear();
+            txt_Precio.Clear();
+
+            // no encontre una forma de que se limpien los combobox porque siempre aparece como predeterminado samsung y celulares
+            // encontre una manera pero nose si es la adecuada de todos modos dejo el comentario por ahi si encontras una manera mas limpia 
+
+            combob_Categoria.Text = " ";
+            combob_Marca.Text = " ";
+        }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
             // Una cosa importante es que deben estar en orden con los textbox, deben estar tal cual estan por ejemplo si el primero es txt_Codigo
             // en el form de Alta tengo que hacer un if de Codigo primero porque si no no tira el error en orden
 
+
             ComprobarCampos();
+
 
             Articulo nuevo = new Articulo();
             Marca marca = new Marca();
@@ -58,7 +74,9 @@ namespace Winform
 
             //form_Alta alta= new form_Alta();
             //alta.ShowDialog();
+            
             Cargar();
+            Limpiar_txt_cb();
             //Close();
         }
 
