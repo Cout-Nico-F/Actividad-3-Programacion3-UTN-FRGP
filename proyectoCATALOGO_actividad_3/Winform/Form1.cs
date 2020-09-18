@@ -161,5 +161,11 @@ namespace Winform
             lbl_Hora.Text = DateTime.Now.ToString("HH:mm:ss"); //mayusculas = formato 24 horas
             lbl_Fecha.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void btn_PantallaCarga_Click(object sender, EventArgs e)
+        {
+            Form_Bienvenida bien = new Form_Bienvenida();
+            bien.Show();
+        }
     }
 }
