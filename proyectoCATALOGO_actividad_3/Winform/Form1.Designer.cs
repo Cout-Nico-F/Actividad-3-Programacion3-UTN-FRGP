@@ -248,8 +248,6 @@
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListar.Size = new System.Drawing.Size(628, 197);
             this.dgvListar.TabIndex = 9;
-            this.dgvListar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListar_CellContentClick_1);
-            this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged_1);
             // 
             // pbImagen
             // 

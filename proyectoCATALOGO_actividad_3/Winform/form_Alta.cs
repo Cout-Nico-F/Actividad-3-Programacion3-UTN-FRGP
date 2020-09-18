@@ -168,10 +168,5 @@ namespace Winform
             }
             errorAlta.SetError(combob_Categoria, "");
         }
-
-        private void dgv_Alta_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

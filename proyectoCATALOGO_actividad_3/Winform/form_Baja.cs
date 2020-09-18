@@ -40,8 +40,6 @@ namespace Winform
             {
 
             }
-            
-
         }
 
         private void btn_AceptarBaja_Click(object sender, EventArgs e)
@@ -53,11 +51,6 @@ namespace Winform
             MessageBox.Show("Articulo eliminado exitosamente", "Atencion",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             Close();
-        }
-
-        private void dgv_Baja_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btn_CancelarBaja_Click(object sender, EventArgs e)

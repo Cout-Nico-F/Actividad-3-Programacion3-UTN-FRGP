@@ -56,7 +56,6 @@ namespace Negocios
                 {
                   aux.Marca.Descripcion = " ";
                 }
-
                 try
                 {
                   aux.Categoria = new Categoria();
@@ -67,20 +66,11 @@ namespace Negocios
                 {
                   aux.Categoria.Descripcion = " ";
                 }
-
                 aux.Id = Reader.GetInt32(7);
-                
-
-                // (tengo problemas con mostrar el precio) rta-> Segun lo que investigué el tipo de data Money de SQL es equivalente al tipo Decimal en .net
-                
-                // (no se porque sale descripcion antes que nombre) rta-> DGV toma por defecto el orden de la clase Articulo en este caso.  Entonces cambié el orden de declaracion de las prop y listo.
-
                 listaArticulos.Add(aux);
             }
-
             connection.Close();
             return listaArticulos;
-
         }
 
         public void agregarArticulo(Articulo nuevo,Marca m,Categoria c)
@@ -109,7 +99,6 @@ namespace Negocios
             connection.Open();
             command.ExecuteNonQuery();
         }
-        
     }
     // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo
 }

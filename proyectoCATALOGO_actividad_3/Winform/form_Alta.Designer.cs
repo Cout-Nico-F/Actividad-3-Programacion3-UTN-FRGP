@@ -306,7 +306,6 @@
             this.dgv_Alta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Alta.Size = new System.Drawing.Size(719, 276);
             this.dgv_Alta.TabIndex = 17;
-            this.dgv_Alta.SelectionChanged += new System.EventHandler(this.dgv_Alta_SelectionChanged);
             // 
             // form_Alta
             // 

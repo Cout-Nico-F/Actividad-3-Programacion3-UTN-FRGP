@@ -13,7 +13,6 @@ using Modelo;
 // agregue como referencia a Modelo y Negocio para poder hacer un using 
 namespace Winform
 {
-    //problema de asignacion de id salta del ID = 5 al ID = 11
     public partial class Form1 : Form
     {
         public Form1()
@@ -67,11 +66,6 @@ namespace Winform
             dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
         }
 
-        private void dgvListar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -108,16 +102,6 @@ namespace Winform
                 // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
                 //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void pbImagen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btn_Articulos_Click(object sender, EventArgs e)
@@ -169,21 +153,6 @@ namespace Winform
         private void btn_Opciones_Click(object sender, EventArgs e)
         {
             Mostrar_Submenu(panel_Opciones);
-        }
-
-        private void pbImagen_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvListar_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvListar_SelectionChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void tm_timer_Tick(object sender, EventArgs e)
