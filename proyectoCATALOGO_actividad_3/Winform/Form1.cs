@@ -65,6 +65,7 @@ namespace Winform
             dgvListar.DataSource = negocio.ListarArticulos();
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["imagenurl"].Visible = false;
+            dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
         }
 
         private void dgvListar_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -155,7 +156,7 @@ namespace Winform
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (dgvListar.SelectedRows.Count == 1)
+            if (dgvListar.SelectedRows.Count == 1 && dgvListar.CurrentRow != null)
             {
                 form_Baja baja = new form_Baja((Articulo)dgvListar.CurrentRow.DataBoundItem);
                 baja.ShowDialog();
@@ -163,7 +164,7 @@ namespace Winform
             }
             else
             {
-                MessageBox.Show("Haga click sobre un articulo para eliminarlo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Haga click sobre un articulo para seleccionarlo, luego presione eliminar", "Elija el articulo a eliminar.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
                 //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
