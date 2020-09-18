@@ -48,7 +48,6 @@
             this.lbl_Hora = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.tm_timer = new System.Windows.Forms.Timer(this.components);
-            this.btn_Carga = new System.Windows.Forms.Button();
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
             this.panel_Productos.SuspendLayout();
@@ -285,23 +284,12 @@
             this.tm_timer.Enabled = true;
             this.tm_timer.Tick += new System.EventHandler(this.tm_timer_Tick);
             // 
-            // btn_Carga
-            // 
-            this.btn_Carga.Location = new System.Drawing.Point(802, 284);
-            this.btn_Carga.Name = "btn_Carga";
-            this.btn_Carga.Size = new System.Drawing.Size(84, 28);
-            this.btn_Carga.TabIndex = 13;
-            this.btn_Carga.Text = "Carga";
-            this.btn_Carga.UseVisualStyleBackColor = true;
-            this.btn_Carga.Click += new System.EventHandler(this.btn_Carga_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1098, 341);
-            this.Controls.Add(this.btn_Carga);
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl_Hora);
             this.Controls.Add(this.pbImagen);
@@ -339,7 +327,6 @@
         private System.Windows.Forms.Label lbl_Hora;
         private System.Windows.Forms.Label lbl_Fecha;
         private System.Windows.Forms.Timer tm_timer;
-        private System.Windows.Forms.Button btn_Carga;
     }
 }
 
