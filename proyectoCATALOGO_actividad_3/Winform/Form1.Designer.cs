@@ -227,7 +227,7 @@
             this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListar.EnableHeadersVisualStyles = false;
             this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(242, 41);
+            this.dgvListar.Location = new System.Drawing.Point(226, 57);
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
             this.dgvListar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -249,10 +249,11 @@
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListar.Size = new System.Drawing.Size(628, 197);
             this.dgvListar.TabIndex = 9;
+            this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged_1);
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(958, 68);
+            this.pbImagen.Location = new System.Drawing.Point(884, 68);
             this.pbImagen.Name = "pbImagen";
             this.pbImagen.Size = new System.Drawing.Size(122, 194);
             this.pbImagen.TabIndex = 10;

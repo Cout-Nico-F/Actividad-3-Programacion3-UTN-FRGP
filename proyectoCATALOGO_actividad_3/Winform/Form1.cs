@@ -167,5 +167,10 @@ namespace Winform
             Form_Bienvenida bien = new Form_Bienvenida();
             bien.Show();
         }
+
+        private void dgvListar_SelectionChanged_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
