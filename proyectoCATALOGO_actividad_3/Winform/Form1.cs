@@ -55,7 +55,6 @@ namespace Winform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
             Cargar();
         }
 
@@ -126,16 +125,13 @@ namespace Winform
             Mostrar_Submenu(panel_Productos);
         }
 
-        private void btn_Agregar_Click(object sender, EventArgs e)
+        private void btn_Listar_Click(object sender, EventArgs e)
         {
             Form_Listado listado = new Form_Listado();
             listado.ShowDialog();
             Cargar();
             Ocultar_Submenu();
-            
-            // me confundi de nombre nose como arreglarlo
-            // codigo
-
+            //codigo
             Ocultar_Submenu();
         }
      
@@ -166,7 +162,6 @@ namespace Winform
             {
                 MessageBox.Show("Haga click sobre un articulo para seleccionarlo, luego presione eliminar", "Elija el articulo a eliminar.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
-                //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             Ocultar_Submenu();
         }

@@ -176,7 +176,7 @@
             this.btn_Listar.TabIndex = 0;
             this.btn_Listar.Text = "LISTADO DE ARTICULOS";
             this.btn_Listar.UseVisualStyleBackColor = false;
-            this.btn_Listar.Click += new System.EventHandler(this.btn_Agregar_Click);
+            this.btn_Listar.Click += new System.EventHandler(this.btn_Listar_Click);
             // 
             // btn_Articulos
             // 
