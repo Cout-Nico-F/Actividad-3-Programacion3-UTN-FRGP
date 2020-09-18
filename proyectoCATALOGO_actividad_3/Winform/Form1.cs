@@ -164,10 +164,8 @@ namespace Winform
 
         private void btn_Carga_Click(object sender, EventArgs e)
         {
-            
-            
-            //form_CargaAplicacion carga = new form_CargaAplicacion();
-            //carga.Show();
+            form_CargaAplicacion carga = new form_CargaAplicacion();
+            carga.Show();
         }
     }
 }
