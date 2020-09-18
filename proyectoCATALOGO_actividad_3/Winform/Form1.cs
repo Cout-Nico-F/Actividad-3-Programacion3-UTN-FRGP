@@ -64,6 +64,7 @@ namespace Winform
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["imagenurl"].Visible = false;
             dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
+            dgvListar.Rows[0].Selected = false;
         }
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
