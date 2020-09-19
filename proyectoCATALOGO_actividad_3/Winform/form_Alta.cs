@@ -111,6 +111,7 @@ namespace Winform
                 txt_Codigo.Text = articulo.codigo;
                 txt_ImagenURL.Text = articulo.imagenUrl;
                 txt_Precio.Text = articulo.precio.ToString();
+
                 combob_Categoria.SelectedValue = articulo.Categoria.Id;
                 combob_Marca.SelectedValue = articulo.Marca.Id;
             }
@@ -121,9 +122,9 @@ namespace Winform
             this.Close();
         }
 
-        private bool ComprobarCampos()
+        private bool ComprobarCampos() //Todos los campos menos el ID admiten null en la base de datos. entonces de que sirve este metodo en realidad? 
         {
-            if (txt_Codigo.Text == "")
+            /*if (txt_Codigo.Text == "")
             {
                 errorAlta.SetError(txt_Codigo, "Codigo no ingresado");
                 MessageBox.Show("Ingrese el codigo del Articulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -181,7 +182,7 @@ namespace Winform
                 return false;
             }
             errorAlta.SetError(combob_Categoria, "");
-
+*/
             return true;
         }
 
