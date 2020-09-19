@@ -53,22 +53,23 @@ namespace Winform
         {
             if (ComprobarCampos())
             {
-                Articulo nuevo = new Articulo();
+                Articulo articulo = new Articulo();
+
                 Marca marca = new Marca();
                 Categoria categoria = new Categoria();
                 ArticulosNegocio articuloNegocio = new ArticulosNegocio();
                 MarcaNegocio marcaNegocio = new MarcaNegocio();
                 CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
-                nuevo.codigo = txt_Codigo.Text;
-                nuevo.nombre = txt_Nombre.Text;
-                nuevo.descripcion = txt_Descripcion.Text;
-                nuevo.precio = Convert.ToDecimal(txt_Precio.Text);
+                articulo.codigo = txt_Codigo.Text;
+                articulo.nombre = txt_Nombre.Text;
+                articulo.descripcion = txt_Descripcion.Text;
+                articulo.precio = Convert.ToDecimal(txt_Precio.Text);
                 marca = (Marca)combob_Marca.SelectedItem;
                 categoria = (Categoria)combob_Categoria.SelectedItem;
-                nuevo.imagenUrl = txt_ImagenURL.Text;
+                articulo.imagenUrl = txt_ImagenURL.Text;
 
-                articuloNegocio.agregarArticulo(nuevo, marca, categoria);
+                articuloNegocio.agregarArticulo(articulo, marca, categoria);
 
                 Cargar();
                 Limpiar_txt_cb();
