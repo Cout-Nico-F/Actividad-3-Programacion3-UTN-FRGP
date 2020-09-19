@@ -14,17 +14,17 @@ namespace Winform
 {
     public partial class form_Alta : Form
     {
-        Articulo _articulo = null;
+        private Articulo articulo = null;
 
         public form_Alta()
         {
             InitializeComponent();
         }
 
-        public form_Alta(Articulo articulo)
+        public form_Alta(Articulo _articulo)
         {
             InitializeComponent();
-            _articulo = articulo;
+            articulo = _articulo;
         }
 
         private void Cargar()
@@ -33,7 +33,6 @@ namespace Winform
             dgv_Alta.DataSource = negocio.ListarArticulos();
             dgv_Alta.Columns["id"].Visible = false;
             dgv_Alta.Columns["imagenurl"].Visible = false;
-
         }
         public void Limpiar_txt_cb()
         {

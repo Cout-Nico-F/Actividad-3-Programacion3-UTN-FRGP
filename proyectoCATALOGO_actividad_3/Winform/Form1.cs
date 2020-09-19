@@ -114,7 +114,7 @@ namespace Winform
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
-            if (dgvListar.SelectedRows.Count == 1 && dgvListar.CurrentRow != null)
+            if (dgvListar.CurrentRow != null)
             {
                 form_Baja baja = new form_Baja((Articulo)dgvListar.CurrentRow.DataBoundItem);
                 baja.ShowDialog();
