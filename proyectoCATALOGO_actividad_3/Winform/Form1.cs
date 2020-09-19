@@ -51,7 +51,6 @@ namespace Winform
                 Submenu.Visible = false;
         }
             
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Cargar();
@@ -87,6 +86,7 @@ namespace Winform
             form_Alta alta = new form_Alta();
             alta.ShowDialog();
             Cargar();
+            Ocultar_Submenu();
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -117,14 +117,6 @@ namespace Winform
             Cargar();
             Ocultar_Submenu();
             //codigo
-            Ocultar_Submenu();
-        }
-     
-        private void btnAgrega_Click(object sender, EventArgs e)
-        {
-            form_Alta alta = new form_Alta();
-            alta.ShowDialog();
-            Cargar();
             Ocultar_Submenu();
         }
 

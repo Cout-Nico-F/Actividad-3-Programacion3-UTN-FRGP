@@ -132,7 +132,7 @@
             this.btnAgrega.TabIndex = 0;
             this.btnAgrega.Text = "AGREGAR";
             this.btnAgrega.UseVisualStyleBackColor = false;
-            this.btnAgrega.Click += new System.EventHandler(this.btnAgrega_Click);
+            this.btnAgrega.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btn_Opciones
             // 
