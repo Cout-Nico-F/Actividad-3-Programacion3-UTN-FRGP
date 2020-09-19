@@ -64,6 +64,12 @@
     <Compile Include="form_Baja.Designer.cs">
       <DependentUpon>form_Baja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Bienvenida.Designer.cs">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Listado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_Baja.resx">
       <DependentUpon>form_Baja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Bienvenida.resx">
+      <DependentUpon>Form_Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Listado.resx">
       <DependentUpon>Form_Listado.cs</DependentUpon>
