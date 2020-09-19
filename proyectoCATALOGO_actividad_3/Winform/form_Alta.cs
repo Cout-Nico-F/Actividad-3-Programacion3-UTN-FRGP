@@ -43,42 +43,28 @@ namespace Winform
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            // Una cosa importante es que deben estar en orden con los textbox, deben estar tal cual estan por ejemplo si el primero es txt_Codigo
-            // en el form de Alta tengo que hacer un if de Codigo primero porque si no no tira el error en orden
+            if (ComprobarCampos())
+            {
+                Articulo nuevo = new Articulo();
+                Marca marca = new Marca();
+                Categoria categoria = new Categoria();
+                ArticulosNegocio articuloNegocio = new ArticulosNegocio();
+                MarcaNegocio marcaNegocio = new MarcaNegocio();
+                CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
 
+                nuevo.codigo = txt_Codigo.Text;
+                nuevo.nombre = txt_Nombre.Text;
+                nuevo.descripcion = txt_Descripcion.Text;
+                nuevo.precio = Convert.ToDecimal(txt_Precio.Text);
+                marca = (Marca)combob_Marca.SelectedItem;
+                categoria = (Categoria)combob_Categoria.SelectedItem;
+                nuevo.imagenUrl = txt_ImagenURL.Text;
 
-            ComprobarCampos();
+                articuloNegocio.agregarArticulo(nuevo, marca, categoria);
 
-
-            Articulo nuevo = new Articulo();
-            Marca marca = new Marca();
-            Categoria categoria = new Categoria();
-            ArticulosNegocio articuloNegocio = new ArticulosNegocio();
-            MarcaNegocio marcaNegocio = new MarcaNegocio();
-            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-
-            nuevo.codigo = txt_Codigo.Text;
-            nuevo.nombre = txt_Nombre.Text;
-            nuevo.descripcion = txt_Descripcion.Text;
-            nuevo.precio = Convert.ToDecimal(txt_Precio.Text);
-            marca = (Marca)combob_Marca.SelectedItem;
-            categoria = (Categoria)combob_Categoria.SelectedItem;
-            nuevo.imagenUrl = txt_ImagenURL.Text;
-
-            //funcion de agregar articulo
-            articuloNegocio.agregarArticulo(nuevo, marca, categoria);
-            //marcaNegocio.agregarMarca(marca);
-            //categoriaNegocio.agregarCategoria(categoria);
-
-            //MessageBox.Show("Articulo agregado exitosamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information); 
-            //con este nuevo form de Alta no haria falta el mensaje no? ya que el dgv se actualiza automaticamente
-
-            //form_Alta alta= new form_Alta();
-            //alta.ShowDialog();
-
-            Cargar();
-            Limpiar_txt_cb();
-            //Close();
+                Cargar();
+                Limpiar_txt_cb();
+            }
         }
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
@@ -110,14 +96,14 @@ namespace Winform
             this.Close();
         }
 
-        private void ComprobarCampos()
+        private bool ComprobarCampos()
         {
             if (txt_Codigo.Text == "")
             {
                 errorAlta.SetError(txt_Codigo, "Codigo no ingresado");
                 MessageBox.Show("Ingrese el codigo del Articulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Codigo.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(txt_Codigo, "");
 
@@ -126,7 +112,7 @@ namespace Winform
                 errorAlta.SetError(txt_Nombre, "Nombre no ingresado");
                 MessageBox.Show("Ingrese el nombre del Articulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Nombre.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(txt_Nombre, "");
 
@@ -135,7 +121,7 @@ namespace Winform
                 errorAlta.SetError(txt_Descripcion, "Descripcion no ingresado");
                 MessageBox.Show("Ingrese un descripcion del Articulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Descripcion.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(txt_Descripcion, "");
 
@@ -149,7 +135,7 @@ namespace Winform
                 errorAlta.SetError(txt_Precio, "Precio no ingresado o el Precio no es un numero");
                 MessageBox.Show("Ingrese un Precio expresado de forma numerica ", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Precio.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(txt_Precio, "");
 
@@ -158,7 +144,7 @@ namespace Winform
                 errorAlta.SetError(combob_Marca, "Marca no ingresada");
                 MessageBox.Show("Elija una Marca de la lista desplegable", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 combob_Marca.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(combob_Marca, "");
 
@@ -167,9 +153,11 @@ namespace Winform
                 errorAlta.SetError(combob_Categoria, "Categoria no ingresada");
                 MessageBox.Show("Elija una categoria del la lista desplegable", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 combob_Categoria.Focus();
-                return;
+                return false;
             }
             errorAlta.SetError(combob_Categoria, "");
+
+            return true;
         }
 
         private void btn_Volver_Agregar_Click(object sender, EventArgs e)
