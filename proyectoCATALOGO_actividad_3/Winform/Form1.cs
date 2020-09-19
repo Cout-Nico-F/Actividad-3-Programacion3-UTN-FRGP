@@ -89,22 +89,6 @@ namespace Winform
             Ocultar_Submenu();
         }
 
-        private void btnBaja_Click(object sender, EventArgs e)
-        {
-            if (dgvListar.SelectedRows.Count == 1)
-            {
-                form_Baja baja = new form_Baja((Articulo)dgvListar.CurrentRow.DataBoundItem);
-                baja.ShowDialog();
-                Cargar(); // para que al volver a form1 la lista este actualizada.
-            }
-            else
-            {
-                MessageBox.Show("Haga click sobre un articulo para eliminarlo","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
-                //MessageBox.Show("Haga click en la zona blanca del articulo a eliminar para seleccionarlo \n(La fila entera aparecera seleccionada) ", "Seleccione primero la fila a Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void btn_Articulos_Click(object sender, EventArgs e)
         {
             Mostrar_Submenu(panel_Productos);
@@ -138,7 +122,6 @@ namespace Winform
             else
             {
                 MessageBox.Show("Haga click sobre un articulo para seleccionarlo, luego presione eliminar", "Elija el articulo a eliminar.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // nose que te parece esto hice no visible el cuadrito del costado (Row) y en cambio hice que se pueda seleccionar toda la fila de una ¿Que te parece?
             }
             Ocultar_Submenu();
         }
@@ -158,11 +141,6 @@ namespace Winform
         {
             Form_Bienvenida bien = new Form_Bienvenida();
             bien.Show();
-        }
-
-        private void dgvListar_SelectionChanged_1(object sender, EventArgs e)
-        {
-            
         }
     }
 }
