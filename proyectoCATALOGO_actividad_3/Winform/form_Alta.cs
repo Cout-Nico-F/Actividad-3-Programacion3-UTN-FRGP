@@ -112,6 +112,7 @@ namespace Winform
                 txt_ImagenURL.Text = articulo.imagenUrl;
                 txt_Precio.Text = articulo.precio.ToString();
                 combob_Categoria.SelectedValue = articulo.Categoria.Id;
+                combob_Marca.SelectedValue = articulo.Marca.Id;
             }
         }
 

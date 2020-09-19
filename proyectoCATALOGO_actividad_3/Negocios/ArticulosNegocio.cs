@@ -71,7 +71,7 @@ namespace Negocios
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                  //aux.Categoria.Descripcion = " "; //No puedo quitar esta linea o la conversion tira error
+                  aux.Categoria.Descripcion = " "; //No puedo quitar esta linea o la conversion tira error
                 }
                 try
                 {
