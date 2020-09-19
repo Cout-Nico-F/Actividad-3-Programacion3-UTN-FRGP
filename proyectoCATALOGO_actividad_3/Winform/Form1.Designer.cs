@@ -241,7 +241,7 @@
             this.dgvListar.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvListar.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SkyBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -249,13 +249,13 @@
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListar.Size = new System.Drawing.Size(628, 197);
             this.dgvListar.TabIndex = 9;
-            this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged_1);
+            this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
             // pbImagen
             // 
             this.pbImagen.Location = new System.Drawing.Point(884, 68);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(122, 194);
+            this.pbImagen.Size = new System.Drawing.Size(202, 194);
             this.pbImagen.TabIndex = 10;
             this.pbImagen.TabStop = false;
             // 
@@ -302,10 +302,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1098, 341);
+            this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btn_PantallaCarga);
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl_Hora);
-            this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.dgvListar);
             this.Controls.Add(this.panel_Articulos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
