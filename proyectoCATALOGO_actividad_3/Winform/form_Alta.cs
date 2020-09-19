@@ -14,10 +14,19 @@ namespace Winform
 {
     public partial class form_Alta : Form
     {
+        Articulo _articulo = null;
+
         public form_Alta()
         {
             InitializeComponent();
         }
+
+        public form_Alta(Articulo articulo)
+        {
+            InitializeComponent();
+            _articulo = articulo;
+        }
+
         private void Cargar()
         {
             ArticulosNegocio negocio = new ArticulosNegocio();

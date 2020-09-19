@@ -106,8 +106,9 @@ namespace Winform
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            form_Modificar Modificar = new form_Modificar();
-            Modificar.ShowDialog();
+            form_Alta modificar = new form_Alta((Articulo)dgvListar.CurrentRow.DataBoundItem);
+            modificar.ShowDialog();
+            Cargar();
             Ocultar_Submenu();
         }
 

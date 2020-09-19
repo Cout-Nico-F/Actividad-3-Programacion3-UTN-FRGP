@@ -286,6 +286,7 @@
             this.dgv_Alta.EnableHeadersVisualStyles = false;
             this.dgv_Alta.GridColor = System.Drawing.Color.SlateGray;
             this.dgv_Alta.Location = new System.Drawing.Point(38, 55);
+            this.dgv_Alta.MultiSelect = false;
             this.dgv_Alta.Name = "dgv_Alta";
             this.dgv_Alta.ReadOnly = true;
             this.dgv_Alta.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -298,6 +299,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Alta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Alta.RowHeadersVisible = false;
+            this.dgv_Alta.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
