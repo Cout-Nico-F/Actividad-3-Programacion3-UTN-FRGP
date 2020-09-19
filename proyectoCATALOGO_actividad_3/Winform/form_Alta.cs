@@ -12,18 +12,19 @@ using System.Windows.Forms;
 
 namespace Winform
 {
-  public partial class form_Alta : Form
-  {
-    public form_Alta()
+    public partial class form_Alta : Form
     {
-      InitializeComponent();
-    }
+        public form_Alta()
+        {
+            InitializeComponent();
+        }
         private void Cargar()
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgv_Alta.DataSource = negocio.ListarArticulos();
             dgv_Alta.Columns["id"].Visible = false;
             dgv_Alta.Columns["imagenurl"].Visible = false;
+
         }
         public void Limpiar_txt_cb()
         {
@@ -59,13 +60,13 @@ namespace Winform
             nuevo.codigo = txt_Codigo.Text;
             nuevo.nombre = txt_Nombre.Text;
             nuevo.descripcion = txt_Descripcion.Text;
-            nuevo.precio = Convert.ToDecimal(txt_Precio.Text); 
-            marca =(Marca)combob_Marca.SelectedItem;
+            nuevo.precio = Convert.ToDecimal(txt_Precio.Text);
+            marca = (Marca)combob_Marca.SelectedItem;
             categoria = (Categoria)combob_Categoria.SelectedItem;
             nuevo.imagenUrl = txt_ImagenURL.Text;
 
             //funcion de agregar articulo
-            articuloNegocio.agregarArticulo(nuevo,marca,categoria);
+            articuloNegocio.agregarArticulo(nuevo, marca, categoria);
             //marcaNegocio.agregarMarca(marca);
             //categoriaNegocio.agregarCategoria(categoria);
 
@@ -74,7 +75,7 @@ namespace Winform
 
             //form_Alta alta= new form_Alta();
             //alta.ShowDialog();
-            
+
             Cargar();
             Limpiar_txt_cb();
             //Close();
@@ -100,6 +101,8 @@ namespace Winform
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
             combob_Categoria.DataSource = categoriaNegocio.ListarCategorias();
+
+            Limpiar_txt_cb();
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
