@@ -41,6 +41,8 @@ namespace Winform
             txt_ImagenURL.Clear();
             txt_Nombre.Clear();
             txt_Precio.Clear();
+            combob_Categoria.SelectedIndex = -1;
+            combob_Marca.SelectedIndex = -1;
 
             // no encontre una forma de que se limpien los combobox porque siempre aparece como predeterminado samsung y celulares
             // encontre una manera pero nose si es la adecuada de todos modos dejo el comentario por ahi si encontras una manera mas limpia 
