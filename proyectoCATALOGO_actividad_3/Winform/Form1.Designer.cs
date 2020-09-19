@@ -227,7 +227,7 @@
             this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListar.EnableHeadersVisualStyles = false;
             this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(226, 57);
+            this.dgvListar.Location = new System.Drawing.Point(200, 30);
             this.dgvListar.MultiSelect = false;
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
@@ -248,7 +248,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(628, 197);
+            this.dgvListar.Size = new System.Drawing.Size(666, 229);
             this.dgvListar.TabIndex = 9;
             this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
@@ -271,6 +271,7 @@
             this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
             this.lbl_Hora.TabIndex = 11;
             this.lbl_Hora.Text = "label1";
+            this.lbl_Hora.Click += new System.EventHandler(this.lbl_Hora_Click);
             // 
             // lbl_Fecha
             // 
@@ -290,11 +291,13 @@
             // 
             // btn_PantallaCarga
             // 
-            this.btn_PantallaCarga.Location = new System.Drawing.Point(958, 296);
+            this.btn_PantallaCarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_PantallaCarga.ForeColor = System.Drawing.Color.White;
+            this.btn_PantallaCarga.Location = new System.Drawing.Point(958, 279);
             this.btn_PantallaCarga.Name = "btn_PantallaCarga";
-            this.btn_PantallaCarga.Size = new System.Drawing.Size(67, 29);
+            this.btn_PantallaCarga.Size = new System.Drawing.Size(81, 46);
             this.btn_PantallaCarga.TabIndex = 13;
-            this.btn_PantallaCarga.Text = "button1";
+            this.btn_PantallaCarga.Text = "Pantalla Carga";
             this.btn_PantallaCarga.UseVisualStyleBackColor = true;
             this.btn_PantallaCarga.Click += new System.EventHandler(this.btn_PantallaCarga_Click);
             // 

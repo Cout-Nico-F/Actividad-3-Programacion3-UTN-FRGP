@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Bienvenida));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_Carga = new System.Windows.Forms.Label();
             this.pb_Carga = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.tm_1 = new System.Windows.Forms.Timer(this.components);
             this.tm_2 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_Carga = new System.Windows.Forms.Label();
-            this.btn_Iniciar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -46,39 +49,42 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 82);
+            this.panel1.Size = new System.Drawing.Size(637, 62);
             this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.panel2.Controls.Add(this.btn_Iniciar);
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lbl_Carga);
             this.panel2.Controls.Add(this.pb_Carga);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 82);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(637, 247);
+            this.panel2.Size = new System.Drawing.Size(637, 286);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lbl_Carga
+            // 
+            this.lbl_Carga.AutoSize = true;
+            this.lbl_Carga.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_Carga.ForeColor = System.Drawing.Color.Black;
+            this.lbl_Carga.Location = new System.Drawing.Point(104, 236);
+            this.lbl_Carga.Name = "lbl_Carga";
+            this.lbl_Carga.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Carga.TabIndex = 2;
+            this.lbl_Carga.Text = "label2";
             // 
             // pb_Carga
             // 
             this.pb_Carga.ForeColor = System.Drawing.Color.Transparent;
-            this.pb_Carga.Location = new System.Drawing.Point(107, 157);
+            this.pb_Carga.Location = new System.Drawing.Point(107, 190);
             this.pb_Carga.Name = "pb_Carga";
             this.pb_Carga.Size = new System.Drawing.Size(422, 34);
             this.pb_Carga.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(225, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 91);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Hola";
             // 
             // tm_1
             // 
@@ -90,23 +96,31 @@
             this.tm_2.Interval = 30;
             this.tm_2.Tick += new System.EventHandler(this.tm_2_Tick);
             // 
-            // lbl_Carga
+            // pictureBox1
             // 
-            this.lbl_Carga.AutoSize = true;
-            this.lbl_Carga.Location = new System.Drawing.Point(104, 207);
-            this.lbl_Carga.Name = "lbl_Carga";
-            this.lbl_Carga.Size = new System.Drawing.Size(35, 13);
-            this.lbl_Carga.TabIndex = 2;
-            this.lbl_Carga.Text = "label2";
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(141, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(365, 139);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
-            // btn_Iniciar
+            // label1
             // 
-            this.btn_Iniciar.Location = new System.Drawing.Point(452, 207);
-            this.btn_Iniciar.Name = "btn_Iniciar";
-            this.btn_Iniciar.Size = new System.Drawing.Size(51, 21);
-            this.btn_Iniciar.TabIndex = 3;
-            this.btn_Iniciar.Text = "Iniciar";
-            this.btn_Iniciar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(216, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(222, 54);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(196, 16);
+            this.panel3.TabIndex = 5;
             // 
             // Form_Bienvenida
             // 
@@ -120,6 +134,7 @@
             this.Load += new System.EventHandler(this.Form_Bienvenida_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,9 +145,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer tm_1;
         private System.Windows.Forms.Timer tm_2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar pb_Carga;
         private System.Windows.Forms.Label lbl_Carga;
-        private System.Windows.Forms.Button btn_Iniciar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,13 +21,21 @@ namespace Winform
 
         private void tm_1_Tick(object sender, EventArgs e)
         {
+            
+
             if (this.Opacity < 1)
             {
                 this.Opacity += 1;
             } 
             pb_Carga.Value += 1;
             lbl_Carga.Text = pb_Carga.Value + "%";
-            if(pb_Carga.Value == 100)
+            // Hace un espera entre estos intervalos 
+            // 31 es 30
+            if(pb_Carga.Value  == 31 ) { Thread.Sleep(1000); }
+            if (pb_Carga.Value == 51) { Thread.Sleep(3000); }
+            if (pb_Carga.Value == 81) { Thread.Sleep(2000); }
+            if (pb_Carga.Value == 100) { Thread.Sleep(4000); }
+            if (pb_Carga.Value == 100)
             {
                 tm_1.Stop();
                 tm_2.Start();
@@ -51,6 +60,11 @@ namespace Winform
             this.Opacity = 0.0;
             tm_1.Start();
             
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

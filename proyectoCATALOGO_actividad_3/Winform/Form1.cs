@@ -154,5 +154,10 @@ namespace Winform
             Form_Bienvenida bien = new Form_Bienvenida();
             bien.Show();
         }
+
+        private void lbl_Hora_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
