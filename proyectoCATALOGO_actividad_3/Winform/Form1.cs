@@ -106,9 +106,17 @@ namespace Winform
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            form_Alta modificar = new form_Alta((Articulo)dgvListar.CurrentRow.DataBoundItem);
-            modificar.ShowDialog();
-            Cargar();
+            if (dgvListar.CurrentRow != null)
+            {
+                form_Alta modificar = new form_Alta((Articulo)dgvListar.CurrentRow.DataBoundItem);
+                modificar.ShowDialog();
+                Cargar();
+            }
+            else
+            {
+                MessageBox.Show("Haga click sobre un articulo para seleccionarlo, luego presione modificar", "Elija el articulo a modificar.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             Ocultar_Submenu();
         }
 

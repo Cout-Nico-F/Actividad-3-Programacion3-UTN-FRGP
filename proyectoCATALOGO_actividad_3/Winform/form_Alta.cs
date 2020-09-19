@@ -96,7 +96,23 @@ namespace Winform
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
             combob_Categoria.DataSource = categoriaNegocio.ListarCategorias();
 
+            combob_Categoria.ValueMember = "Id";
+            combob_Categoria.DisplayMember = "Descripcion";
+
+            combob_Marca.ValueMember = "Id";
+            combob_Marca.DisplayMember = "Descripcion";
+
             Limpiar_txt_cb();
+
+            if (articulo != null)
+            {
+                txt_Nombre.Text = articulo.nombre;
+                txt_Descripcion.Text = articulo.descripcion;
+                txt_Codigo.Text = articulo.codigo;
+                txt_ImagenURL.Text = articulo.imagenUrl;
+                txt_Precio.Text = articulo.precio.ToString();
+                combob_Categoria.SelectedValue = articulo.Categoria.Id;
+            }
         }
 
         private void btCancelar_Click(object sender, EventArgs e)

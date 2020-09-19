@@ -23,7 +23,7 @@ namespace Negocios
 
             //command.CommandText = "select a.codigo As Codigo, a.nombre As Nombre, a.descripcion As Descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
 
-            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
+            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id , c.id, m.id from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
 
             command.Connection = connection;
             connection.Open();
@@ -32,6 +32,8 @@ namespace Negocios
             while (Reader.Read()) // va a recorrer cada registro y va dejar el puntero en el proximo registro
             {
                 Articulo aux = new Articulo();
+                aux.Marca = new Marca();
+                aux.Categoria = new Categoria();
                 aux.codigo = Reader.GetString(0);
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
@@ -49,24 +51,39 @@ namespace Negocios
                 }
                 try
                 {
-                  aux.Marca = new Marca();
                   aux.Marca.Descripcion = (string)Reader.GetString(5);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                  aux.Marca.Descripcion = " ";
+                  //aux.Marca.Descripcion = " "; pensandolo bien no creo que sea correcto ponerle string con un espacio aca.
                 }
                 try
                 {
-                  aux.Categoria = new Categoria();
+                    aux.Marca.Id = Reader.GetInt32(8);
+                }
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
+                    //aux.Marca.Id = " ";
+                }
+                try
+                {
                   aux.Categoria.Descripcion = (string)Reader.GetString(6);
                 }
-
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
                   aux.Categoria.Descripcion = " ";
                 }
+                try
+                {
+                    aux.Categoria.Id = Reader.GetInt32(9);
+                }
+                catch (System.Data.SqlTypes.SqlNullValueException)
+                {
+                    //aux.Categoria.Descripcion = " ";
+                }
+
                 aux.Id = Reader.GetInt32(7);
+
                 listaArticulos.Add(aux);
             }
             connection.Close();
