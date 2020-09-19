@@ -60,9 +60,9 @@
             this.pb_Imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Imagen.Location = new System.Drawing.Point(738, 65);
+            this.pb_Imagen.Location = new System.Drawing.Point(761, 65);
             this.pb_Imagen.Name = "pb_Imagen";
-            this.pb_Imagen.Size = new System.Drawing.Size(242, 377);
+            this.pb_Imagen.Size = new System.Drawing.Size(219, 288);
             this.pb_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Imagen.TabIndex = 7;
             this.pb_Imagen.TabStop = false;
@@ -116,12 +116,14 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Listado.Size = new System.Drawing.Size(675, 276);
+            this.dgv_Listado.Size = new System.Drawing.Size(702, 276);
             this.dgv_Listado.TabIndex = 8;
             this.dgv_Listado.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
             // btn_VolverListado
             // 
+            this.btn_VolverListado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VolverListado.ForeColor = System.Drawing.Color.White;
             this.btn_VolverListado.Location = new System.Drawing.Point(30, 12);
             this.btn_VolverListado.Name = "btn_VolverListado";
             this.btn_VolverListado.Size = new System.Drawing.Size(137, 50);
@@ -147,7 +149,7 @@
             this.lbl_Fecha2.AutoSize = true;
             this.lbl_Fecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha2.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha2.Location = new System.Drawing.Point(431, 379);
+            this.lbl_Fecha2.Location = new System.Drawing.Point(447, 379);
             this.lbl_Fecha2.Name = "lbl_Fecha2";
             this.lbl_Fecha2.Size = new System.Drawing.Size(179, 63);
             this.lbl_Fecha2.TabIndex = 13;

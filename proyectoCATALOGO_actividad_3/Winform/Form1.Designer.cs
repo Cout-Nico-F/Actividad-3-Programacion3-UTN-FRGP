@@ -248,7 +248,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgvListar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(666, 229);
+            this.dgvListar.Size = new System.Drawing.Size(650, 229);
             this.dgvListar.TabIndex = 9;
             this.dgvListar.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
@@ -283,6 +283,7 @@
             this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
             this.lbl_Fecha.TabIndex = 12;
             this.lbl_Fecha.Text = "label1";
+            this.lbl_Fecha.Click += new System.EventHandler(this.lbl_Fecha_Click);
             // 
             // tm_timer
             // 
