@@ -92,7 +92,6 @@ namespace Negocios
 
         public void agregarArticulo(Articulo nuevo)
         {
-            // Maxi nos va a ayudar a optimizar esto mas adelante pero por ahora asi funciona
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
 
@@ -102,6 +101,30 @@ namespace Negocios
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
+        }
+
+        public void modificarArticulo (Articulo nuevo)
+        {
+            SqlConnection connection = new SqlConnection();
+            SqlCommand command = new SqlCommand();
+
+            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "update articulos set Codigo='"+ nuevo.codigo +"', Nombre='"+ nuevo.nombre +"' ,Descripcion='"+ nuevo.descripcion +"', Precio='"+ nuevo.precio +"', IdMarca= '"+ nuevo.Marca.Id +"', IdCategoria='"+ nuevo.Categoria.Id +"', ImagenUrl= '"+ nuevo.imagenUrl +"' where Id = "+ nuevo.Id;
+            command.Connection = connection;
+            connection.Open();
+            command.ExecuteNonQuery();
+
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public void bajaArticulo(int idArticulo)

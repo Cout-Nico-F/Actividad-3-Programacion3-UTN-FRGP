@@ -71,8 +71,13 @@ namespace Winform
                 articulo.Categoria = (Categoria)combob_Categoria.SelectedItem;
                 articulo.imagenUrl = txt_ImagenURL.Text;
 
-                articuloNegocio.agregarArticulo(articulo);
+                if (articulo.Id == 0)
+                {
+                    articuloNegocio.agregarArticulo(articulo);
+                }
+                else articuloNegocio.modificarArticulo(articulo);
 
+                MessageBox.Show("Operacion realizada con exito", "Exito");
                 Cargar();
                 Limpiar_txt_cb();
             }
