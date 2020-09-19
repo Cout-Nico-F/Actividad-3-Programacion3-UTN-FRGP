@@ -59,7 +59,7 @@ namespace Negocios
                 }
                 try
                 {
-                    aux.Marca.Id = Reader.GetInt32(8);
+                    aux.Marca.Id = Reader.GetInt32(9);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
@@ -71,11 +71,11 @@ namespace Negocios
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                  aux.Categoria.Descripcion = " ";
+                  //aux.Categoria.Descripcion = " "; //No puedo quitar esta linea o la conversion tira error
                 }
                 try
                 {
-                    aux.Categoria.Id = Reader.GetInt32(9);
+                    aux.Categoria.Id = Reader.GetInt32(8);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
