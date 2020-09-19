@@ -18,7 +18,6 @@ namespace Winform
         {
             InitializeComponent();
         }
-
         private void Form_Listado_Load(object sender, EventArgs e)
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
@@ -28,7 +27,6 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-
             try
             {
                 Articulo articulo = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
@@ -39,7 +37,11 @@ namespace Winform
 
                 pb_Imagen.Image = null;
             }
-            
+        }
+
+        private void btn_VolverListado_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
