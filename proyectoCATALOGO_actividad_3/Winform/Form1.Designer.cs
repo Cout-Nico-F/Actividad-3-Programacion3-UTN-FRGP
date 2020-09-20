@@ -49,6 +49,7 @@
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.tm_timer = new System.Windows.Forms.Timer(this.components);
             this.btn_PantallaCarga = new System.Windows.Forms.Button();
+            this.txt_Filtro = new System.Windows.Forms.TextBox();
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
             this.panel_Productos.SuspendLayout();
@@ -66,7 +67,7 @@
             this.panel_Articulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Articulos.Location = new System.Drawing.Point(0, 0);
             this.panel_Articulos.Name = "panel_Articulos";
-            this.panel_Articulos.Size = new System.Drawing.Size(172, 341);
+            this.panel_Articulos.Size = new System.Drawing.Size(172, 369);
             this.panel_Articulos.TabIndex = 6;
             // 
             // panel_Opciones
@@ -227,7 +228,7 @@
             this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListar.EnableHeadersVisualStyles = false;
             this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(200, 30);
+            this.dgvListar.Location = new System.Drawing.Point(192, 47);
             this.dgvListar.MultiSelect = false;
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
@@ -266,7 +267,7 @@
             this.lbl_Hora.AutoSize = true;
             this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Hora.Location = new System.Drawing.Point(261, 262);
+            this.lbl_Hora.Location = new System.Drawing.Point(261, 279);
             this.lbl_Hora.Name = "lbl_Hora";
             this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
             this.lbl_Hora.TabIndex = 11;
@@ -278,7 +279,7 @@
             this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha.Location = new System.Drawing.Point(556, 262);
+            this.lbl_Fecha.Location = new System.Drawing.Point(557, 279);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
             this.lbl_Fecha.TabIndex = 12;
@@ -302,12 +303,22 @@
             this.btn_PantallaCarga.UseVisualStyleBackColor = true;
             this.btn_PantallaCarga.Click += new System.EventHandler(this.btn_PantallaCarga_Click);
             // 
+            // txt_Filtro
+            // 
+            this.txt_Filtro.Location = new System.Drawing.Point(431, 19);
+            this.txt_Filtro.Name = "txt_Filtro";
+            this.txt_Filtro.Size = new System.Drawing.Size(257, 20);
+            this.txt_Filtro.TabIndex = 14;
+            this.txt_Filtro.TextChanged += new System.EventHandler(this.txt_Filtro_TextChanged);
+            this.txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Filtro_KeyPress);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1098, 341);
+            this.ClientSize = new System.Drawing.Size(1098, 369);
+            this.Controls.Add(this.txt_Filtro);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.btn_PantallaCarga);
             this.Controls.Add(this.lbl_Fecha);
@@ -347,6 +358,7 @@
         private System.Windows.Forms.Label lbl_Fecha;
         private System.Windows.Forms.Timer tm_timer;
         private System.Windows.Forms.Button btn_PantallaCarga;
+        private System.Windows.Forms.TextBox txt_Filtro;
     }
 }
 

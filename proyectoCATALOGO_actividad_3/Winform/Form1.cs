@@ -15,6 +15,7 @@ namespace Winform
 {
     public partial class Form1 : Form
     {
+        private List<Articulo> ListaOriginal; 
         public Form1()
         {
             InitializeComponent();
@@ -54,12 +55,18 @@ namespace Winform
         private void Form1_Load(object sender, EventArgs e)
         {
             Cargar();
+            
+            if(dgvListar.Rows.Count > 0 )
+            {
+                dgvListar.Rows[0].Selected = false;
+            }
         }
 
         private void Cargar()
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
-            dgvListar.DataSource = negocio.ListarArticulos();
+            ListaOriginal = negocio.ListarArticulos();
+            dgvListar.DataSource = ListaOriginal;
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["imagenurl"].Visible = false;
             dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
@@ -68,20 +75,31 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvListar.CurrentRow.DataBoundItem != null)
+            try
             {
-                try
+                // lo meti dentro de un try catch porque no me dejaba probar el filtro 
+                //igualmente no me deja
+                if (dgvListar.CurrentRow.DataBoundItem != null)
                 {
-                    Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-                    pbImagen.Load(reg.imagenUrl);
-                }
-                catch (Exception)
-                {
-                    // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
-                    // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
-                    pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+                    try
+                    {
+                        Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
+                        pbImagen.Load(reg.imagenUrl);
+                    }
+                    catch (Exception)
+                    {
+                        // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
+                        // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
+                        pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -119,6 +137,8 @@ namespace Winform
             {
                 MessageBox.Show("Haga click sobre un articulo para seleccionarlo, luego presione modificar", "Elija el articulo a modificar.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            Text = "Modificar Articulos";
 
             Ocultar_Submenu();
         }
@@ -163,6 +183,25 @@ namespace Winform
         private void lbl_Fecha_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txt_Filtro_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txt_Filtro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // no acepta el operando || (or) con variables de tipo string
+            String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
+            String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
+            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) );
+
+            // no lo probe todavia 
+            dgvListar.DataSource = listaFiltrada;
         }
     }
 }
