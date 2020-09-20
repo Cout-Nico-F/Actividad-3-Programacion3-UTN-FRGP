@@ -34,7 +34,7 @@ namespace Winform
 
             try
             {
-                pb_Baja.Load(_articuloSeleccionado.imagenUrl);
+                pb_Baja.Load(_articuloSeleccionado.ImagenUrl);
             }
             catch (Exception)
             {

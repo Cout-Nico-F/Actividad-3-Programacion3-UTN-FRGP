@@ -31,7 +31,7 @@ namespace Winform
                 if (dgv_Listado.CurrentRow != null)
                 {
                     Articulo reg = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
-                    pb_Imagen.Load(reg.imagenUrl);
+                    pb_Imagen.Load(reg.ImagenUrl);
                 }
             }
             catch (Exception ex)

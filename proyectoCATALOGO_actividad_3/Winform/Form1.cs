@@ -75,7 +75,7 @@ namespace Winform
                 if (dgvListar.CurrentRow != null)
                 {
                     Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-                    pbImagen.Load(reg.imagenUrl);
+                    pbImagen.Load(reg.ImagenUrl);
                 }
             }
             catch (Exception ex)
@@ -151,7 +151,7 @@ namespace Winform
         private void txt_Filtro_TextChanged(object sender, EventArgs e)
         {
             List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
-            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()));
+            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.Nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()));
 
             dgvListar.DataSource = listaFiltrada;
         }

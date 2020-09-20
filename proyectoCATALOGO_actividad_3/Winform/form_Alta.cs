@@ -58,13 +58,13 @@ namespace Winform
             {
 
 
-                articulo.codigo = txt_Codigo.Text;
-                articulo.nombre = txt_Nombre.Text;
-                articulo.descripcion = txt_Descripcion.Text;
-                articulo.precio = Convert.ToDecimal(txt_Precio.Text);
+                articulo.Codigo = txt_Codigo.Text;
+                articulo.Nombre = txt_Nombre.Text;
+                articulo.Descripcion = txt_Descripcion.Text;
+                articulo.Precio = Convert.ToDecimal(txt_Precio.Text);
                 articulo.Marca = (Marca)combob_Marca.SelectedItem;
                 articulo.Categoria = (Categoria)combob_Categoria.SelectedItem;
-                articulo.imagenUrl = txt_ImagenURL.Text;
+                articulo.ImagenUrl = txt_ImagenURL.Text;
 
                 if (articulo.Id == 0)
                 {
@@ -114,11 +114,11 @@ namespace Winform
 
             if (articulo != null)
             {
-                txt_Nombre.Text = articulo.nombre;
-                txt_Descripcion.Text = articulo.descripcion;
-                txt_Codigo.Text = articulo.codigo;
-                txt_ImagenURL.Text = articulo.imagenUrl;
-                txt_Precio.Text = articulo.precio.ToString();
+                txt_Nombre.Text = articulo.Nombre;
+                txt_Descripcion.Text = articulo.Descripcion;
+                txt_Codigo.Text = articulo.Codigo;
+                txt_ImagenURL.Text = articulo.ImagenUrl;
+                txt_Precio.Text = articulo.Precio.ToString();
 
                 combob_Categoria.SelectedValue = articulo.Categoria.Id;
                 combob_Marca.SelectedValue = articulo.Marca.Id;

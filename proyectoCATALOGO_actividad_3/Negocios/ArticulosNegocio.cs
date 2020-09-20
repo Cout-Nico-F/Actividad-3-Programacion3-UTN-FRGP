@@ -32,17 +32,17 @@ namespace Negocios
                 aux.Marca = new Marca();
                 aux.Categoria = new Categoria();
 
-                aux.codigo = Reader.GetString(0);
-                aux.nombre = Reader.GetString(1);
-                aux.descripcion = Reader.GetString(2);
-                aux.precio = Reader.GetDecimal(4);
+                aux.Codigo = Reader.GetString(0);
+                aux.Nombre = Reader.GetString(1);
+                aux.Descripcion = Reader.GetString(2);
+                aux.Precio = Reader.GetDecimal(4);
                 try
                 {
-                    aux.imagenUrl = Reader.GetString(3);
+                    aux.ImagenUrl = Reader.GetString(3);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                    aux.imagenUrl = " No contiene una Direccion URL";
+                    aux.ImagenUrl = " No contiene una Direccion URL";
                 }
                 try
                 {
@@ -89,7 +89,7 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','" + nuevo.Marca.Id + "','" + nuevo.Categoria.Id + "','" + nuevo.imagenUrl + "')";
+            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "','" + nuevo.Precio + "','" + nuevo.Marca.Id + "','" + nuevo.Categoria.Id + "','" + nuevo.ImagenUrl + "')";
 
             command.Connection = connection;
             connection.Open();
@@ -107,10 +107,10 @@ namespace Negocios
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = "update ARTICULOS Set Codigo=@codigo,Nombre=@nombre,Descripcion=@descripcion,Precio=@precio,idMarca=@idMarca,idCategoria=@idCategoria Where Id=@id";
 
-                command.Parameters.AddWithValue("@codigo", nuevo.codigo);
-                command.Parameters.AddWithValue("@nombre", nuevo.nombre);
-                command.Parameters.AddWithValue("@descripcion", nuevo.descripcion);
-                command.Parameters.AddWithValue("@precio", nuevo.precio);
+                command.Parameters.AddWithValue("@codigo", nuevo.Codigo);
+                command.Parameters.AddWithValue("@nombre", nuevo.Nombre);
+                command.Parameters.AddWithValue("@descripcion", nuevo.Descripcion);
+                command.Parameters.AddWithValue("@precio", nuevo.Precio);
                 command.Parameters.AddWithValue("@id", nuevo.Id);
                 command.Parameters.AddWithValue("@idMarca", nuevo.Marca.Id);
                 command.Parameters.AddWithValue("@idCategoria", nuevo.Categoria.Id);

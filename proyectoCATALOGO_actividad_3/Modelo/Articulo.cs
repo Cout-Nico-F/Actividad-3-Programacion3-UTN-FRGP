@@ -10,15 +10,15 @@ namespace Modelo
   {
     public int Id { get; set; }
   
-    public string codigo { get; set; }
+    public string Codigo { get; set; }
    
-    public string nombre { get; set; }
+    public string Nombre { get; set; }
 
-    public string descripcion { get; set; }
+    public string Descripcion { get; set; }
         
-    public string imagenUrl { get; set; }
+    public string ImagenUrl { get; set; }
 
-    public Decimal precio { get; set; }
+    public Decimal Precio { get; set; }
 
     public Marca Marca { get; set; }
 
