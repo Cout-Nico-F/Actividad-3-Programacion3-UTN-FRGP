@@ -22,7 +22,7 @@ namespace Winform
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgv_Listado.DataSource = negocio.ListarArticulos();
-            dgv_Listado.Columns[4].Visible = false;
+            //dgv_Listado.Columns[4].Visible = false;
         }
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)

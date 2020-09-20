@@ -175,7 +175,7 @@
             this.btn_Listar.Name = "btn_Listar";
             this.btn_Listar.Size = new System.Drawing.Size(172, 55);
             this.btn_Listar.TabIndex = 0;
-            this.btn_Listar.Text = "LISTADO DE ARTICULOS";
+            this.btn_Listar.Text = "DETALLES ARTICULOS";
             this.btn_Listar.UseVisualStyleBackColor = false;
             this.btn_Listar.Click += new System.EventHandler(this.btn_Listar_Click);
             // 
