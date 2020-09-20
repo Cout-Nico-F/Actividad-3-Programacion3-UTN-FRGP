@@ -26,15 +26,6 @@ namespace Winform
             } 
             pb_Carga.Value += 2;
             lbl_Carga.Text = pb_Carga.Value + "%";
-
-            // Hace un espera entre estos intervalos 
-            // 31 es 30
-           /* if(pb_Carga.Value  == 31 ) { Thread.Sleep(1000); }
-            if (pb_Carga.Value == 51) { Thread.Sleep(3000); }
-            if (pb_Carga.Value == 81) { Thread.Sleep(2000); }
-            if (pb_Carga.Value == 100) { Thread.Sleep(4000); }
-           */
-            //Esta espera me pacere que no va. Se ahce muy lento abrir el programa y en realidad no esta cargando nada, no se justifica
             if (pb_Carga.Value == 100)
             {
                 tm_1.Stop();
@@ -48,19 +39,17 @@ namespace Winform
             if(this.Opacity == 0)
             {
                 tm_2.Stop();
-                //this.Close();
             }
             this.Hide();
             Form1 f = new Form1();
             f.ShowDialog();
-            
+            Close();
         }
 
         private void Form_Bienvenida_Load(object sender, EventArgs e)
         {
             this.Opacity = 0.0;
             tm_1.Start();
-            
         }
     }
 }

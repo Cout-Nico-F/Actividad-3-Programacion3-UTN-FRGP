@@ -34,17 +34,5 @@ namespace Negocios
             connection.Close();
             return AltaArticulos;
         }
-        /*public void agregarCategoria(Categoria nuevo)
-        {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-
-            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into CATEGORIAS(Id,Descripcion) values('"+nuevo.Id+"','"+nuevo.Descripcion+"')";
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-        }*/
     }
 }

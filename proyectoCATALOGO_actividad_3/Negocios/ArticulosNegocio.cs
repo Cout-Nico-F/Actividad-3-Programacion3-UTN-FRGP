@@ -12,7 +12,6 @@ namespace Negocios
     {
         public List<Articulo> ListarArticulos()
         {
-            // Puse los nombres en ingles la verdad nose porque 
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
             SqlDataReader Reader;
@@ -22,12 +21,12 @@ namespace Negocios
             command.CommandType = System.Data.CommandType.Text;
 
             command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id As IDArticulo, c.id As IDCategoria, m.id As IDMarca from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
-            
+
             command.Connection = connection;
             connection.Open();
             Reader = command.ExecuteReader();
 
-            while (Reader.Read()) // va a recorrer cada registro y va dejar el puntero en el proximo registro
+            while (Reader.Read())
             {
                 Articulo aux = new Articulo();
                 aux.Marca = new Marca();
@@ -37,24 +36,20 @@ namespace Negocios
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
                 aux.precio = Reader.GetDecimal(4);
-                // hice un try y catch de aux.ImagenUrL porque me tiraba error ya que el alta de un articulo no da la posibilidad de ingresar una url
-                // por ahora queda asi
                 try
                 {
                     aux.imagenUrl = Reader.GetString(3);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-
                     aux.imagenUrl = " No contiene una Direccion URL";
                 }
                 try
                 {
-                  aux.Marca.Descripcion = (string)Reader.GetString(5);
+                    aux.Marca.Descripcion = (string)Reader.GetString(5);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                  //aux.Marca.Descripcion = " "; pensandolo bien no creo que sea correcto ponerle string con un espacio aca.
                 }
                 try
                 {
@@ -62,15 +57,14 @@ namespace Negocios
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                    //aux.Marca.Id = " ";
                 }
                 try
                 {
-                  aux.Categoria.Descripcion = (string)Reader.GetString(6);
+                    aux.Categoria.Descripcion = (string)Reader.GetString(6);
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                  aux.Categoria.Descripcion = " "; //No puedo quitar esta linea o la conversion tira error
+                    aux.Categoria.Descripcion = " ";
                 }
                 try
                 {
@@ -78,7 +72,6 @@ namespace Negocios
                 }
                 catch (System.Data.SqlTypes.SqlNullValueException)
                 {
-                    //aux.Categoria.Descripcion = " ";
                 }
 
                 aux.Id = Reader.GetInt32(7);
@@ -96,14 +89,14 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ nuevo.Marca.Id +"','"+ nuevo.Categoria.Id + "','"+ nuevo.imagenUrl +"')";
-            
+            command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','" + nuevo.Marca.Id + "','" + nuevo.Categoria.Id + "','" + nuevo.imagenUrl + "')";
+
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
         }
 
-        public void modificarArticulo (Articulo nuevo)
+        public void modificarArticulo(Articulo nuevo)
         {
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
@@ -112,16 +105,15 @@ namespace Negocios
             {
                 connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
                 command.CommandType = System.Data.CommandType.Text;
-                //command.CommandText = "update articulos set Codigo='" + nuevo.codigo + "', Nombre='" + nuevo.nombre + "' ,Descripcion='" + nuevo.descripcion + "', Precio='" + nuevo.precio + "', IdMarca= '" + nuevo.Marca.Id + "', IdCategoria='" + nuevo.Categoria.Id + "', ImagenUrl= '" + nuevo.imagenUrl + "' where Id = " + nuevo.Id;
                 command.CommandText = "update ARTICULOS Set Codigo=@codigo,Nombre=@nombre,Descripcion=@descripcion,Precio=@precio,idMarca=@idMarca,idCategoria=@idCategoria Where Id=@id";
-                
-                command.Parameters.AddWithValue("@codigo",nuevo.codigo);
-                command.Parameters.AddWithValue("@nombre",nuevo.nombre) ;
-                command.Parameters.AddWithValue("@descripcion",nuevo.descripcion);
+
+                command.Parameters.AddWithValue("@codigo", nuevo.codigo);
+                command.Parameters.AddWithValue("@nombre", nuevo.nombre);
+                command.Parameters.AddWithValue("@descripcion", nuevo.descripcion);
                 command.Parameters.AddWithValue("@precio", nuevo.precio);
-                command.Parameters.AddWithValue("@id",nuevo.Id);
-                command.Parameters.AddWithValue("@idMarca",nuevo.Marca.Id);
-                command.Parameters.AddWithValue("@idCategoria",nuevo.Categoria.Id);
+                command.Parameters.AddWithValue("@id", nuevo.Id);
+                command.Parameters.AddWithValue("@idMarca", nuevo.Marca.Id);
+                command.Parameters.AddWithValue("@idCategoria", nuevo.Categoria.Id);
 
                 command.Connection = connection;
                 connection.Open();
@@ -129,10 +121,8 @@ namespace Negocios
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
-
         }
 
         public void bajaArticulo(int idArticulo)
@@ -142,11 +132,10 @@ namespace Negocios
 
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "delete from articulos where articulos.id = "+idArticulo;
+            command.CommandText = "delete from articulos where articulos.id = " + idArticulo;
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
         }
     }
-    // Tambien cree una biblioteca de clase llamada ArticulosNegocio, ademas referencie Modelo con Negocios para poder hacer un using Modelo
 }

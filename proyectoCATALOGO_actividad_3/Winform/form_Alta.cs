@@ -43,30 +43,21 @@ namespace Winform
             txt_Precio.Clear();
             combob_Categoria.SelectedIndex = -1;
             combob_Marca.SelectedIndex = -1;
-
-            // no encontre una forma de que se limpien los combobox porque siempre aparece como predeterminado samsung y celulares
-            // encontre una manera pero nose si es la adecuada de todos modos dejo el comentario por ahi si encontras una manera mas limpia 
-
-            //combob_Categoria.Text = " ";
-            //combob_Marca.Text = " ";
         }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            // no hace falta este if no? o es algo que no estoy viendo
-            /*if (ComprobarCampos())
-            {*/
-               
-                //Marca marca = new Marca();
-                //Categoria categoria = new Categoria();
-                ArticulosNegocio articuloNegocio = new ArticulosNegocio();
-                //MarcaNegocio marcaNegocio = new MarcaNegocio();          //Estos dos no se estan usando aca, los comento por ahora.
-                //CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+            ArticulosNegocio articuloNegocio = new ArticulosNegocio();
 
-                if (articulo == null)
-                {
-                    articulo = new Articulo();
-                }
+            if (articulo == null)
+            {
+                articulo = new Articulo();
+            }
+
+            if (ComprobarCampos())
+            {
+
+
                 articulo.codigo = txt_Codigo.Text;
                 articulo.nombre = txt_Nombre.Text;
                 articulo.descripcion = txt_Descripcion.Text;
@@ -75,24 +66,22 @@ namespace Winform
                 articulo.Categoria = (Categoria)combob_Categoria.SelectedItem;
                 articulo.imagenUrl = txt_ImagenURL.Text;
 
-            if (articulo.Id == 0)
-            {
-                articuloNegocio.agregarArticulo(articulo);
-            }
+                if (articulo.Id == 0)
+                {
+                    articuloNegocio.agregarArticulo(articulo);
+                }
 
-            else
-            {
-                articuloNegocio.modificarArticulo(articulo);
-            }
-            
+                else
+                {
+                    articuloNegocio.modificarArticulo(articulo);
+                }
+
 
                 MessageBox.Show("Operacion realizada con exito", "Exito");
                 Cargar();
                 Limpiar_txt_cb();
-            
-            this.Close();
-         }
-        //}
+            }
+        }
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
         {
@@ -106,7 +95,6 @@ namespace Winform
 
         private void form_Alta_Load(object sender, EventArgs e)
         {
-            // ALTA
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgv_Alta.DataSource = negocio.ListarArticulos();
             dgv_Alta.Columns[4].Visible = false;
@@ -116,8 +104,6 @@ namespace Winform
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
             combob_Categoria.DataSource = categoriaNegocio.ListarCategorias();
 
-            //Se crean igual para alta y modificar
-
             combob_Categoria.ValueMember = "Id";
             combob_Categoria.DisplayMember = "Descripcion";
 
@@ -126,7 +112,6 @@ namespace Winform
 
             Limpiar_txt_cb();
 
-            //MODIFICAR
             if (articulo != null)
             {
                 txt_Nombre.Text = articulo.nombre;
@@ -144,22 +129,6 @@ namespace Winform
                 lista.Add(articulo);
                 dgv_Alta.DataSource = lista;
             }
-
-            //El error que comente en el commit sobre el agregar era porque tenia esas lineas de codigo fuera del if de articulo != null
-            /*List<Articulo> lista = new List<Articulo>();
-            lista.Add(articulo);
-            dgv_Alta.DataSource = lista;*/
-
-
-            //no hay un picture box pero se puede agregar si se quiere 
-            /*try
-            {
-                pb_Alta.Load(_articuloSeleccionado.imagenUrl);
-            }
-            catch (Exception)
-            {
-
-            }*/
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
@@ -169,7 +138,7 @@ namespace Winform
 
         private bool ComprobarCampos() //Todos los campos menos el ID admiten null en la base de datos. entonces de que sirve este metodo en realidad? 
         {
-            /*if (txt_Codigo.Text == "")
+            if (txt_Codigo.Text == "")
             {
                 errorAlta.SetError(txt_Codigo, "Codigo no ingresado");
                 MessageBox.Show("Ingrese el codigo del Articulo", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -227,7 +196,6 @@ namespace Winform
                 return false;
             }
             errorAlta.SetError(combob_Categoria, "");
-*/
             return true;
         }
 

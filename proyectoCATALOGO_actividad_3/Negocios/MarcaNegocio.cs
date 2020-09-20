@@ -27,25 +27,12 @@ namespace Negocios
 
             while (Reader.Read())
             {
-                AltaArticulos.Add(new Marca((int)Reader["Id"],(string)Reader["Descripcion"]));
+                AltaArticulos.Add(new Marca((int)Reader["Id"], (string)Reader["Descripcion"]));
             }
 
             Reader.Close();
             connection.Close();
             return AltaArticulos;
         }
-        /*public void agregarMarca(Marca nuevo)
-        {
-            SqlConnection connection = new SqlConnection();
-            SqlCommand command = new SqlCommand();
-
-            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "insert into MARCAS(Id,Descripcion) values('"+ nuevo.Id +"''"+ nuevo.Descripcion +"')";
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-        }*/
-
     }
 }

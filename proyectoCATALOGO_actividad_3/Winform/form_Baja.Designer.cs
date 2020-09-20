@@ -102,8 +102,6 @@
             this.dgv_Baja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Baja.Size = new System.Drawing.Size(697, 89);
             this.dgv_Baja.TabIndex = 5;
-            this.dgv_Baja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Baja_CellContentClick);
-            this.dgv_Baja.SelectionChanged += new System.EventHandler(this.dgv_Baja_SelectionChanged);
             // 
             // pb_Baja
             // 
@@ -131,7 +129,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 300);
             this.Name = "form_Baja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "form_Baja";
+            this.Text = "Baja";
             this.Load += new System.EventHandler(this.form_Baja_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Baja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Baja)).EndInit();

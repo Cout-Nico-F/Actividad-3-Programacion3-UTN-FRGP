@@ -24,7 +24,6 @@ namespace Winform
         {
             _articuloSeleccionado = articuloSeleccionado;
             InitializeComponent();
-            
         }
 
         private void form_Baja_Load(object sender, EventArgs e)
@@ -39,7 +38,6 @@ namespace Winform
             }
             catch (Exception)
             {
-
             }
         }
 
@@ -47,9 +45,8 @@ namespace Winform
         {
             ArticulosNegocio articuloNegocio = new ArticulosNegocio();
             articuloNegocio.bajaArticulo(_articuloSeleccionado.Id);
-            //mensaje de exito
 
-            MessageBox.Show("Articulo eliminado exitosamente", "Atencion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Articulo eliminado exitosamente", "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             Close();
         }
@@ -57,16 +54,6 @@ namespace Winform
         private void btn_CancelarBaja_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void dgv_Baja_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgv_Baja_SelectionChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,12 +10,11 @@ using System.Windows.Forms;
 using Negocios;
 using Modelo;
 
-// agregue como referencia a Modelo y Negocio para poder hacer un using 
 namespace Winform
 {
     public partial class Form1 : Form
     {
-        private List<Articulo> ListaOriginal; 
+        private List<Articulo> ListaOriginal;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +23,6 @@ namespace Winform
 
         private void Personalizar_Disenio()
         {
-            
             panel_Productos.Visible = false;
             panel_Opciones.Visible = false;
         }
@@ -34,11 +32,11 @@ namespace Winform
             if (panel_Productos.Visible == true)
             {
                 panel_Productos.Visible = false;
-            } 
-            if(panel_Opciones.Visible == true)
+            }
+            if (panel_Opciones.Visible == true)
             {
                 panel_Opciones.Visible = false;
-            }    
+            }
         }
 
         private void Mostrar_Submenu(Panel Submenu)
@@ -51,12 +49,11 @@ namespace Winform
             else
                 Submenu.Visible = false;
         }
-            
+
         private void Form1_Load(object sender, EventArgs e)
         {
             Cargar();
-            //evita que salga seleccionado una row por defecto
-            if(dgvListar.Rows.Count > 0 )
+            if (dgvListar.Rows.Count > 0)
             {
                 dgvListar.Rows[0].Selected = false;
             }
@@ -69,8 +66,6 @@ namespace Winform
             dgvListar.DataSource = ListaOriginal;
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["imagenurl"].Visible = false;
-            //dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
-            //dgvListar.Rows[0].Selected = false;
         }
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
@@ -85,7 +80,7 @@ namespace Winform
             }
             catch (Exception ex)
             {
-                pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+                pbImagen.Image = null;
             }
         }
 
@@ -108,19 +103,10 @@ namespace Winform
             listado.ShowDialog();
             Cargar();
             Ocultar_Submenu();
-            //codigo
-            //Ocultar_Submenu();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
-            /*Articulo art;
-            art = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-
-            form_Alta modificar = new form_Alta();
-            modificar.ShowDialog();
-            Cargar();*/
-
             if (dgvListar.CurrentRow != null)
             {
                 form_Alta modificar = new form_Alta((Articulo)dgvListar.CurrentRow.DataBoundItem);
@@ -159,42 +145,15 @@ namespace Winform
 
         private void tm_timer_Tick(object sender, EventArgs e)
         {
-            lbl_Hora.Text = DateTime.Now.ToLongTimeString(); //mayusculas = formato 24 horas
+            lbl_Hora.Text = DateTime.Now.ToLongTimeString();
             lbl_Fecha.Text = DateTime.Now.ToShortDateString();
         }
         private void txt_Filtro_TextChanged(object sender, EventArgs e)
         {
-            // no acepta el operando || (or) con variables de tipo string
-            String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
-            String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            //tremendo fail lo de pasarlo a string
-
             List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
-            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()) );
+            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()));
 
-            //Quizas puedo agregar un boton en el form1 que diga busqueda avanzada si sobra tiempo lo hago
-            
             dgvListar.DataSource = listaFiltrada;
-            // Solo tenia que pasarlo a TextChanged porque en el evento keyPress funciona regular y ahora pensandolo mejor
-            // tiene sentido jaja porque estaba esperando una tecla
-            
-        }
-
-        private void txt_Filtro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            // no acepta el operando || (or) con variables de tipo string
-            /*String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
-            String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
-            List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
-            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) );
-
-            // no lo probe todavia 
-            dgvListar.DataSource = listaFiltrada;
-            //probado pero funciona regular*/
         }
     }
 }
