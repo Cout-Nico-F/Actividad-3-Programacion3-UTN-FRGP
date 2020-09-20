@@ -29,30 +29,21 @@ namespace Winform
         {
             try
             {
-                Articulo articulo = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
-                pb_Imagen.Load(articulo.imagenUrl);
+                if (dgv_Listado.CurrentRow != null)
+                {
+                    Articulo reg = (Articulo)dgv_Listado.CurrentRow.DataBoundItem;
+                    pb_Imagen.Load(reg.imagenUrl);
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                pb_Imagen.Image = null;
+                pb_Imagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
             }
         }
 
         private void btn_VolverListado_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void lbl_Hora2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tm_time_Tick(object sender, EventArgs e)
-        {
-            lbl_Hora_2.Text = DateTime.Now.ToString(); //mayusculas = formato 24 horas
-            lbl_Fecha_2.Text = DateTime.Now.ToShortDateString();
         }
     }
 }
