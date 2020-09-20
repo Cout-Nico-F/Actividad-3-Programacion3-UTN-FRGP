@@ -84,6 +84,7 @@
             this.dgv_Baja.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Baja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Baja.Location = new System.Drawing.Point(22, 76);
+            this.dgv_Baja.MultiSelect = false;
             this.dgv_Baja.Name = "dgv_Baja";
             this.dgv_Baja.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

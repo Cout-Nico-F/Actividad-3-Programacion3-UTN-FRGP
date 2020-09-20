@@ -97,6 +97,7 @@
             this.dgv_Listado.EnableHeadersVisualStyles = false;
             this.dgv_Listado.GridColor = System.Drawing.Color.SlateGray;
             this.dgv_Listado.Location = new System.Drawing.Point(30, 77);
+            this.dgv_Listado.MultiSelect = false;
             this.dgv_Listado.Name = "dgv_Listado";
             this.dgv_Listado.ReadOnly = true;
             this.dgv_Listado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

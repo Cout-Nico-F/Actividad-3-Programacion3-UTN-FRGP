@@ -305,7 +305,7 @@
             // 
             // txt_Filtro
             // 
-            this.txt_Filtro.Location = new System.Drawing.Point(431, 19);
+            this.txt_Filtro.Location = new System.Drawing.Point(405, 19);
             this.txt_Filtro.Name = "txt_Filtro";
             this.txt_Filtro.Size = new System.Drawing.Size(257, 20);
             this.txt_Filtro.TabIndex = 14;
@@ -329,6 +329,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(256, 187);
             this.Name = "Form1";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Articulos";
             this.Load += new System.EventHandler(this.Form1_Load);

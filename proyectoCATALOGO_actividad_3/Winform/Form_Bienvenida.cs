@@ -50,8 +50,10 @@ namespace Winform
             if(this.Opacity == 0)
             {
                 tm_2.Stop();
-                this.Close();
+                //this.Close();
             }
+            Form1 f = new Form1();
+            f.ShowDialog();
             
         }
 
