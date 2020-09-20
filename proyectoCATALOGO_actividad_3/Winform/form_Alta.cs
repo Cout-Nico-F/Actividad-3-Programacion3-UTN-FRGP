@@ -137,10 +137,12 @@ namespace Winform
                 combob_Marca.SelectedValue = articulo.Marca.Id;
 
                 Text = "Modificar Articulo";
+
+                List<Articulo> lista = new List<Articulo>();
+                lista.Add(articulo);
+                dgv_Alta.DataSource = lista;
             }
-            List<Articulo> lista = new List<Articulo>();
-            lista.Add(articulo);
-            dgv_Alta.DataSource = lista;
+            
 
             //no hay un picture box pero se puede agregar si se quiere 
             /*try
