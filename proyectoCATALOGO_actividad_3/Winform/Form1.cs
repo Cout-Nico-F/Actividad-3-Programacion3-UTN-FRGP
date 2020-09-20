@@ -75,30 +75,22 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            try
-            {
-                // lo meti dentro de un try catch porque no me dejaba probar el filtro 
-                //igualmente no me deja
-                if (dgvListar.CurrentRow.DataBoundItem != null)
-                {
-                    try
-                    {
-                        Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-                        pbImagen.Load(reg.imagenUrl);
-                    }
-                    catch (Exception)
-                    {
-                        // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
-                        // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
-                        pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
 
-                throw ex;
-            }
+            /*if (dgvListar.CurrentRow.DataBoundItem != null)
+            {
+                try
+                {
+                    Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
+                    pbImagen.Load(reg.imagenUrl);
+                }
+                catch (Exception)
+                {
+                    // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
+                    // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
+                    pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+                }
+            }*/
+            
             
         }
 
@@ -127,6 +119,13 @@ namespace Winform
 
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
+            /*Articulo art;
+            art = (Articulo)dgvListar.CurrentRow.DataBoundItem;
+
+            form_Alta modificar = new form_Alta();
+            modificar.ShowDialog();
+            Cargar();*/
+
             if (dgvListar.CurrentRow != null)
             {
                 form_Alta modificar = new form_Alta((Articulo)dgvListar.CurrentRow.DataBoundItem);

@@ -47,20 +47,22 @@ namespace Winform
             // no encontre una forma de que se limpien los combobox porque siempre aparece como predeterminado samsung y celulares
             // encontre una manera pero nose si es la adecuada de todos modos dejo el comentario por ahi si encontras una manera mas limpia 
 
-            combob_Categoria.Text = " ";
-            combob_Marca.Text = " ";
+            //combob_Categoria.Text = " ";
+            //combob_Marca.Text = " ";
         }
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (ComprobarCampos())
-            {
-                //
+            // no hace falta este if no? o es algo que no estoy viendo
+            /*if (ComprobarCampos())
+            {*/
+               
                 //Marca marca = new Marca();
                 //Categoria categoria = new Categoria();
                 ArticulosNegocio articuloNegocio = new ArticulosNegocio();
                 //MarcaNegocio marcaNegocio = new MarcaNegocio();          //Estos dos no se estan usando aca, los comento por ahora.
                 //CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
                 if (articulo == null)
                 {
                     articulo = new Articulo();
@@ -73,17 +75,22 @@ namespace Winform
                 articulo.Categoria = (Categoria)combob_Categoria.SelectedItem;
                 articulo.imagenUrl = txt_ImagenURL.Text;
 
-                if (articulo.Id == 0)
-                {
-                    articuloNegocio.agregarArticulo(articulo);
-                }
-                else articuloNegocio.modificarArticulo(articulo);
+            if (articulo.Id == 0)
+            {
+                articuloNegocio.agregarArticulo(articulo);
+            }
+
+            else
+            {
+                articuloNegocio.modificarArticulo(articulo);
+            }
+            
 
                 MessageBox.Show("Operacion realizada con exito", "Exito");
                 Cargar();
                 Limpiar_txt_cb();
             }
-        }
+        //}
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
         {
@@ -97,6 +104,7 @@ namespace Winform
 
         private void form_Alta_Load(object sender, EventArgs e)
         {
+            // ALTA
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgv_Alta.DataSource = negocio.ListarArticulos();
             dgv_Alta.Columns[4].Visible = false;
@@ -106,6 +114,8 @@ namespace Winform
             combob_Marca.DataSource = marcaNegocio.ListarMarcas();
             combob_Categoria.DataSource = categoriaNegocio.ListarCategorias();
 
+            //Se crean igual para alta y modificar
+
             combob_Categoria.ValueMember = "Id";
             combob_Categoria.DisplayMember = "Descripcion";
 
@@ -114,6 +124,7 @@ namespace Winform
 
             Limpiar_txt_cb();
 
+            //MODIFICAR
             if (articulo != null)
             {
                 txt_Nombre.Text = articulo.nombre;
@@ -124,6 +135,8 @@ namespace Winform
 
                 combob_Categoria.SelectedValue = articulo.Categoria.Id;
                 combob_Marca.SelectedValue = articulo.Marca.Id;
+
+                Text = "Modificar Articulo";
             }
         }
 

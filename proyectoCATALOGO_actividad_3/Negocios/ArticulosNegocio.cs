@@ -21,10 +21,8 @@ namespace Negocios
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
 
-            //command.CommandText = "select a.codigo As Codigo, a.nombre As Nombre, a.descripcion As Descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
-
-            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id , c.id, m.id from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
-
+            command.CommandText = "select a.codigo, a.nombre, a.descripcion, a.imagenUrl, a.precio, m.descripcion as Marca , c.descripcion as Categoria, a.id As IDArticulo, c.id As IDCategoria, m.id As IDMarca from articulos a left join categorias c on a.idcategoria = c.id inner join marcas m on a.idmarca = m.id";
+            
             command.Connection = connection;
             connection.Open();
             Reader = command.ExecuteReader();
@@ -34,6 +32,7 @@ namespace Negocios
                 Articulo aux = new Articulo();
                 aux.Marca = new Marca();
                 aux.Categoria = new Categoria();
+
                 aux.codigo = Reader.GetString(0);
                 aux.nombre = Reader.GetString(1);
                 aux.descripcion = Reader.GetString(2);
@@ -98,6 +97,7 @@ namespace Negocios
             connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = "insert into ARTICULOS(Codigo,Nombre,Descripcion,Precio,IdMarca,IdCategoria,ImagenUrl) values ('" + nuevo.codigo + "','" + nuevo.nombre + "','" + nuevo.descripcion + "','" + nuevo.precio + "','"+ nuevo.Marca.Id +"','"+ nuevo.Categoria.Id + "','"+ nuevo.imagenUrl +"')";
+            
             command.Connection = connection;
             connection.Open();
             command.ExecuteNonQuery();
@@ -108,21 +108,28 @@ namespace Negocios
             SqlConnection connection = new SqlConnection();
             SqlCommand command = new SqlCommand();
 
-            connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "update articulos set Codigo='"+ nuevo.codigo +"', Nombre='"+ nuevo.nombre +"' ,Descripcion='"+ nuevo.descripcion +"', Precio='"+ nuevo.precio +"', IdMarca= '"+ nuevo.Marca.Id +"', IdCategoria='"+ nuevo.Categoria.Id +"', ImagenUrl= '"+ nuevo.imagenUrl +"' where Id = "+ nuevo.Id;
-            command.Connection = connection;
-            connection.Open();
-            command.ExecuteNonQuery();
-
             try
             {
+                connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
+                command.CommandType = System.Data.CommandType.Text;
+                //command.CommandText = "update articulos set Codigo='" + nuevo.codigo + "', Nombre='" + nuevo.nombre + "' ,Descripcion='" + nuevo.descripcion + "', Precio='" + nuevo.precio + "', IdMarca= '" + nuevo.Marca.Id + "', IdCategoria='" + nuevo.Categoria.Id + "', ImagenUrl= '" + nuevo.imagenUrl + "' where Id = " + nuevo.Id;
+                command.CommandText = "update ARTICULOS Set Codigo=@codigo,Nombre=@nombre,Descripcion=@descripcion,Id=@id,IDMarca=@idMarca,IDCategoria=@idCategoria Where Id = @id";
+                
+                command.Parameters.AddWithValue("@codigo",nuevo.codigo);
+                command.Parameters.AddWithValue("@nombre",nuevo.nombre) ;
+                command.Parameters.AddWithValue("@descripcion",nuevo.descripcion);
+                command.Parameters.AddWithValue("@id",nuevo.Id);
+                command.Parameters.AddWithValue("@idMarca",nuevo.Marca.Id);
+                command.Parameters.AddWithValue("@idCategoria",nuevo.Categoria.Id);
 
+                command.Connection = connection;
+                connection.Open();
+                command.ExecuteNonQuery();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
 
         }
