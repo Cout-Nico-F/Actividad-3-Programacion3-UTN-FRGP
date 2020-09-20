@@ -60,9 +60,9 @@
             this.pb_Imagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_Imagen.Location = new System.Drawing.Point(761, 65);
+            this.pb_Imagen.Location = new System.Drawing.Point(787, 65);
             this.pb_Imagen.Name = "pb_Imagen";
-            this.pb_Imagen.Size = new System.Drawing.Size(219, 288);
+            this.pb_Imagen.Size = new System.Drawing.Size(225, 288);
             this.pb_Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_Imagen.TabIndex = 7;
             this.pb_Imagen.TabStop = false;
@@ -117,7 +117,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_Listado.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Listado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Listado.Size = new System.Drawing.Size(702, 276);
+            this.dgv_Listado.Size = new System.Drawing.Size(738, 286);
             this.dgv_Listado.TabIndex = 8;
             this.dgv_Listado.SelectionChanged += new System.EventHandler(this.dgvListar_SelectionChanged);
             // 
@@ -165,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1013, 470);
+            this.ClientSize = new System.Drawing.Size(1045, 470);
             this.Controls.Add(this.lbl_Fecha2);
             this.Controls.Add(this.lbl_Hora2);
             this.Controls.Add(this.btn_VolverListado);
