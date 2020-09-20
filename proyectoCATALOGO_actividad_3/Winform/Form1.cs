@@ -196,6 +196,7 @@ namespace Winform
             List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
             List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()) );
 
+            //Quizas puedo agregar un boton en el form1 que diga busqueda avanzada si sobra tiempo lo hago
             
             dgvListar.DataSource = listaFiltrada;
             // Solo tenia que pasarlo a TextChanged porque en el evento keyPress funciona regular y ahora pensandolo mejor

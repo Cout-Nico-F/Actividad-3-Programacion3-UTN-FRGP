@@ -89,7 +89,9 @@ namespace Winform
                 MessageBox.Show("Operacion realizada con exito", "Exito");
                 Cargar();
                 Limpiar_txt_cb();
-            }
+            
+            this.Close();
+         }
         //}
 
         private void btAceptar_MouseMove(object sender, MouseEventArgs e)
