@@ -292,9 +292,9 @@
             // 
             // txt_Filtro
             // 
-            this.txt_Filtro.Location = new System.Drawing.Point(403, 28);
+            this.txt_Filtro.Location = new System.Drawing.Point(377, 28);
             this.txt_Filtro.Name = "txt_Filtro";
-            this.txt_Filtro.Size = new System.Drawing.Size(257, 20);
+            this.txt_Filtro.Size = new System.Drawing.Size(332, 20);
             this.txt_Filtro.TabIndex = 14;
             this.txt_Filtro.TextChanged += new System.EventHandler(this.txt_Filtro_TextChanged);
             this.txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Filtro_KeyPress);

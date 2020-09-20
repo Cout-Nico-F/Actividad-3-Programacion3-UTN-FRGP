@@ -113,11 +113,12 @@ namespace Negocios
                 connection.ConnectionString = "data source =localhost\\SQLEXPRESS01; initial catalog =CATALOGO_DB; integrated security =sspi";
                 command.CommandType = System.Data.CommandType.Text;
                 //command.CommandText = "update articulos set Codigo='" + nuevo.codigo + "', Nombre='" + nuevo.nombre + "' ,Descripcion='" + nuevo.descripcion + "', Precio='" + nuevo.precio + "', IdMarca= '" + nuevo.Marca.Id + "', IdCategoria='" + nuevo.Categoria.Id + "', ImagenUrl= '" + nuevo.imagenUrl + "' where Id = " + nuevo.Id;
-                command.CommandText = "update ARTICULOS Set Codigo=@codigo,Nombre=@nombre,Descripcion=@descripcion,idMarca=@idMarca,idCategoria=@idCategoria Where Id=@id";
+                command.CommandText = "update ARTICULOS Set Codigo=@codigo,Nombre=@nombre,Descripcion=@descripcion,Precio=@precio,idMarca=@idMarca,idCategoria=@idCategoria Where Id=@id";
                 
                 command.Parameters.AddWithValue("@codigo",nuevo.codigo);
                 command.Parameters.AddWithValue("@nombre",nuevo.nombre) ;
                 command.Parameters.AddWithValue("@descripcion",nuevo.descripcion);
+                command.Parameters.AddWithValue("@precio", nuevo.precio);
                 command.Parameters.AddWithValue("@id",nuevo.Id);
                 command.Parameters.AddWithValue("@idMarca",nuevo.Marca.Id);
                 command.Parameters.AddWithValue("@idCategoria",nuevo.Categoria.Id);
