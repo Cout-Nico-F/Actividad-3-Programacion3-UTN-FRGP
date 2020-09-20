@@ -101,6 +101,8 @@
             this.dgv_Baja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Baja.Size = new System.Drawing.Size(697, 89);
             this.dgv_Baja.TabIndex = 5;
+            this.dgv_Baja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Baja_CellContentClick);
+            this.dgv_Baja.SelectionChanged += new System.EventHandler(this.dgv_Baja_SelectionChanged);
             // 
             // pb_Baja
             // 

@@ -24,6 +24,7 @@ namespace Winform
         {
             _articuloSeleccionado = articuloSeleccionado;
             InitializeComponent();
+            
         }
 
         private void form_Baja_Load(object sender, EventArgs e)
@@ -56,6 +57,16 @@ namespace Winform
         private void btn_CancelarBaja_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgv_Baja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgv_Baja_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

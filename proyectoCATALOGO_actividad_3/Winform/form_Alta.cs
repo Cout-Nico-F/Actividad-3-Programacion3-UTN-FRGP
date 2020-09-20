@@ -138,6 +138,19 @@ namespace Winform
 
                 Text = "Modificar Articulo";
             }
+            List<Articulo> lista = new List<Articulo>();
+            lista.Add(articulo);
+            dgv_Alta.DataSource = lista;
+
+            //no hay un picture box
+            /*try
+            {
+                pb_Alta.Load(_articuloSeleccionado.imagenUrl);
+            }
+            catch (Exception)
+            {
+
+            }*/
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
