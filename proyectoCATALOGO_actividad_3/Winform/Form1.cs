@@ -75,7 +75,6 @@ namespace Winform
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
-            //no se cual es el error aca si lo comento todo compila
             try
             {
                 if (dgvListar.CurrentRow != null)
@@ -83,13 +82,9 @@ namespace Winform
                     Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
                     pbImagen.Load(reg.imagenUrl);
                 }
-
-                
             }
             catch (System.NullReferenceException ex)
             {
-                // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
-                // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                 pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
             }
         }
