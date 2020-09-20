@@ -69,30 +69,29 @@ namespace Winform
             dgvListar.DataSource = ListaOriginal;
             dgvListar.Columns["id"].Visible = false;
             dgvListar.Columns["imagenurl"].Visible = false;
-            dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
+            //dgvListar.CurrentCell = null; //Para que no este seleccionado ningun articulo por defecto.
             //dgvListar.Rows[0].Selected = false;
         }
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
             //no se cual es el error aca si lo comento todo compila
-            /*if (dgvListar.CurrentRow.DataBoundItem != null)
+            try
             {
-                try
-                { 
-                     Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-                     pbImagen.Load(reg.imagenUrl);
-                }
-                catch (Exception)
+                if (dgvListar.CurrentRow != null)
                 {
-                    // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
-                    // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
-                    pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+                    Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
+                    pbImagen.Load(reg.imagenUrl);
                 }
-            }*/
 
-            
-            
+                
+            }
+            catch (System.NullReferenceException ex)
+            {
+                // MessageBox.Show("No se encontro la imagen", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); [Creo que es mejor sin error, que opinas?] rta -> Si me parece mejor de esa manera
+                // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
+                pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
