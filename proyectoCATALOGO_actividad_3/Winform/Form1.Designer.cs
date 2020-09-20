@@ -266,7 +266,7 @@
             this.lbl_Hora.AutoSize = true;
             this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Hora.Location = new System.Drawing.Point(262, 306);
+            this.lbl_Hora.Location = new System.Drawing.Point(286, 324);
             this.lbl_Hora.Name = "lbl_Hora";
             this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
             this.lbl_Hora.TabIndex = 11;
@@ -278,7 +278,7 @@
             this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha.Location = new System.Drawing.Point(555, 306);
+            this.lbl_Fecha.Location = new System.Drawing.Point(556, 324);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
             this.lbl_Fecha.TabIndex = 12;
