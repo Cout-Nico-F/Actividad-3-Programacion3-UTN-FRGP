@@ -29,6 +29,7 @@ namespace Winform
             } 
             pb_Carga.Value += 1;
             lbl_Carga.Text = pb_Carga.Value + "%";
+
             // Hace un espera entre estos intervalos 
             // 31 es 30
             if(pb_Carga.Value  == 31 ) { Thread.Sleep(1000); }

@@ -37,9 +37,9 @@
             this.pb_Imagen = new System.Windows.Forms.PictureBox();
             this.dgv_Listado = new System.Windows.Forms.DataGridView();
             this.btn_VolverListado = new System.Windows.Forms.Button();
-            this.lbl_Hora2 = new System.Windows.Forms.Label();
-            this.lbl_Fecha2 = new System.Windows.Forms.Label();
+            this.lbl_Fecha_2 = new System.Windows.Forms.Label();
             this.tm_time = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Hora_2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Imagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Listado)).BeginInit();
             this.SuspendLayout();
@@ -133,32 +133,31 @@
             this.btn_VolverListado.UseVisualStyleBackColor = true;
             this.btn_VolverListado.Click += new System.EventHandler(this.btn_VolverListado_Click);
             // 
-            // lbl_Hora2
+            // lbl_Fecha_2
             // 
-            this.lbl_Hora2.AutoSize = true;
-            this.lbl_Hora2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Hora2.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Hora2.Location = new System.Drawing.Point(108, 379);
-            this.lbl_Hora2.Name = "lbl_Hora2";
-            this.lbl_Hora2.Size = new System.Drawing.Size(179, 63);
-            this.lbl_Hora2.TabIndex = 12;
-            this.lbl_Hora2.Text = "label1";
-            this.lbl_Hora2.Click += new System.EventHandler(this.lbl_Hora2_Click);
-            // 
-            // lbl_Fecha2
-            // 
-            this.lbl_Fecha2.AutoSize = true;
-            this.lbl_Fecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Fecha2.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha2.Location = new System.Drawing.Point(447, 379);
-            this.lbl_Fecha2.Name = "lbl_Fecha2";
-            this.lbl_Fecha2.Size = new System.Drawing.Size(179, 63);
-            this.lbl_Fecha2.TabIndex = 13;
-            this.lbl_Fecha2.Text = "label1";
+            this.lbl_Fecha_2.AutoSize = true;
+            this.lbl_Fecha_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha_2.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Fecha_2.Location = new System.Drawing.Point(447, 379);
+            this.lbl_Fecha_2.Name = "lbl_Fecha_2";
+            this.lbl_Fecha_2.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Fecha_2.TabIndex = 13;
+            this.lbl_Fecha_2.Text = "label1";
             // 
             // tm_time
             // 
             this.tm_time.Tick += new System.EventHandler(this.tm_time_Tick);
+            // 
+            // lbl_Hora_2
+            // 
+            this.lbl_Hora_2.AutoSize = true;
+            this.lbl_Hora_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Hora_2.ForeColor = System.Drawing.Color.Transparent;
+            this.lbl_Hora_2.Location = new System.Drawing.Point(156, 379);
+            this.lbl_Hora_2.Name = "lbl_Hora_2";
+            this.lbl_Hora_2.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Hora_2.TabIndex = 14;
+            this.lbl_Hora_2.Text = "label1";
             // 
             // Form_Listado
             // 
@@ -166,8 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1045, 470);
-            this.Controls.Add(this.lbl_Fecha2);
-            this.Controls.Add(this.lbl_Hora2);
+            this.Controls.Add(this.lbl_Hora_2);
+            this.Controls.Add(this.lbl_Fecha_2);
             this.Controls.Add(this.btn_VolverListado);
             this.Controls.Add(this.dgv_Listado);
             this.Controls.Add(this.pb_Imagen);
@@ -188,8 +187,8 @@
         private System.Windows.Forms.PictureBox pb_Imagen;
         private System.Windows.Forms.DataGridView dgv_Listado;
         private System.Windows.Forms.Button btn_VolverListado;
-        private System.Windows.Forms.Label lbl_Hora2;
-        private System.Windows.Forms.Label lbl_Fecha2;
+        private System.Windows.Forms.Label lbl_Fecha_2;
         private System.Windows.Forms.Timer tm_time;
+        private System.Windows.Forms.Label lbl_Hora_2;
     }
 }
