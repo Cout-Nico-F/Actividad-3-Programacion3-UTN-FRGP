@@ -55,7 +55,7 @@ namespace Winform
         private void Form1_Load(object sender, EventArgs e)
         {
             Cargar();
-            
+            //evita que salga seleccionado una row por defecto
             if(dgvListar.Rows.Count > 0 )
             {
                 dgvListar.Rows[0].Selected = false;
