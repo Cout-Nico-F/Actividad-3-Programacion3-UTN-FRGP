@@ -48,7 +48,6 @@
             this.lbl_Hora = new System.Windows.Forms.Label();
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.tm_timer = new System.Windows.Forms.Timer(this.components);
-            this.btn_PantallaCarga = new System.Windows.Forms.Button();
             this.txt_Filtro = new System.Windows.Forms.TextBox();
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
@@ -291,18 +290,6 @@
             this.tm_timer.Enabled = true;
             this.tm_timer.Tick += new System.EventHandler(this.tm_timer_Tick);
             // 
-            // btn_PantallaCarga
-            // 
-            this.btn_PantallaCarga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PantallaCarga.ForeColor = System.Drawing.Color.White;
-            this.btn_PantallaCarga.Location = new System.Drawing.Point(958, 279);
-            this.btn_PantallaCarga.Name = "btn_PantallaCarga";
-            this.btn_PantallaCarga.Size = new System.Drawing.Size(81, 46);
-            this.btn_PantallaCarga.TabIndex = 13;
-            this.btn_PantallaCarga.Text = "Pantalla Carga";
-            this.btn_PantallaCarga.UseVisualStyleBackColor = true;
-            this.btn_PantallaCarga.Click += new System.EventHandler(this.btn_PantallaCarga_Click);
-            // 
             // txt_Filtro
             // 
             this.txt_Filtro.Location = new System.Drawing.Point(405, 19);
@@ -320,7 +307,6 @@
             this.ClientSize = new System.Drawing.Size(1098, 369);
             this.Controls.Add(this.txt_Filtro);
             this.Controls.Add(this.pbImagen);
-            this.Controls.Add(this.btn_PantallaCarga);
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.lbl_Hora);
             this.Controls.Add(this.dgvListar);
@@ -358,7 +344,6 @@
         private System.Windows.Forms.Label lbl_Hora;
         private System.Windows.Forms.Label lbl_Fecha;
         private System.Windows.Forms.Timer tm_timer;
-        private System.Windows.Forms.Button btn_PantallaCarga;
         private System.Windows.Forms.TextBox txt_Filtro;
     }
 }

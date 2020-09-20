@@ -170,8 +170,7 @@ namespace Winform
 
         private void btn_PantallaCarga_Click(object sender, EventArgs e)
         {
-            Form_Bienvenida bien = new Form_Bienvenida();
-            bien.Show();
+            
         }
 
         private void lbl_Hora_Click(object sender, EventArgs e)

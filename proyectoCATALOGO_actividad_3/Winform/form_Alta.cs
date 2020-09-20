@@ -142,7 +142,12 @@ namespace Winform
                 lista.Add(articulo);
                 dgv_Alta.DataSource = lista;
             }
-            
+
+            //El error que comente en el commit sobre el agregar era porque tenia esas lineas de codigo fuera del if de articulo != null
+            /*List<Articulo> lista = new List<Articulo>();
+            lista.Add(articulo);
+            dgv_Alta.DataSource = lista;*/
+
 
             //no hay un picture box pero se puede agregar si se quiere 
             /*try
