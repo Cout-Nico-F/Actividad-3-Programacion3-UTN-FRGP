@@ -186,13 +186,25 @@ namespace Winform
 
         private void txt_Filtro_TextChanged(object sender, EventArgs e)
         {
+            // no acepta el operando || (or) con variables de tipo string
+            String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
+            String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
+            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()));
+
+            
+            dgvListar.DataSource = listaFiltrada;
+            // Solo tenia que pasarlo a TextChanged porque en el evento keyPress funciona regular y ahora pensandolo mejor
+            // tiene sentido jaja porque estaba esperando una tecla
             
         }
 
         private void txt_Filtro_KeyPress(object sender, KeyPressEventArgs e)
         {
             // no acepta el operando || (or) con variables de tipo string
-            String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            /*String buscarPorNombre = "x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
             String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
             String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
             String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
@@ -201,6 +213,7 @@ namespace Winform
 
             // no lo probe todavia 
             dgvListar.DataSource = listaFiltrada;
+            //probado pero funciona regular*/
         }
     }
 }
