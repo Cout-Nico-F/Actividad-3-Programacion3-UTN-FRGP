@@ -49,6 +49,7 @@
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.tm_timer = new System.Windows.Forms.Timer(this.components);
             this.txt_Filtro = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_Articulos.SuspendLayout();
             this.panel_Opciones.SuspendLayout();
             this.panel_Productos.SuspendLayout();
@@ -264,26 +265,24 @@
             // lbl_Hora
             // 
             this.lbl_Hora.AutoSize = true;
-            this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_Hora.ForeColor = System.Drawing.Color.Transparent;
             this.lbl_Hora.Location = new System.Drawing.Point(286, 324);
             this.lbl_Hora.Name = "lbl_Hora";
-            this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Hora.Size = new System.Drawing.Size(95, 39);
             this.lbl_Hora.TabIndex = 11;
-            this.lbl_Hora.Text = "label1";
-            this.lbl_Hora.Click += new System.EventHandler(this.lbl_Hora_Click);
+            this.lbl_Hora.Text = "Hora";
             // 
             // lbl_Fecha
             // 
             this.lbl_Fecha.AutoSize = true;
-            this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha.Location = new System.Drawing.Point(556, 324);
+            this.lbl_Fecha.Location = new System.Drawing.Point(598, 324);
             this.lbl_Fecha.Name = "lbl_Fecha";
-            this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
+            this.lbl_Fecha.Size = new System.Drawing.Size(127, 39);
             this.lbl_Fecha.TabIndex = 12;
-            this.lbl_Fecha.Text = "label1";
-            this.lbl_Fecha.Click += new System.EventHandler(this.lbl_Fecha_Click);
+            this.lbl_Fecha.Text = "Fecha ";
             // 
             // tm_timer
             // 
@@ -299,12 +298,24 @@
             this.txt_Filtro.TextChanged += new System.EventHandler(this.txt_Filtro_TextChanged);
             this.txt_Filtro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Filtro_KeyPress);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(301, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Buscar:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             this.ClientSize = new System.Drawing.Size(1098, 421);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Filtro);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.lbl_Fecha);
@@ -345,6 +356,7 @@
         private System.Windows.Forms.Label lbl_Fecha;
         private System.Windows.Forms.Timer tm_timer;
         private System.Windows.Forms.TextBox txt_Filtro;
+        private System.Windows.Forms.Label label1;
     }
 }
 

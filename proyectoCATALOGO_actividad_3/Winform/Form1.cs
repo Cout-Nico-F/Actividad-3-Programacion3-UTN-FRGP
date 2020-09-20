@@ -83,7 +83,7 @@ namespace Winform
                     pbImagen.Load(reg.imagenUrl);
                 }
             }
-            catch (System.NullReferenceException ex)
+            catch (Exception ex)
             {
                 pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
             }
@@ -162,22 +162,6 @@ namespace Winform
             lbl_Hora.Text = DateTime.Now.ToLongTimeString(); //mayusculas = formato 24 horas
             lbl_Fecha.Text = DateTime.Now.ToShortDateString();
         }
-
-        private void btn_PantallaCarga_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void lbl_Hora_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_Fecha_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txt_Filtro_TextChanged(object sender, EventArgs e)
         {
             // no acepta el operando || (or) con variables de tipo string

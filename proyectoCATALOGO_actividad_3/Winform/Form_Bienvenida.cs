@@ -18,11 +18,8 @@ namespace Winform
             InitializeComponent();
         }
 
-
         private void tm_1_Tick(object sender, EventArgs e)
         {
-            
-
             if (this.Opacity < 1)
             {
                 this.Opacity += 1;
