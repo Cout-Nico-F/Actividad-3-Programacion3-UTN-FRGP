@@ -191,8 +191,10 @@ namespace Winform
             String buscarPorDescripcion = "x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
             String buscarPorMarca = "x.Marca.Descripcion.ToUpper().Contains(txt_Flitro.Text.ToUpper())";
             String buscarPorCategoria = "x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper())";
+            //tremendo fail lo de pasarlo a string
+
             List<Articulo> lista = (List<Articulo>)dgvListar.DataSource;
-            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()));
+            List<Articulo> listaFiltrada = ListaOriginal.FindAll(x => x.nombre.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Marca.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.Categoria.Descripcion.ToUpper().Contains(txt_Filtro.Text.ToUpper()) || x.codigo.ToUpper().Contains(txt_Filtro.Text.ToUpper()) );
 
             
             dgvListar.DataSource = listaFiltrada;
