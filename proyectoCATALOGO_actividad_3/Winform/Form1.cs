@@ -76,12 +76,12 @@ namespace Winform
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
         {
 
-            /*if (dgvListar.CurrentRow.DataBoundItem != null)
+            if (dgvListar.CurrentRow.DataBoundItem != null)
             {
                 try
-                {
-                    Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
-                    pbImagen.Load(reg.imagenUrl);
+                { 
+                     Articulo reg = (Articulo)dgvListar.CurrentRow.DataBoundItem;
+                     pbImagen.Load(reg.imagenUrl);
                 }
                 catch (Exception)
                 {
@@ -89,7 +89,8 @@ namespace Winform
                     // no encuentro la manera de que no se muestre la imagen anterior cuando hacemos click en la imagen que no tiene url
                     pbImagen.Image = null; //de esta manera se setea en nula la imagen para que no muestre la anterior.
                 }
-            }*/
+            }
+
             
             
         }
