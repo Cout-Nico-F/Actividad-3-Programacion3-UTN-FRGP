@@ -50,6 +50,7 @@ namespace Winform
                 tm_2.Stop();
                 //this.Close();
             }
+            this.Hide();
             Form1 f = new Form1();
             f.ShowDialog();
             
