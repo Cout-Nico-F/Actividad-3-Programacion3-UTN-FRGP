@@ -115,7 +115,7 @@ namespace Winform
             Cargar();
             Ocultar_Submenu();
             //codigo
-            Ocultar_Submenu();
+            //Ocultar_Submenu();
         }
 
         private void btn_Modificar_Click(object sender, EventArgs e)

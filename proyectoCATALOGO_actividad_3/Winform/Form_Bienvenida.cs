@@ -31,10 +31,11 @@ namespace Winform
             lbl_Carga.Text = pb_Carga.Value + "%";
             // Hace un espera entre estos intervalos 
             // 31 es 30
-            if(pb_Carga.Value  == 31 ) { Thread.Sleep(1000); }
+            /*if(pb_Carga.Value  == 31 ) { Thread.Sleep(1000); }
             if (pb_Carga.Value == 51) { Thread.Sleep(3000); }
             if (pb_Carga.Value == 81) { Thread.Sleep(2000); }
-            if (pb_Carga.Value == 100) { Thread.Sleep(4000); }
+            if (pb_Carga.Value == 100) { Thread.Sleep(4000); }*/
+            //era un poco molesto a la hora de compilar por eso lo comente a la hora de entregar deberia descomentar los if
             if (pb_Carga.Value == 100)
             {
                 tm_1.Stop();

@@ -66,7 +66,7 @@
             this.panel_Articulos.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Articulos.Location = new System.Drawing.Point(0, 0);
             this.panel_Articulos.Name = "panel_Articulos";
-            this.panel_Articulos.Size = new System.Drawing.Size(172, 369);
+            this.panel_Articulos.Size = new System.Drawing.Size(172, 421);
             this.panel_Articulos.TabIndex = 6;
             // 
             // panel_Opciones
@@ -227,7 +227,7 @@
             this.dgvListar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvListar.EnableHeadersVisualStyles = false;
             this.dgvListar.GridColor = System.Drawing.Color.SlateGray;
-            this.dgvListar.Location = new System.Drawing.Point(192, 47);
+            this.dgvListar.Location = new System.Drawing.Point(201, 68);
             this.dgvListar.MultiSelect = false;
             this.dgvListar.Name = "dgvListar";
             this.dgvListar.ReadOnly = true;
@@ -254,9 +254,9 @@
             // 
             // pbImagen
             // 
-            this.pbImagen.Location = new System.Drawing.Point(884, 68);
+            this.pbImagen.Location = new System.Drawing.Point(874, 68);
             this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(202, 194);
+            this.pbImagen.Size = new System.Drawing.Size(202, 229);
             this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImagen.TabIndex = 10;
             this.pbImagen.TabStop = false;
@@ -266,7 +266,7 @@
             this.lbl_Hora.AutoSize = true;
             this.lbl_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Hora.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Hora.Location = new System.Drawing.Point(261, 279);
+            this.lbl_Hora.Location = new System.Drawing.Point(262, 306);
             this.lbl_Hora.Name = "lbl_Hora";
             this.lbl_Hora.Size = new System.Drawing.Size(179, 63);
             this.lbl_Hora.TabIndex = 11;
@@ -278,7 +278,7 @@
             this.lbl_Fecha.AutoSize = true;
             this.lbl_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Fecha.ForeColor = System.Drawing.Color.Transparent;
-            this.lbl_Fecha.Location = new System.Drawing.Point(557, 279);
+            this.lbl_Fecha.Location = new System.Drawing.Point(555, 306);
             this.lbl_Fecha.Name = "lbl_Fecha";
             this.lbl_Fecha.Size = new System.Drawing.Size(179, 63);
             this.lbl_Fecha.TabIndex = 12;
@@ -292,7 +292,7 @@
             // 
             // txt_Filtro
             // 
-            this.txt_Filtro.Location = new System.Drawing.Point(405, 19);
+            this.txt_Filtro.Location = new System.Drawing.Point(403, 28);
             this.txt_Filtro.Name = "txt_Filtro";
             this.txt_Filtro.Size = new System.Drawing.Size(257, 20);
             this.txt_Filtro.TabIndex = 14;
@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1098, 369);
+            this.ClientSize = new System.Drawing.Size(1098, 421);
             this.Controls.Add(this.txt_Filtro);
             this.Controls.Add(this.pbImagen);
             this.Controls.Add(this.lbl_Fecha);
