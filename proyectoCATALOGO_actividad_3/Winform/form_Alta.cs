@@ -142,7 +142,7 @@ namespace Winform
             lista.Add(articulo);
             dgv_Alta.DataSource = lista;
 
-            //no hay un picture box
+            //no hay un picture box pero se puede agregar si se quiere 
             /*try
             {
                 pb_Alta.Load(_articuloSeleccionado.imagenUrl);
