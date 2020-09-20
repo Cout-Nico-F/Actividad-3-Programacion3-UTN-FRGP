@@ -22,6 +22,7 @@ namespace Winform
         {
             ArticulosNegocio negocio = new ArticulosNegocio();
             dgv_Listado.DataSource = negocio.ListarArticulos();
+
         }
 
         private void dgvListar_SelectionChanged(object sender, EventArgs e)
