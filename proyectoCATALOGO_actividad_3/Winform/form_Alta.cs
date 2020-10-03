@@ -74,6 +74,7 @@ namespace Winform
                 else
                 {
                     articuloNegocio.modificarArticulo(articulo);
+                    Close();
                 }
 
 
